@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Luke McShane | Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luke-McShane/Portfolio.git"
+  },
+  "author": "Luke McShane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Luke-McShane/Portfolio/issues"
+  },
+  "homepage": "https://github.com/Luke-McShane/Portfolio#readme"
+}
