@@ -8,7 +8,12 @@
 
 .section-title {
   font: $font-primary;
+  margin: 3rem 0 2rem 0;
   letter-spacing: 1px;
+}
+
+.section-subtitle {
+  margin: 1rem 0 1rem 0;
 }
 
 .section-content {
@@ -22,4 +27,36 @@
   border-bottom: 3px solid $colour-dark-accent;
   margin: auto;
   padding: 0.5rem;
+}
+
+.py-1 {
+  padding: 1rem 0;
+}
+
+.py-2 {
+  padding: 2rem 0;
+}
+
+.py-3 {
+  padding: 3rem 0;
+}
+
+.py-4 {
+  padding: 4rem 0;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.p-3 {
+  padding: 3rem;
+}
+
+.p-4 {
+  padding: 4rem;
 }

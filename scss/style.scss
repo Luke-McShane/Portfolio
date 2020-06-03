@@ -4,6 +4,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html,
@@ -18,6 +19,7 @@ ul {
 }
 
 a {
+  display: inline-block;
   text-decoration: none;
   color: $colour-text;
 }
@@ -126,30 +128,58 @@ img {
     align-items: center;
     text-align: center;
 
-    h2 {
-      margin: 3rem 0 2rem 0;
-    }
-
-    h3 {
-      margin: 1rem 0 2rem 0;
-    }
-
     &-grid {
       display: grid;
       gap: 1rem;
       grid-template-columns: repeat(3, 1fr);
-      // grid-template-areas:
-      //   'projects-item-1 projects-item-2 projects-item-3'
-      //   'projects-item-4 projects-item-5 projects-item-6'
-      //   'projects-item-7 projects-item-8 projects-item-9';
+
 
       &-item {
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          background-color: $colour-light-accent;
+          opacity: 0.9;
+          transform: scale(2) translateX(-75%) translateY(-75%) rotate(-28deg);
+          transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+
+        &:hover {
+          .projects-main-grid-item-info {
+            opacity: 1;
+            transform: translateY(50%);
+          }
+
+          &::before {
+            transform: scale(3) translateX(0) translateY(0) rotate(-28deg);
+          }
+
+          img {
+            transform: scale(1.2);
+          }
+        }
 
         &-info {
+          position: absolute;
+          opacity: 0;
+          z-index: 2;
+          top: -30%;
+          left: 0;
+          bottom: 0;
+          right: 0;
           display: grid;
+          height: 90%;
+          transition: all 500ms ease-out 500ms;
+
           grid-template-areas:
-            'title title'
-            'btn-1 btn-2';
+            'title title title'
+            'btn-1 btn-2 btn-3';
 
           .project-title {
             grid-area: title;
@@ -162,56 +192,100 @@ img {
           .project-btn-2 {
             grid-area: btn-2;
           }
+
+          .project-btn-3 {
+            grid-area: btn-3;
+          }
+
+          h2,
+          a {
+            color: #fff !important;
+          }
         }
 
-        // width: 240px;  
-        // height: 120px;
-
-        // 
-
         &-img {
-          width: 240px;
-          height: 120px;
+          display: block;
+          width: 100%;
+          height: 100%;
+          opacity: 0.8;
+          z-index: 0;
+
+          img {
+            transition: transform 500ms ease-in;
+          }
         }
       }
     }
   }
 }
 
+.exercises {
+  &-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+    margin-left: 10%;
+
+    &-container {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+
+      &-html ul,
+      &-css ul {
+        overflow-x: auto;
+        width: 100%;
+      }
+
+      // Rather than have everything in two separate lists on the main screen, have a button for each language, and clicking a button brings an overlay/modal that will neatly display all the lessons. Each lesson can either be a number with a title (i.e. '30 - Flexbox Basics') and thus we can have like 3 or 4 columns, or we can have a number with a title with a description, and can have one exercise per row, or perhaps 2 exercises per row (2 columns)
+    }
+  }
+}
+
 
 // For if you decide to use grid-template-areas for the portfolio items:
-&-1 {
-  //   grid-area: projects-item-1;
-  // }
+// grid-template-areas:
+//   'projects-item-1 projects-item-2 projects-item-3'
+//   'projects-item-4 projects-item-5 projects-item-6'
+//   'projects-item-7 projects-item-8 projects-item-9';
+//&-1 {
+//   grid-area: projects-item-1;
+// }
 
-  // &-2 {
-  //   grid-area: projects-item-2;
-  // }
+// &-2 {
+//   grid-area: projects-item-2;
+// }
 
-  // &-3 {
-  //   grid-area: projects-item-3;
-  // }
+// &-3 {
+//   grid-area: projects-item-3;
+// }
 
-  // &-4 {
-  //   grid-area: projects-item-4;
-  // }
+// &-4 {
+//   grid-area: projects-item-4;
+// }
 
-  // &-5 {
-  //   grid-area: projects-item-5;
-  // }
+// &-5 {
+//   grid-area: projects-item-5;
+// }
 
-  // &-6 {
-  //   grid-area: projects-item-6;
-  // }
+// &-6 {
+//   grid-area: projects-item-6;
+// }
 
-  // &-7 {
-  //   grid-area: projects-item-7;
-  // }
+// &-7 {
+//   grid-area: projects-item-7;
+// }
 
-  // &-8 {
-  //   grid-area: projects-item-8;
-  // }
+// &-8 {
+//   grid-area: projects-item-8;
+// }
 
-  // &-9 {
-  //   grid-area: projects-item-9;
-  // }
+// &-9 {
+//   grid-area: projects-item-9;
+// }
