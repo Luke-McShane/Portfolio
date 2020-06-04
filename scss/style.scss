@@ -149,6 +149,10 @@ img {
         grid-area: btn-3;
       }
 
+      // a {
+      //   height: auto;
+      // }
+
       h2,
       a {
         color: #fff !important;
@@ -211,6 +215,50 @@ img {
   }
 }
 
+.blog {
+
+  &-main {
+    margin-left: 10%;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+
+    &-grid-item-info {
+      grid-template-areas:
+        'title title title'
+        'btn-1 btn-2 btn-3';
+
+      .project-title {
+        grid-area: title;
+      }
+
+      .project-btn-1 {
+        grid-area: btn-1;
+      }
+
+      .project-btn-2 {
+        grid-area: btn-2;
+      }
+
+      .project-btn-3 {
+        grid-area: btn-3;
+      }
+
+      // a {
+      //   height: auto;
+      // }
+
+      h2,
+      a {
+        color: #fff !important;
+      }
+    }
+  }
+}
 
 // For if you decide to use grid-template-areas for the portfolio items:
 // grid-template-areas:
