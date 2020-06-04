@@ -128,96 +128,35 @@ img {
     align-items: center;
     text-align: center;
 
-    &-grid {
-      display: grid;
-      gap: 1rem;
-      grid-template-columns: repeat(3, 1fr);
+    &-grid-item-info {
+      grid-template-areas:
+        'title title title'
+        'btn-1 btn-2 btn-3';
 
+      .project-title {
+        grid-area: title;
+      }
 
-      &-item {
-        position: relative;
-        overflow: hidden;
+      .project-btn-1 {
+        grid-area: btn-1;
+      }
 
-        &::before {
-          content: '';
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          z-index: 1;
-          background-color: $colour-light-accent;
-          opacity: 0.9;
-          transform: scale(2) translateX(-75%) translateY(-75%) rotate(-28deg);
-          transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1);
-        }
+      .project-btn-2 {
+        grid-area: btn-2;
+      }
 
-        &:hover {
-          .projects-main-grid-item-info {
-            opacity: 1;
-            transform: translateY(50%);
-          }
+      .project-btn-3 {
+        grid-area: btn-3;
+      }
 
-          &::before {
-            transform: scale(3) translateX(0) translateY(0) rotate(-28deg);
-          }
-
-          img {
-            transform: scale(1.2);
-          }
-        }
-
-        &-info {
-          position: absolute;
-          opacity: 0;
-          z-index: 2;
-          top: -30%;
-          left: 0;
-          bottom: 0;
-          right: 0;
-          display: grid;
-          height: 90%;
-          transition: all 500ms ease-out 500ms;
-
-          grid-template-areas:
-            'title title title'
-            'btn-1 btn-2 btn-3';
-
-          .project-title {
-            grid-area: title;
-          }
-
-          .project-btn-1 {
-            grid-area: btn-1;
-          }
-
-          .project-btn-2 {
-            grid-area: btn-2;
-          }
-
-          .project-btn-3 {
-            grid-area: btn-3;
-          }
-
-          h2,
-          a {
-            color: #fff !important;
-          }
-        }
-
-        &-img {
-          display: block;
-          width: 100%;
-          height: 100%;
-          opacity: 0.8;
-          z-index: 0;
-
-          img {
-            transition: transform 500ms ease-in;
-          }
-        }
+      h2,
+      a {
+        color: #fff !important;
       }
     }
   }
 }
+
 
 .exercises {
   &-main {
@@ -251,9 +190,9 @@ img {
         border: 4px solid $colour-background;
         // border-radius: 50%;
         box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
-inset 0 -15px 15px rgba(255, 255, 255, 0.05),
-0 15px 15px rgba(0, 0, 0, 0.1),
-inset 0 15px 15px rgba(0, 0, 0, 0.1);
+          inset 0 -15px 15px rgba(255, 255, 255, 0.05),
+          0 15px 15px rgba(0, 0, 0, 0.1),
+          inset 0 15px 15px rgba(0, 0, 0, 0.1);
 
         h2 {
           display: inline-block;
