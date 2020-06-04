@@ -6,15 +6,17 @@
   height: 100%; }
 
 .section-title {
-  font: oblique 100 3rem/2rem "Taviraj";
+  font: normal small-caps 100 3rem/2rem "Lato";
   margin: 3rem 0 2rem 0;
   letter-spacing: 1px; }
 
 .section-subtitle {
-  margin: 1rem 0 1rem 0; }
+  margin: 1rem 0 1rem 0;
+  font-weight: 200;
+  font-style: italic; }
 
 .section-content {
-  font: normal 200 1.2rem/1.6rem "Kanit"; }
+  font: normal 200 1.2rem/1.6rem "Lato"; }
 
 .py-1 {
   padding: 1rem 0; }
@@ -72,7 +74,7 @@ img {
   color: #8e8e8e; }
 
 #nav-main {
-  font: normal 200 1.2rem/1.6rem "Kanit";
+  font: normal 200 1.2rem/1.6rem "Lato";
   position: fixed;
   top: 25%;
   left: 10%; }
@@ -198,6 +200,7 @@ img {
   align-items: center;
   text-align: center;
   height: 100vh;
+  width: 100%;
   overflow: hidden;
   margin-left: 10%; }
   .exercises-main-container {
@@ -206,7 +209,19 @@ img {
     align-items: center;
     width: 100%;
     height: 100%; }
-    .exercises-main-container-html ul,
-    .exercises-main-container-css ul {
-      overflow-x: auto;
-      width: 100%; }
+    .exercises-main-container-html, .exercises-main-container-css, .exercises-main-container-js {
+      width: 25%;
+      padding-top: 25%;
+      position: relative;
+      color: #8e8e8e;
+      border: 4px solid #292F30;
+      box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05), inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.1), inset 0 15px 15px rgba(0, 0, 0, 0.1); }
+      .exercises-main-container-html h2, .exercises-main-container-css h2, .exercises-main-container-js h2 {
+        display: inline-block;
+        position: absolute;
+        top: 42%;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: 0;
+        font-size: 3rem; }
