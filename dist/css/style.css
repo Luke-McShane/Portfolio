@@ -248,3 +248,27 @@ img {
     .blog-main-grid-item-info h2,
     .blog-main-grid-item-info a {
       color: #fff !important; }
+
+.footer {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding: 2rem;
+  letter-spacing: 1.3px; }
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+    .footer-content-text {
+      color: #fff;
+      margin-bottom: 1rem; }
+      .footer-content-text-span {
+        color: #8e8e8e; }
+    .footer-content-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .footer-content-icons i {
+        padding: 0 1rem; }

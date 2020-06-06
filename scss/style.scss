@@ -252,6 +252,41 @@ img {
   }
 }
 
+.footer {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding: 2rem;
+  letter-spacing: 1.3px;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &-text {
+      color: #fff;
+      margin-bottom: 1rem;
+
+      &-span {
+        color: $colour-text;
+      }
+    }
+
+    &-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      i {
+        padding: 0 1rem;
+      }
+    }
+  }
+}
+
 // For if you decide to use grid-template-areas for the portfolio items:
 // grid-template-areas:
 //   'projects-item-1 projects-item-2 projects-item-3'
