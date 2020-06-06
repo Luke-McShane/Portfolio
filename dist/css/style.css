@@ -7,7 +7,7 @@
 
 .section-title {
   font: normal small-caps 100 3rem/2rem "Lato";
-  margin: 3rem 0 1rem 0;
+  margin: 4rem 0 1rem 0;
   letter-spacing: 1px; }
 
 .section-subtitle {
@@ -237,16 +237,14 @@ img {
   justify-content: flex-start;
   align-items: center;
   text-align: center; }
+  .blog-main h1 {
+    margin-bottom: 3rem; }
   .blog-main-grid-item-info {
-    grid-template-areas: 'title title title' 'btn-1 btn-2 btn-3'; }
-    .blog-main-grid-item-info .project-title {
+    grid-template-areas: 'title' 'btn-1'; }
+    .blog-main-grid-item-info .blog-title {
       grid-area: title; }
-    .blog-main-grid-item-info .project-btn-1 {
+    .blog-main-grid-item-info .blog-btn-1 {
       grid-area: btn-1; }
-    .blog-main-grid-item-info .project-btn-2 {
-      grid-area: btn-2; }
-    .blog-main-grid-item-info .project-btn-3 {
-      grid-area: btn-3; }
     .blog-main-grid-item-info h2,
     .blog-main-grid-item-info a {
       color: #fff !important; }

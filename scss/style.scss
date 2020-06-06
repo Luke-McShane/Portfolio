@@ -227,30 +227,22 @@ img {
     align-items: center;
     text-align: center;
 
+    h1 {
+      margin-bottom: 3rem;
+    }
+
     &-grid-item-info {
       grid-template-areas:
-        'title title title'
-        'btn-1 btn-2 btn-3';
+        'title'
+        'btn-1';
 
-      .project-title {
+      .blog-title {
         grid-area: title;
       }
 
-      .project-btn-1 {
+      .blog-btn-1 {
         grid-area: btn-1;
       }
-
-      .project-btn-2 {
-        grid-area: btn-2;
-      }
-
-      .project-btn-3 {
-        grid-area: btn-3;
-      }
-
-      // a {
-      //   height: auto;
-      // }
 
       h2,
       a {
