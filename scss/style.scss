@@ -33,6 +33,32 @@ img {
   height: 100%;
 }
 
+input,
+textarea {
+  width: 70%;
+  padding: 0.3rem 0.5rem;
+  font-size: 1.4rem;
+  border: none;
+  margin: 0.2rem 0;
+  background: $colour-alternative-background;
+
+  // color: $;
+  &[type="submit"] {
+    margin-top: 2rem;
+    width: 35%;
+    color: $colour-text;
+  }
+
+  &:focus {
+    outline: none;
+    caret-color: #fff;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
 .btn {
   &-dark {
     padding: 0.7rem 1.2rem;
@@ -80,12 +106,14 @@ img {
     align-items: center;
     text-align: center;
     width: 100%;
+    margin-left: 10%;
 
     h1 {
       padding-bottom: 0.8rem;
 
       &::after {
         @include bottom-line;
+        padding: 0;
       }
     }
 
@@ -127,6 +155,10 @@ img {
     justify-content: flex-start;
     align-items: center;
     text-align: center;
+
+    h2 {
+      margin-bottom: 3rem;
+    }
 
     &-grid-item-info {
       grid-template-areas:
@@ -199,6 +231,9 @@ img {
           inset 0 15px 15px rgba(0, 0, 0, 0.1);
 
         h2 {
+          font: $font-primary;
+          margin: 4rem 0 1rem 0;
+          letter-spacing: 1px;
           display: inline-block;
           position: absolute;
           top: 42%;
@@ -252,12 +287,46 @@ img {
   }
 }
 
+.contact {
+  height: 100vh;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-left: 10%;
+
+    &-form {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      textarea {
+        height: 20%;
+        font-size: 1.8rem;
+      }
+
+      input[type="submit"] {
+        padding: 0.5rem 0;
+      }
+    }
+  }
+
+}
+
 .footer {
   width: 100%;
   height: auto;
-  margin: auto;
   padding: 2rem;
   letter-spacing: 1.3px;
+  align-self: flex-end;
 
   &-content {
     display: flex;
@@ -267,11 +336,11 @@ img {
     text-align: center;
 
     &-text {
-      color: #fff;
+      color: $colour-text;
       margin-bottom: 1rem;
 
       &-span {
-        color: $colour-text;
+        color: #fff;
       }
     }
 
@@ -286,6 +355,7 @@ img {
     }
   }
 }
+
 
 // For if you decide to use grid-template-areas for the portfolio items:
 // grid-template-areas:

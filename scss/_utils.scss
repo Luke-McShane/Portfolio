@@ -1,3 +1,13 @@
+@mixin bottom-line {
+  content: '';
+  display: block;
+  width: 80px;
+  border-bottom: 3px solid $colour-dark-accent;
+  margin: auto;
+  padding: 0.5rem;
+  margin-top: 0.8rem;
+}
+
 .container {
   max-width: $width-website-max;
   margin: auto;
@@ -10,6 +20,12 @@
   font: $font-primary;
   margin: 4rem 0 1rem 0;
   letter-spacing: 1px;
+
+  &::after {
+    @include bottom-line;
+    padding: 0.2rem;
+    width: 80px;
+  }
 }
 
 .section-subtitle {
@@ -20,15 +36,6 @@
 
 .section-content {
   font: $font-secondary;
-}
-
-@mixin bottom-line {
-  content: '';
-  display: block;
-  width: 80px;
-  border-bottom: 3px solid $colour-dark-accent;
-  margin: auto;
-  padding: 0.5rem;
 }
 
 .py-1 {
