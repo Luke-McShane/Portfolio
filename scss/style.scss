@@ -145,8 +145,11 @@ textarea {
 }
 
 .projects {
+  position: relative;
 
   &-main {
+    position: relative;
+    z-index: 1;
     margin-left: 10%;
     height: 100vh;
     width: 100%;
@@ -194,7 +197,10 @@ textarea {
   }
 
   &-info {
-    position: relative;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
     height: 100vh;
     width: 100vw;
     background-color: $colour-alternative-background;
@@ -205,8 +211,8 @@ textarea {
     text-align: center;
 
     &-content {
-      height: 250px;
-      width: 400px;
+      height: 450px;
+      width: 800px;
       padding: 0.5rem;
       background-color: $colour-background;
 
@@ -224,6 +230,8 @@ textarea {
 
         #modal-img {
           grid-area: img;
+          height: 250px;
+          width: 350px;
         }
 
         &-text {
@@ -232,6 +240,10 @@ textarea {
 
         &-buttons {
           grid-area: btns;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
         }
 
         #modal-cancel {
