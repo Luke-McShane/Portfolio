@@ -323,6 +323,7 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  overflow-y: auto;
 }
 
 .projects-main h2 {
@@ -360,6 +361,71 @@ textarea {
 .projects-main-grid-item-info h2,
 .projects-main-grid-item-info a {
   color: #fff !important;
+}
+
+.projects-info {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: #111414;
+  opacity: 0.9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.projects-info-content {
+  height: 250px;
+  width: 400px;
+  padding: 0.5rem;
+  background-color: #292F30;
+}
+
+.projects-info-content-grid {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+      grid-template-areas: 'title title title' 'img txt txt' 'btns btns btns';
+}
+
+.projects-info-content-grid #modal-title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: title;
+}
+
+.projects-info-content-grid #modal-img {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: img;
+}
+
+.projects-info-content-grid-text {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: txt;
+}
+
+.projects-info-content-grid-buttons {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: btns;
+}
+
+.projects-info-content-grid #modal-cancel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
 }
 
 .exercises-main {

@@ -155,6 +155,7 @@ textarea {
     justify-content: flex-start;
     align-items: center;
     text-align: center;
+    overflow-y: auto;
 
     h2 {
       margin-bottom: 3rem;
@@ -188,6 +189,57 @@ textarea {
       h2,
       a {
         color: #fff !important;
+      }
+    }
+  }
+
+  &-info {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: $colour-alternative-background;
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &-content {
+      height: 250px;
+      width: 400px;
+      padding: 0.5rem;
+      background-color: $colour-background;
+
+      &-grid {
+        display: grid;
+        position: relative;
+        grid-template-areas:
+          'title title title'
+          'img txt txt'
+          'btns btns btns';
+
+        #modal-title {
+          grid-area: title;
+        }
+
+        #modal-img {
+          grid-area: img;
+        }
+
+        &-text {
+          grid-area: txt;
+        }
+
+        &-buttons {
+          grid-area: btns;
+        }
+
+        #modal-cancel {
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding: 0.5rem;
+        }
       }
     }
   }
@@ -249,6 +301,8 @@ textarea {
     }
   }
 }
+
+
 
 .blog {
 
