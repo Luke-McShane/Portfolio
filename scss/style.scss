@@ -212,9 +212,10 @@ textarea {
 
     &-content {
       height: 450px;
-      width: 800px;
+      width: 1200px;
       padding: 0.5rem;
       background-color: $colour-background;
+      opacity: 1;
 
       &-grid {
         display: grid;
@@ -226,6 +227,7 @@ textarea {
 
         #modal-title {
           grid-area: title;
+          padding: 0.8rem 0;
         }
 
         #modal-img {

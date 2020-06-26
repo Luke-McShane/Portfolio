@@ -251,15 +251,17 @@ textarea {
     text-align: center; }
     .projects-info-content {
       height: 450px;
-      width: 800px;
+      width: 1200px;
       padding: 0.5rem;
-      background-color: #292F30; }
+      background-color: #292F30;
+      opacity: 1; }
       .projects-info-content-grid {
         display: grid;
         position: relative;
         grid-template-areas: 'title title title' 'img txt txt' 'btns btns btns'; }
         .projects-info-content-grid #modal-title {
-          grid-area: title; }
+          grid-area: title;
+          padding: 0.8rem 0; }
         .projects-info-content-grid #modal-img {
           grid-area: img;
           height: 250px;
