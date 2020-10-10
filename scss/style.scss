@@ -206,6 +206,7 @@ textarea {
 
   &-info {
     position: absolute;
+    display: none;
     z-index: 2;
     top: 0;
     left: 0;
@@ -213,7 +214,7 @@ textarea {
     width: 100vw;
     background-color: $colour-alternative-background;
     opacity: 0.9;
-    display: flex;
+    display: /flex;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -246,6 +247,10 @@ textarea {
 
         &-text {
           grid-area: txt;
+        }
+
+        h3 {
+          margin: 0.8rem 0rem 0.1rem 0rem;
         }
 
         &-buttons {

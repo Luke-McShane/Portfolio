@@ -243,6 +243,7 @@ textarea {
         font-size: 0.9rem; }
   .projects-info {
     position: absolute;
+    display: none;
     z-index: 2;
     top: 0;
     left: 0;
@@ -250,7 +251,7 @@ textarea {
     width: 100vw;
     background-color: #111414;
     opacity: 0.9;
-    display: flex;
+    display: /flex;
     justify-content: center;
     align-items: center;
     text-align: center; }
@@ -273,6 +274,8 @@ textarea {
           width: 350px; }
         .projects-info-content-grid-text {
           grid-area: txt; }
+        .projects-info-content-grid h3 {
+          margin: 0.8rem 0rem 0.1rem 0rem; }
         .projects-info-content-grid-buttons {
           grid-area: btns;
           display: flex;
