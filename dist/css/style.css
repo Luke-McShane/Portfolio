@@ -56,10 +56,11 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
-  height: 75%; }
+  height: 70%; }
   .grid-system-item {
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    height: 100%; }
     .grid-system-item::before {
       content: '';
       position: absolute;
@@ -223,7 +224,7 @@ textarea {
     text-align: center;
     overflow-y: auto; }
     .projects-main h2 {
-      margin-bottom: 3rem; }
+      margin-bottom: 2rem; }
     .projects-main-grid-item-info {
       grid-template-areas: 'title title title' 'btn-1 btn-2 btn-3'; }
       .projects-main-grid-item-info .project-title {

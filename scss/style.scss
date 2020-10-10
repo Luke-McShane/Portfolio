@@ -160,8 +160,11 @@ textarea {
     text-align: center;
     overflow-y: auto;
 
+    // &-title{
+    //   height: 25%;
+    // }
     h2 {
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
     }
 
     &-grid-item-info {

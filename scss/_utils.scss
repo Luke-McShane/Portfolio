@@ -74,11 +74,12 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
-  height: 75%;
+  height: 70%;
 
   &-item {
     position: relative;
     overflow: hidden;
+    height: 100%;
 
     &::before {
       content: '';
