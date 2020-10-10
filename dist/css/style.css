@@ -224,11 +224,12 @@ textarea {
     text-align: center;
     overflow-y: auto; }
     .projects-main h2 {
-      margin-bottom: 2rem; }
+      margin-bottom: 1rem; }
     .projects-main-grid-item-info {
       grid-template-areas: 'title title title' 'btn-1 btn-2 btn-3'; }
       .projects-main-grid-item-info .project-title {
-        grid-area: title; }
+        grid-area: title;
+        font-size: 1.2rem; }
       .projects-main-grid-item-info .project-btn-1 {
         grid-area: btn-1; }
       .projects-main-grid-item-info .project-btn-2 {
@@ -238,6 +239,8 @@ textarea {
       .projects-main-grid-item-info h2,
       .projects-main-grid-item-info a {
         color: #fff !important; }
+      .projects-main-grid-item-info p {
+        font-size: 0.9rem; }
   .projects-info {
     position: absolute;
     z-index: 2;
