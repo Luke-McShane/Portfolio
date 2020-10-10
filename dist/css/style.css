@@ -85,7 +85,7 @@
       bottom: 0;
       right: 0;
       display: grid;
-      height: 90%;
+      height: 75%;
       transition: all 500ms ease-out 500ms; }
     .grid-system-item-img {
       display: block;
@@ -384,5 +384,3 @@ textarea {
       align-items: center; }
       .footer-content-icons i {
         padding: 0 1rem; }
-
-/*# sourceMappingURL=style.css.map */
