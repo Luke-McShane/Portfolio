@@ -55,7 +55,8 @@
 .grid-system {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(3, 1fr); }
+  grid-template-columns: repeat(3, 1fr);
+  height: 75%; }
   .grid-system-item {
     position: relative;
     overflow: hidden; }

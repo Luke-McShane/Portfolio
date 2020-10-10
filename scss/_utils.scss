@@ -74,7 +74,7 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
-
+  height: 75%;
 
   &-item {
     position: relative;
@@ -128,6 +128,8 @@
       z-index: 0;
 
       img {
+        // height: 80%;
+        // width: 80%;
         transition: transform 500ms ease-in;
       }
     }
