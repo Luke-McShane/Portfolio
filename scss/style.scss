@@ -179,14 +179,17 @@ textarea {
 
       .project-btn-1 {
         grid-area: btn-1;
+        cursor: pointer;
       }
 
       .project-btn-2 {
         grid-area: btn-2;
+        cursor: pointer;
       }
 
       .project-btn-3 {
         grid-area: btn-3;
+        cursor: pointer;
       }
 
       // a {
@@ -205,7 +208,7 @@ textarea {
   }
 
   &-info {
-    position: absolute;
+    position: fixed;
     display: none;
     z-index: 2;
     top: 0;
@@ -214,10 +217,11 @@ textarea {
     width: 100vw;
     background-color: $colour-alternative-background;
     opacity: 0.9;
-    display: /flex;
+    // display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    overflow-y: scroll;
 
     &-content {
       height: 450px;
@@ -231,7 +235,7 @@ textarea {
         position: relative;
         grid-template-areas:
           'title title title'
-          'img txt txt'
+          'txt txt txt'
           'btns btns btns';
 
         #modal-title {
@@ -239,11 +243,11 @@ textarea {
           padding: 0.8rem 0;
         }
 
-        #modal-img {
-          grid-area: img;
-          height: 250px;
-          width: 350px;
-        }
+        // #modal-img {
+        //   grid-area: img;
+        //   height: 250px;
+        //   width: 350px;
+        // }
 
         &-text {
           grid-area: txt;
@@ -266,6 +270,10 @@ textarea {
           top: 0;
           right: 0;
           padding: 0.5rem;
+
+          i {
+          cursor: pointer;
+          }
         }
       }
     }

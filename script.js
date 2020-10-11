@@ -1,4 +1,5 @@
 import * as data from "./project-info.js";
+let scrollPosition = 0;
 
 window.onload = function () {
 
@@ -6,12 +7,18 @@ window.onload = function () {
   closeOverlay.onclick = function () {
     let overlay = document.querySelector(".projects-info");
     overlay.style.display = "none";
+    document.body.classList.remove('show-overlay');
+    window.scrollTo(0, scrollPosition);
   }
 
   let readMoreBtns = document.getElementsByClassName("project-btn-2");
   for (let i = 0; i < readMoreBtns.length; i++) {
     let currentBtn = readMoreBtns[i];
     currentBtn.onclick = function () {
+      scrollPosition = window.pageYOffset;
+      document.body.style.top = -scrollPosition + 'px';
+      document.body.classList.add('show-overlay');
+
       let overlay = document.getElementsByClassName("projects-info")[0];
       let projectInfo = data.default;
       overlay.style.display = "flex";
@@ -23,18 +30,22 @@ window.onload = function () {
       let overview = projectInfo.projects[this.id.toString()[this.id.toString().length - 1] - 1].overview;
       let difficulties = projectInfo.projects[this.id.toString()[this.id.toString().length - 1] - 1].difficulties;
       let lessonsLearned = projectInfo.projects[this.id.toString()[this.id.toString().length - 1] - 1].lessons_learned;
+      let site = projectInfo.projects[this.id.toString()[this.id.toString().length - 1] - 1].site;
+      let source = projectInfo.projects[this.id.toString()[this.id.toString().length - 1] - 1].source;
 
       let overlayTitle = overlay.querySelector("#modal-title");
       let overlayOverview = overlay.querySelector("#modal-overview");
       let overlayDifficulties = overlay.querySelector("#modal-difficulties");
       let overlayLessonsLearned = overlay.querySelector("#modal-lessons-learned");
+      let overlaySite = overlay.querySelector("#live");
+      let overlaySource = overlay.querySelector("#source");
 
       overlayTitle.innerHTML = title;
       overlayOverview.innerHTML = overview;
       overlayDifficulties.innerHTML = difficulties;
       overlayLessonsLearned.innerHTML = lessonsLearned;
-      // overlayDifficulties =
-      //   overlayLessonsLearned = 
+      overlaySite.href = site;
+      overlaySource.href = source;
     }
   }
 }
