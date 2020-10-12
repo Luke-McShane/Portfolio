@@ -87,6 +87,14 @@
   padding: 4rem;
 }
 
+.freeze {
+  pointer-events: none;
+}
+
+.to-back {
+  z-index: -1;
+}
+
 .grid-system {
   display: grid;
   gap: 1rem;
@@ -113,6 +121,7 @@
     &:hover {
       .grid-system-item-info {
         opacity: 1;
+        z-index: 2;
         transform: translateY(50%);
       }
 
@@ -128,7 +137,7 @@
     &-info {
       position: absolute;
       opacity: 0;
-      z-index: 2;
+      z-index: -1;
       top: -30%;
       left: 0;
       bottom: 0;

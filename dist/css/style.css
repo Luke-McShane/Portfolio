@@ -67,6 +67,12 @@
 .p-4 {
   padding: 4rem; }
 
+.freeze {
+  pointer-events: none; }
+
+.to-back {
+  z-index: -1; }
+
 .grid-system {
   display: grid;
   gap: 1rem;
@@ -88,6 +94,7 @@
       transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1); }
     .grid-system-item:hover .grid-system-item-info {
       opacity: 1;
+      z-index: 2;
       transform: translateY(50%); }
     .grid-system-item:hover::before {
       transform: scale(3) translateX(0) translateY(0) rotate(-28deg); }
@@ -96,7 +103,7 @@
     .grid-system-item-info {
       position: absolute;
       opacity: 0;
-      z-index: 2;
+      z-index: -1;
       top: -30%;
       left: 0;
       bottom: 0;
@@ -419,11 +426,58 @@ textarea {
     margin-left: 0%;
     justify-content: space-evenly; }
     .header-main .section-title {
-      line-height: 1.2em; } }
+      line-height: 1.2em;
+      margin: 0; }
+  .projects-main {
+    margin-left: 0; }
+  .grid-system {
+    grid-template-columns: repeat(1, 1fr);
+    height: auto; }
+    .grid-system-item-info :active {
+      opacity: 1;
+      transform: translateY(50%); }
+    .grid-system-item-info p {
+      font-size: 0.7rem; }
+  .exercises-main {
+    margin-left: 0; }
+    .exercises-main-container {
+      flex-direction: column; }
+      .exercises-main-container-html, .exercises-main-container-css, .exercises-main-container-js {
+        width: 75%;
+        height: 25%;
+        padding-top: 10%; }
+        .exercises-main-container-html h2, .exercises-main-container-css h2, .exercises-main-container-js h2 {
+          margin: 0;
+          top: 30%; } }
 
-.projects-main {
-  margin-left: 0; }
-
-.grid-system {
-  grid-template-columns: repeat(1, 1fr);
-  height: auto; }
+@media only screen and (min-device-width: 480px) and (max-device-width: 850px) and (orientation: landscape) {
+  #nav-main {
+    display: none;
+    font-size: 3em; }
+  .header-main {
+    margin-left: 0%;
+    justify-content: center; }
+    .header-main .section-title {
+      line-height: 1.2em;
+      margin: 0; }
+  .projects-main {
+    margin-left: 0; }
+  .grid-system {
+    grid-template-columns: repeat(1, 1fr);
+    height: auto; }
+    .grid-system-item-info {
+      transform: translateY(50%) !important; }
+      .grid-system-item-info .project-title {
+        font-size: 2rem; }
+      .grid-system-item-info .fa-1x {
+        font-size: 2rem; }
+  .exercises-main {
+    margin-left: 0; }
+    .exercises-main-container-html, .exercises-main-container-css, .exercises-main-container-js {
+      width: 75%;
+      height: 50%;
+      padding-top: 10%;
+      margin-left: 1rem; }
+      .exercises-main-container-html h2, .exercises-main-container-css h2, .exercises-main-container-js h2 {
+        font-size: 2rem;
+        top: 25%; } }

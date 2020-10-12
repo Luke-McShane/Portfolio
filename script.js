@@ -4,6 +4,8 @@ let scrollPosition = 0;
 window.onload = function () {
 
   scroll();
+  freezeForTransition();
+
   let closeOverlay = document.querySelector("#close");
   closeOverlay.onclick = function () {
     let overlay = document.querySelector(".projects-info");
@@ -94,4 +96,16 @@ function scroll() {
         .end().filter("[href='#" + id + "']").parent().addClass("current");
     }
   });
+}
+
+function freezeForTransition() {
+  let gridItems = document.querySelectorAll("#grid-system-item");
+  for (let item of gridItems) {
+    item.click(function () {
+      item.addClass('freeze');
+    });
+    item.on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function () {
+      item.removeClass('freeze');
+    });
+  }
 }

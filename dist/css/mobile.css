@@ -6,11 +6,58 @@
     margin-left: 0%;
     justify-content: space-evenly; }
     .header-main .section-title {
-      line-height: 1.2em; } }
+      line-height: 1.2em;
+      margin: 0; }
+  .projects-main {
+    margin-left: 0; }
+  .grid-system {
+    grid-template-columns: repeat(1, 1fr);
+    height: auto; }
+    .grid-system-item-info :active {
+      opacity: 1;
+      transform: translateY(50%); }
+    .grid-system-item-info p {
+      font-size: 0.7rem; }
+  .exercises-main {
+    margin-left: 0; }
+    .exercises-main-container {
+      flex-direction: column; }
+      .exercises-main-container-html, .exercises-main-container-css, .exercises-main-container-js {
+        width: 75%;
+        height: 25%;
+        padding-top: 10%; }
+        .exercises-main-container-html h2, .exercises-main-container-css h2, .exercises-main-container-js h2 {
+          margin: 0;
+          top: 30%; } }
 
-.projects-main {
-  margin-left: 0; }
-
-.grid-system {
-  grid-template-columns: repeat(1, 1fr);
-  height: auto; }
+@media only screen and (min-device-width: 480px) and (max-device-width: 850px) and (orientation: landscape) {
+  #nav-main {
+    display: none;
+    font-size: 3em; }
+  .header-main {
+    margin-left: 0%;
+    justify-content: center; }
+    .header-main .section-title {
+      line-height: 1.2em;
+      margin: 0; }
+  .projects-main {
+    margin-left: 0; }
+  .grid-system {
+    grid-template-columns: repeat(1, 1fr);
+    height: auto; }
+    .grid-system-item-info {
+      transform: translateY(50%) !important; }
+      .grid-system-item-info .project-title {
+        font-size: 2rem; }
+      .grid-system-item-info .fa-1x {
+        font-size: 2rem; }
+  .exercises-main {
+    margin-left: 0; }
+    .exercises-main-container-html, .exercises-main-container-css, .exercises-main-container-js {
+      width: 75%;
+      height: 50%;
+      padding-top: 10%;
+      margin-left: 1rem; }
+      .exercises-main-container-html h2, .exercises-main-container-css h2, .exercises-main-container-js h2 {
+        font-size: 2rem;
+        top: 25%; } }
