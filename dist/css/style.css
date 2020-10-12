@@ -420,3 +420,10 @@ textarea {
     justify-content: space-evenly; }
     .header-main .section-title {
       line-height: 1.2em; } }
+
+.projects-main {
+  margin-left: 0; }
+
+.grid-system {
+  grid-template-columns: repeat(1, 1fr);
+  height: auto; }
