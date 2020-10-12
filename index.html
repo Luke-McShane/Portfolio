@@ -9,20 +9,32 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="./dist/css/style.css" />
   <title>Luke Mcshane | Home</title>
+  <!-- <script src="https://docs.google.com/document/d/1hMV8Nopk4183K8ZiayNGy2z53KzBeDPp6g-LhRn1c-8/edit?usp=sharing"></script> -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script type="module" src="script.js"></script>
 </head>
 
 <body>
   <nav id="nav-main">
     <ul>
-      <li class="current">Home</li>
-      <li>Projects</li>
-      <li>Exercises</li>
-      <li>Blog</li>
-      <li>Contact</li>
+      <li class="current">
+        <a href="#home-section">Home</a>
+      </li>
+      <li>
+        <a href="#projects-section">Projects</a>
+      </li>
+      <li>
+        <a href="#exercises-section">Exercises</a>
+      </li>
+      <li>
+        <a href="#blog-section">Blog</a>
+      </li>
+      <li>
+        <a href="#contact-section">Contact</a>
+       </li>
     </ul>
   </nav>
-  <header class="header">
+  <header class="header" id="home-section">
     <div class="container">
       <div class="header-main">
         <h1 class="section-title">Luke McShane</h1>
@@ -50,13 +62,15 @@
             </a>
           </div>
         </div>
-        <i class="header-main-arrow fas fa-arrow-circle-down fa-4x"></i>
+        <a href="#projects-section" id="header-arrow">
+          <i class="header-main-arrow fas fa-arrow-circle-down fa-4x"></i>
+        </a>
       </div>
     </div>
   </header>
 
 
-  <section class="projects">
+  <section class="projects" id="projects-section">
     <div class="projects-info">
       <div class="projects-info-content">
         <div class="projects-info-content-grid">
@@ -282,7 +296,7 @@
     </div>
   </section>
 
-  <section class="exercises">
+  <section class="exercises" id="exercises-section">
     <div class="container">
       <div class="exercises-main">
         <h2 class="section-title">View more of my work</h2>
@@ -307,7 +321,7 @@
       blog post being a circle on this snaking timeline. Perhaps when the view is for tablet the timeline will snake up-to-down and down-to-up, and 
       when viewing in a mobile view perhaps we have a single column which stores that month's blog posts, and the month and year can be configured
       at the top with two separate dropdowns. -->
-  <section class="blog">
+  <section class="blog" id="blog-section">
     <div class="container">
       <div class="blog-main">
         <h1 class="section-title">My Blogs</h1>
@@ -425,7 +439,7 @@
     </div>
   </section>
 
-  <section class="contact">
+  <section class="contact" id="contact-section">
     <div class="container">
       <div class="contact-content">
         <h2 class="section-title">Contact Me</h2>

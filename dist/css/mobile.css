@@ -1,2 +1,9 @@
-/* No CSS */
-/*# sourceMappingURL=mobile.css.map */
+@media only screen and (max-width: 500px) {
+  #nav-main {
+    display: none;
+    font-size: 3em; }
+  .header-main {
+    margin-left: 0%;
+    justify-content: space-evenly; }
+    .header-main .section-title {
+      line-height: 1.2em; } }

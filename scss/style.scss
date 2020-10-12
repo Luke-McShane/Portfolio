@@ -70,15 +70,17 @@ textarea {
 #nav {
   &-main {
     font: $font-secondary;
+    z-index: 3;
+    font-size: 1rem;
     position: fixed;
-    top: 25%;
+    top: 10%;
     left: 10%;
 
     ul {
       text-align: center;
 
       li {
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
 
         &::after {
           @include bottom-line;
@@ -88,7 +90,10 @@ textarea {
 
       }
 
-      &>li:first-child::after {
+      // &>li:first-child::after {
+      //   border-bottom-color: $colour-light-accent;
+      // }
+      &>li.current::after {
         border-bottom-color: $colour-light-accent;
       }
     }
@@ -445,6 +450,7 @@ textarea {
   }
 }
 
+@import 'mobile.scss';
 
 // For if you decide to use grid-template-areas for the portfolio items:
 // grid-template-areas:

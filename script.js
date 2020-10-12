@@ -3,6 +3,7 @@ let scrollPosition = 0;
 
 window.onload = function () {
 
+  scroll();
   let closeOverlay = document.querySelector("#close");
   closeOverlay.onclick = function () {
     let overlay = document.querySelector(".projects-info");
@@ -48,4 +49,49 @@ window.onload = function () {
       overlaySource.href = source;
     }
   }
+}
+
+function scroll() {
+  var lastId,
+    menu = $("#nav-main"),
+    header = $("#header-arrow"),
+    menuHeight = menu.outerHeight() + 15,
+    menuItems = menu.find("a"),
+    scrollItems = menuItems.map(function () {
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
+
+  menuItems = menuItems.add(header);
+  menuItems.click(function (e) {
+    var href = $(this).attr("href"),
+      // offsetTop = href === "#home-section" ? 0 : $(href).offset().top - menuHeight + 1;
+      offsetTop = href === "#home-section" ? 0 : $(href).offset().top + 1;
+    $('html, body').stop().animate({
+      scrollTop: offsetTop
+    }, 300);
+    e.preventDefault();
+  });
+
+  $(window).scroll(function () {
+    // Get container scroll position
+    var fromTop = $(this).scrollTop() + menuHeight;
+
+    // Get id of current scroll item
+    var cur = scrollItems.map(function () {
+      if ($(this).offset().top < fromTop)
+        return this;
+    });
+    // Get the id of the current element
+    cur = cur[cur.length - 1];
+    var id = cur && cur.length ? cur[0].id : "";
+
+    if (lastId !== id) {
+      lastId = id;
+      // Set/remove active class
+      menuItems
+        .parent().removeClass("current")
+        .end().filter("[href='#" + id + "']").parent().addClass("current");
+    }
+  });
 }

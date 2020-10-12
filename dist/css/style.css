@@ -167,13 +167,15 @@ textarea {
 
 #nav-main {
   font: normal 200 1.2rem/2rem "Lato";
+  z-index: 3;
+  font-size: 1rem;
   position: fixed;
-  top: 25%;
+  top: 10%;
   left: 10%; }
   #nav-main ul {
     text-align: center; }
     #nav-main ul li {
-      margin-bottom: 3rem; }
+      margin-bottom: 2rem; }
       #nav-main ul li::after {
         content: '';
         display: block;
@@ -184,7 +186,7 @@ textarea {
         margin-top: 0.8rem;
         padding: 0.2rem;
         width: 40px; }
-    #nav-main ul > li:first-child::after {
+    #nav-main ul > li.current::after {
       border-bottom-color: #55756C; }
 
 .header-main {
@@ -408,3 +410,13 @@ textarea {
       align-items: center; }
       .footer-content-icons i {
         padding: 0 1rem; }
+
+@media only screen and (max-width: 500px) {
+  #nav-main {
+    display: none;
+    font-size: 3em; }
+  .header-main {
+    margin-left: 0%;
+    justify-content: space-evenly; }
+    .header-main .section-title {
+      line-height: 1.2em; } }
