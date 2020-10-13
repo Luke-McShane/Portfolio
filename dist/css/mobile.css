@@ -1,4 +1,4 @@
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2.75) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
   #nav-main {
     display: none;
     font-size: 3em; }
