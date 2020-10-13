@@ -1,9 +1,8 @@
 // Media query for phones, including when a phone is used in landscape
 @media only screen
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (orientation: portrait)
-  and (-webkit-device-pixel-ratio: 2) {
+  and (min-device-width: 350px) 
+  and (max-device-width: 855px) 
+  and (orientation: portrait) {
   #nav-main {
     display: none;
     font-size: 3em;
@@ -32,10 +31,10 @@
 
     &-item {
       &-info {
-        :active {
-        opacity: 1;
-        transform: translateY(50%);
-       }
+      //   :active {
+      //   opacity: 1;
+      //   transform: translateY(50%);
+      //  }
 
        p {
          font-size: 0.7rem;
@@ -69,10 +68,8 @@
 
 @media only screen 
   and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (orientation: landscape)
-  and (-webkit-device-pixel-ratio: 1) {
-
+  and (max-device-width: 855px) 
+  and (orientation: landscape) {
   #nav-main {
     display: none;
     font-size: 3em;
@@ -93,10 +90,18 @@
     &-main {
       margin-left: 0;
     }
+
+    &-info {
+      &-content {
+        height: 95%;
+        width: 90%;
+        overflow-y: auto;
+      }
+    }
   }
   
   .grid-system {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     height: auto;
 
     &-item {
@@ -104,158 +109,14 @@
         transform: translateY(50%) !important;
 
         .project-title {
-          font-size: 2rem;
+          font-size: 1rem;
         }
         .fa-1x {
-          font-size: 2rem;
+          font-size: 1rem;
         }
-        // &:active {
-        // opacity: 1;
-        // transform: translateY(50%);
-        // }
-      }
-    }  
-  }
-  
-  .exercises {
-    &-main {
-      margin-left: 0;
-      &-container {
 
-        &-html,
-        &-css,
-        &-js {
-          width: 75%;
-          height: 50%;
-          padding-top:10%;
-          margin-left: 1rem;
-
-          h2 {
-            font-size: 2rem;
-            top: 25%;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (orientation: landscape)
-  and (-webkit-device-pixel-ratio: 2.75) {
-
-  #nav-main {
-    display: none;
-    font-size: 3em;
-  }
-  
-  .header-main {
-    margin-left: 0%;
-    justify-content: center;
-
-    .section-title {
-      line-height: 1.2em;
-      font-size: 0.5rem;
-      margin: 0;
-    }
-  }
-  
-  
-  .projects {
-    &-main {
-      margin-left: 0;
-    }
-  }
-  
-  .grid-system {
-    grid-template-columns: repeat(1, 1fr);
-    height: auto;
-
-    &-item {
-      &-info {
-        transform: translateY(50%) !important;
-
-        .project-title {
-          font-size: 2rem;
-        }
-        .fa-1x {
-          font-size: 2rem;
-        }
-        // &:active {
-        // opacity: 1;
-        // transform: translateY(50%);
-        // }
-      }
-    }  
-  }
-  
-  .exercises {
-    &-main {
-      margin-left: 0;
-      &-container {
-
-        &-html,
-        &-css,
-        &-js {
-          width: 75%;
-          height: 50%;
-          padding-top:10%;
-          margin-left: 1rem;
-
-          h2 {
-            font-size: 2rem;
-            top: 25%;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (orientation: landscape)
-  and (-webkit-device-pixel-ratio: 3) {
-
-  #nav-main {
-    display: none;
-    font-size: 3em;
-  }
-  
-  .header-main {
-    margin-left: 0%;
-    justify-content: center;
-
-    .section-title {
-      line-height: 1.2em;
-      font-size: 2.5rem;
-      margin: 0;
-    }
-  }
-  
-  
-  .projects {
-    &-main {
-      margin-left: 0;
-    }
-  }
-  
-  .grid-system {
-    grid-template-columns: repeat(1, 1fr);
-    height: auto;
-
-    &-item {
-      &-info {
-        transform: translateY(50%) !important;
-
-        .project-title {
-          font-size: 2rem;
-        }
-        .fa-1x {
-          font-size: 2rem;
+        p {
+          line-height: 0.9rem;
         }
         // &:active {
         // opacity: 1;
