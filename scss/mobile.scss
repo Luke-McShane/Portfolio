@@ -1,5 +1,6 @@
 // Media query for phones, including when a phone is used in landscape
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 500px)
+  and (-webkit-min-device-pixel-ratio: 2) {
   #nav-main {
     display: none;
     font-size: 3em;
@@ -65,7 +66,8 @@
 
 @media only screen and (min-device-width: 480px) 
   and (max-device-width: 850px) 
-  and (orientation: landscape) {
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 2) {
 
   #nav-main {
     display: none;

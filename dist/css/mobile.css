@@ -1,4 +1,4 @@
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) and (-webkit-min-device-pixel-ratio: 2) {
   #nav-main {
     display: none;
     font-size: 3em; }
@@ -30,7 +30,7 @@
           margin: 0;
           top: 30%; } }
 
-@media only screen and (min-device-width: 480px) and (max-device-width: 850px) and (orientation: landscape) {
+@media only screen and (min-device-width: 480px) and (max-device-width: 850px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
   #nav-main {
     display: none;
     font-size: 3em; }
