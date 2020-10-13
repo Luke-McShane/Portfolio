@@ -1,6 +1,6 @@
 // Media query for phones, including when a phone is used in landscape
 @media only screen and (max-width: 500px)
-  and (-webkit-min-device-pixel-ratio: 2) {
+  and (-webkit-min-device-pixel-ratio: 3) {
   #nav-main {
     display: none;
     font-size: 3em;
