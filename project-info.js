@@ -2,25 +2,25 @@ export default {
   "projects": [
     {
       "title": "Kindle Quotes",
-      "overview": "1-overview",
-      "difficulties": "1-difficulties",
-      "lessons_learned": "1-lessons-learned",
+      "overview": "1-overview Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, vel. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi neque facilis quam, quisquam voluptatem atque impedit dolore molestiae odio! Tempore fugit nostrum optio quo ab ut quibusdam pariatur officiis! Deleniti.",
+      "difficulties": "1-difficulties Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, vel. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi neque facilis quam, quisquam voluptatem atque impedit dolore molestiae odio! Tempore fugit nostrum optio quo ab ut quibusdam pariatur officiis! Deleniti.",
+      "lessons_learned": "1-lessons-learned Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, vel. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi neque facilis quam, quisquam voluptatem atque impedit dolore molestiae odio! Tempore fugit nostrum optio quo ab ut quibusdam pariatur officiis! Deleniti.",
       "site": "https://luke-mcshane.github.io/Kindle-Quotes/",
       "source": "https://github.com/Luke-McShane/Kindle-Quotes"
     },
     {
       "title": "Nature's Sojourn",
-      "overview": "2-overview",
-      "difficulties": "2-difficulties",
-      "lessons_learned": "2-lessons-learned",
+      "overview": "2-overview Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, vel. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi neque facilis quam, quisquam voluptatem atque impedit dolore molestiae odio! Tempore fugit nostrum optio quo ab ut quibusdam pariatur officiis! Deleniti.",
+      "difficulties": "2-difficulties Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, vel. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi neque facilis quam, quisquam voluptatem atque impedit dolore molestiae odio! Tempore fugit nostrum optio quo ab ut quibusdam pariatur officiis! Deleniti.",
+      "lessons_learned": "2-lessons-learned Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, vel. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi neque facilis quam, quisquam voluptatem atque impedit dolore molestiae odio! Tempore fugit nostrum optio quo ab ut quibusdam pariatur officiis! Deleniti.",
       "site": "https://luke-mcshane.github.io/NaturesSojourn-Project-5/",
       "source": "https://github.com/Luke-McShane/NaturesSojourn-Project-5"
     },
     {
       "title": "Nietzsche's Grotto",
-      "overview": "3-overview",
-      "difficulties": "3-difficulties",
-      "lessons_learned": "3-lessons-learned",
+      "overview": "3-overview Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, vel. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi neque facilis quam, quisquam voluptatem atque impedit dolore molestiae odio! Tempore fugit nostrum optio quo ab ut quibusdam pariatur officiis! Deleniti.",
+      "difficulties": "3-difficulties Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, vel. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi neque facilis quam, quisquam voluptatem atque impedit dolore molestiae odio! Tempore fugit nostrum optio quo ab ut quibusdam pariatur officiis! Deleniti.",
+      "lessons_learned": "3-lessons-learned Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, vel. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi neque facilis quam, quisquam voluptatem atque impedit dolore molestiae odio! Tempore fugit nostrum optio quo ab ut quibusdam pariatur officiis! Deleniti.",
       "site": "https://luke-mcshane.github.io/Nietzsches-Hamburger-Project-6/",
       "source": "https://github.com/Luke-McShane/Nietzsches-Hamburger-Project-6"
     },

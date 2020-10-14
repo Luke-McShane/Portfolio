@@ -435,6 +435,12 @@ textarea {
       margin: 0; }
   .projects-main {
     margin-left: 0; }
+  .projects-info {
+    height: 100%; }
+    .projects-info-content {
+      height: 90%;
+      width: 90%;
+      overflow-y: scroll; }
   .grid-system {
     grid-template-columns: repeat(1, 1fr);
     height: auto; }
@@ -464,10 +470,12 @@ textarea {
       margin: 0; }
   .projects-main {
     margin-left: 0; }
-  .projects-info-content {
-    height: 95%;
-    width: 90%;
-    overflow-y: auto; }
+  .projects-info {
+    height: 100%; }
+    .projects-info-content {
+      height: 90%;
+      width: 90%;
+      overflow-y: scroll; }
   .grid-system {
     grid-template-columns: repeat(3, 1fr);
     height: auto; }

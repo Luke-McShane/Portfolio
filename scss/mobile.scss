@@ -23,6 +23,15 @@
     &-main {
       margin-left: 0;
     }
+
+    &-info {
+      height: 100%;
+      &-content {
+        height: 90%;
+        width: 90%;
+        overflow-y: scroll;
+      }
+    }
   }
 
   .grid-system {
@@ -70,6 +79,9 @@
   and (min-device-width: 375px) 
   and (max-device-width: 855px) 
   and (orientation: landscape) {
+  // html, body {
+  //   height: 100vh;
+  // }
   #nav-main {
     display: none;
     font-size: 3em;
@@ -92,10 +104,11 @@
     }
 
     &-info {
+      height: 100%;
       &-content {
-        height: 95%;
+        height: 90%;
         width: 90%;
-        overflow-y: auto;
+        overflow-y: scroll;
       }
     }
   }
