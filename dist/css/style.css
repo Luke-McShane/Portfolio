@@ -276,7 +276,7 @@ textarea {
   .projects-info {
     position: fixed;
     display: none;
-    z-index: 2;
+    z-index: 4;
     top: 0;
     left: 0;
     height: 100vh;
@@ -294,18 +294,13 @@ textarea {
       background-color: #292F30;
       opacity: 1; }
       .projects-info-content-grid {
-        display: grid;
-        position: relative;
-        grid-template-areas: 'title title title' 'txt txt txt' 'btns btns btns'; }
+        display: block;
+        position: relative; }
         .projects-info-content-grid #modal-title {
-          grid-area: title;
           padding: 0.8rem 0; }
-        .projects-info-content-grid-text {
-          grid-area: txt; }
         .projects-info-content-grid h3 {
           margin: 0.8rem 0rem 0.1rem 0rem; }
         .projects-info-content-grid-buttons {
-          grid-area: btns;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -424,6 +419,8 @@ textarea {
         padding: 0 1rem; }
 
 @media only screen and (min-device-width: 350px) and (max-device-width: 855px) and (orientation: portrait) {
+  html, body {
+    height: 100vh; }
   #nav-main {
     display: none;
     font-size: 3em; }
@@ -436,11 +433,16 @@ textarea {
   .projects-main {
     margin-left: 0; }
   .projects-info {
-    height: 100%; }
+    width: 100%; }
     .projects-info-content {
       height: 90%;
       width: 90%;
       overflow-y: scroll; }
+      .projects-info-content-grid {
+        width: 100%; }
+        .projects-info-content-grid-buttons a {
+          margin: 2rem 2rem 0rem 2rem;
+          width: 5rem; }
   .grid-system {
     grid-template-columns: repeat(1, 1fr);
     height: auto; }

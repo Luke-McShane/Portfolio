@@ -1,4 +1,6 @@
 @media only screen and (min-device-width: 350px) and (max-device-width: 855px) and (orientation: portrait) {
+  html, body {
+    height: 100vh; }
   #nav-main {
     display: none;
     font-size: 3em; }
@@ -11,11 +13,16 @@
   .projects-main {
     margin-left: 0; }
   .projects-info {
-    height: 100%; }
+    width: 100%; }
     .projects-info-content {
       height: 90%;
       width: 90%;
       overflow-y: scroll; }
+      .projects-info-content-grid {
+        width: 100%; }
+        .projects-info-content-grid-buttons a {
+          margin: 2rem 2rem 0rem 2rem;
+          width: 5rem; }
   .grid-system {
     grid-template-columns: repeat(1, 1fr);
     height: auto; }

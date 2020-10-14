@@ -223,7 +223,7 @@ textarea {
   &-info {
     position: fixed;
     display: none;
-    z-index: 2;
+    z-index: 4;
     top: 0;
     left: 0;
     height: 100vh;
@@ -244,15 +244,16 @@ textarea {
       opacity: 1;
 
       &-grid {
-        display: grid;
+        // display: grid;
+        display: block;
         position: relative;
-        grid-template-areas:
-          'title title title'
-          'txt txt txt'
-          'btns btns btns';
+        // grid-template-areas:
+        //   'title title title'
+        //   'txt txt txt'
+        //   'btns btns btns';
 
         #modal-title {
-          grid-area: title;
+          // grid-area: title;
           padding: 0.8rem 0;
         }
 
@@ -262,16 +263,16 @@ textarea {
         //   width: 350px;
         // }
 
-        &-text {
-          grid-area: txt;
-        }
+        // &-text {
+        //   grid-area: txt;
+        // }
 
         h3 {
           margin: 0.8rem 0rem 0.1rem 0rem;
         }
 
         &-buttons {
-          grid-area: btns;
+          // grid-area: btns;
           display: flex;
           justify-content: center;
           align-items: center;
