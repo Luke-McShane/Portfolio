@@ -1,103 +1,7 @@
-// Media query for phones, including when a phone is used in landscape
-@media only screen
-  and (min-device-width: 350px) 
-  and (max-device-width: 855px) 
-  and (orientation: portrait) {
-
-  html, body {
-    height: 100vh;
-  }
-  #nav-main {
-    display: none;
-    font-size: 3em;
-  }
-
-  .header-main {
-    margin-left: 0%;
-    justify-content: space-evenly;
-
-    .section-title {
-      line-height: 1.2em;
-      margin: 0;
-    }
-  }
-
-
-  .projects {
-    &-main {
-      margin-left: 0;
-    }
-
-    &-info {
-      width: 100%;
-      &-content {
-        height: 90%;
-        width: 90%;
-        overflow-y: scroll;
-
-        &-grid{
-          width: 100%;
-          // &-text {
-          //   width: 100%;
-          //   height: 100%;
-          // }
-
-          &-buttons {
-            a {
-              margin: 2rem 2rem 0rem 2rem;
-              width: 5rem;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .grid-system {
-    grid-template-columns: repeat(1, 1fr);
-    height: auto;
-
-    &-item {
-      &-info {
-      //   :active {
-      //   opacity: 1;
-      //   transform: translateY(50%);
-      //  }
-
-       p {
-         font-size: 0.7rem;
-       }
-      }
-    }
-  }
-
-  .exercises {
-    &-main {
-      margin-left: 0;
-      &-container {
-        flex-direction: column;
-
-        &-html,
-        &-css,
-        &-js {
-          width: 75%;
-          height: 25%;
-          padding-top:10%;
-
-          h2 {
-            margin: 0;
-            top:30%;
-          }
-        }
-      }
-    }
-  }
-}
-
 @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 855px) 
-  and (orientation: landscape) {
+  and (min-device-width: 481px) 
+  and (max-device-width: 767px) {
+  // and (orientation: landscape) {
   // html, body {
   //   height: 100vh;
   // }
@@ -174,6 +78,104 @@
           h2 {
             font-size: 2rem;
             top: 25%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media query for phones, including when a phone is used in landscape
+@media only screen
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px) {
+  // and (orientation: portrait) {
+
+  html, body {
+    height: 10vh;
+  }
+  #nav-main {
+    display: none;
+    font-size: 3em;
+  }
+
+  .header-main {
+    margin-left: 0%;
+    justify-content: space-evenly;
+
+    .section-title {
+      line-height: 1.2em;
+      margin: 0;
+    }
+  }
+
+
+  .projects {
+    margin-bottom: 4rem;
+    &-main {
+      margin-left: 0;
+    }
+
+    &-info {
+      width: 100%;
+      height: 100%;
+      &-content {
+        height: 90%;
+        width: 90%;
+        overflow-y: scroll;
+
+        &-grid{
+          width: 100%;
+          // &-text {
+          //   width: 100%;
+          //   height: 100%;
+          // }
+
+          &-buttons {
+            a {
+              margin: 2rem 2rem 0rem 2rem;
+              width: 5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .grid-system {
+    grid-template-columns: repeat(1, 1fr);
+    height: auto;
+
+    &-item {
+      &-info {
+      //   :active {
+      //   opacity: 1;
+      //   transform: translateY(50%);
+      //  }
+
+       p {
+         font-size: 0.7rem;
+       }
+      }
+    }
+  }
+
+  .exercises {
+    &-main {
+      margin-left: 0;
+      &-container {
+        flex-direction: column;
+
+        &-html,
+        &-css,
+        &-js {
+          width: 75%;
+          height: 25%;
+          padding-top:10%;
+
+          h2 {
+            margin: 0;
+            top:30%;
           }
         }
       }

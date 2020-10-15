@@ -1,46 +1,4 @@
-@media only screen and (min-device-width: 350px) and (max-device-width: 855px) and (orientation: portrait) {
-  html, body {
-    height: 100vh; }
-  #nav-main {
-    display: none;
-    font-size: 3em; }
-  .header-main {
-    margin-left: 0%;
-    justify-content: space-evenly; }
-    .header-main .section-title {
-      line-height: 1.2em;
-      margin: 0; }
-  .projects-main {
-    margin-left: 0; }
-  .projects-info {
-    width: 100%; }
-    .projects-info-content {
-      height: 90%;
-      width: 90%;
-      overflow-y: scroll; }
-      .projects-info-content-grid {
-        width: 100%; }
-        .projects-info-content-grid-buttons a {
-          margin: 2rem 2rem 0rem 2rem;
-          width: 5rem; }
-  .grid-system {
-    grid-template-columns: repeat(1, 1fr);
-    height: auto; }
-    .grid-system-item-info p {
-      font-size: 0.7rem; }
-  .exercises-main {
-    margin-left: 0; }
-    .exercises-main-container {
-      flex-direction: column; }
-      .exercises-main-container-html, .exercises-main-container-css, .exercises-main-container-js {
-        width: 75%;
-        height: 25%;
-        padding-top: 10%; }
-        .exercises-main-container-html h2, .exercises-main-container-css h2, .exercises-main-container-js h2 {
-          margin: 0;
-          top: 30%; } }
-
-@media only screen and (min-device-width: 375px) and (max-device-width: 855px) and (orientation: landscape) {
+@media only screen and (min-device-width: 481px) and (max-device-width: 767px) {
   #nav-main {
     display: none;
     font-size: 3em; }
@@ -79,3 +37,48 @@
       .exercises-main-container-html h2, .exercises-main-container-css h2, .exercises-main-container-js h2 {
         font-size: 2rem;
         top: 25%; } }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  html, body {
+    height: 10vh; }
+  #nav-main {
+    display: none;
+    font-size: 3em; }
+  .header-main {
+    margin-left: 0%;
+    justify-content: space-evenly; }
+    .header-main .section-title {
+      line-height: 1.2em;
+      margin: 0; }
+  .projects {
+    margin-bottom: 4rem; }
+    .projects-main {
+      margin-left: 0; }
+    .projects-info {
+      width: 100%;
+      height: 100%; }
+      .projects-info-content {
+        height: 90%;
+        width: 90%;
+        overflow-y: scroll; }
+        .projects-info-content-grid {
+          width: 100%; }
+          .projects-info-content-grid-buttons a {
+            margin: 2rem 2rem 0rem 2rem;
+            width: 5rem; }
+  .grid-system {
+    grid-template-columns: repeat(1, 1fr);
+    height: auto; }
+    .grid-system-item-info p {
+      font-size: 0.7rem; }
+  .exercises-main {
+    margin-left: 0; }
+    .exercises-main-container {
+      flex-direction: column; }
+      .exercises-main-container-html, .exercises-main-container-css, .exercises-main-container-js {
+        width: 75%;
+        height: 25%;
+        padding-top: 10%; }
+        .exercises-main-container-html h2, .exercises-main-container-css h2, .exercises-main-container-js h2 {
+          margin: 0;
+          top: 30%; } }

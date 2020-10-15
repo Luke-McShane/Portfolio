@@ -129,7 +129,7 @@ textarea {
       }
     }
 
-    #resume {
+    .resume {
       display: flex;
       justify-content: space-evenly;
       align-items: flex-end;
@@ -141,11 +141,11 @@ textarea {
 
         span[class^="resume-"] {
           display: inline-block;
-        }
+        }  
+      }
 
-        .resume-icon {
-          margin-bottom: 0.5rem;
-        }
+      &-icon {
+        margin-bottom: 0.5rem;
       }
     }
 
@@ -255,6 +255,7 @@ textarea {
         #modal-title {
           // grid-area: title;
           padding: 0.8rem 0;
+          font-size: 1.8rem;
         }
 
         // #modal-img {
@@ -268,7 +269,7 @@ textarea {
         // }
 
         h3 {
-          margin: 0.8rem 0rem 0.1rem 0rem;
+          margin: 1rem 0rem 0.1rem 0rem;
         }
 
         &-buttons {
@@ -313,15 +314,16 @@ textarea {
       align-items: center;
       width: 100%;
       height: 100%;
+      display: flex;
 
       &-html,
       &-css,
       &-js {
-        // flex: 1;
+        flex: 1;
         // width: 25%;
         // height: 50%;
-        width: 25%;
-        padding-top: 25%;
+        // width: 25%;
+        // padding-top: 25%;
         position: relative;
         color: $colour-text;
         border: 4px solid $colour-background;
@@ -460,6 +462,7 @@ textarea {
 }
 
 @import 'mobile.scss';
+@import 'tablet.scss';
 
 // For if you decide to use grid-template-areas for the portfolio items:
 // grid-template-areas:
