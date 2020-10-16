@@ -32,15 +32,7 @@
         line-height: 0.9rem;
         font-size: 1.5rem; }
   .exercises-main {
-    margin-left: 0; }
-    .exercises-main-container-html, .exercises-main-container-css, .exercises-main-container-js {
-      width: 75%;
-      height: 50%;
-      padding-top: 10%;
-      margin-left: 1rem; }
-      .exercises-main-container-html h2, .exercises-main-container-css h2, .exercises-main-container-js h2 {
-        font-size: 2rem;
-        top: 25%; } }
+    margin-left: 0; } }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
   #nav-main {
@@ -73,12 +65,4 @@
         line-height: 0.9rem;
         font-size: 0.8rem; }
   .exercises-main {
-    margin-left: 0; }
-    .exercises-main-container-html, .exercises-main-container-css, .exercises-main-container-js {
-      width: 75%;
-      height: 50%;
-      padding-top: 10%;
-      margin-left: 1rem; }
-      .exercises-main-container-html h2, .exercises-main-container-css h2, .exercises-main-container-js h2 {
-        font-size: 2rem;
-        top: 25%; } }
+    margin-left: 0; } }

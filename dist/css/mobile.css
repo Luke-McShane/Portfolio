@@ -28,15 +28,7 @@
       .grid-system-item-info p {
         line-height: 0.9rem; }
   .exercises-main {
-    margin-left: 0; }
-    .exercises-main-container-html, .exercises-main-container-css, .exercises-main-container-js {
-      width: 75%;
-      height: 50%;
-      padding-top: 10%;
-      margin-left: 1rem; }
-      .exercises-main-container-html h2, .exercises-main-container-css h2, .exercises-main-container-js h2 {
-        font-size: 2rem;
-        top: 25%; } }
+    margin-left: 0; } }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   html, body {
@@ -76,9 +68,12 @@
     .exercises-main-container {
       flex-direction: column; }
       .exercises-main-container-html, .exercises-main-container-css, .exercises-main-container-js {
-        width: 75%;
-        height: 25%;
-        padding-top: 10%; }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        margin: 2rem 0;
+        width: 90%; }
         .exercises-main-container-html h2, .exercises-main-container-css h2, .exercises-main-container-js h2 {
           margin: 0;
           top: 30%; } }
