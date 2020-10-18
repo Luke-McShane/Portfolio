@@ -166,9 +166,9 @@
       &-container {
         flex-direction: column;
 
-        &-html,
-        &-css,
-        &-js {
+        &-button-html,
+        &-button-css,
+        &-button-js {
           display: flex;
           justify-content: center;
           align-items: center;

@@ -1,4 +1,5 @@
-import * as data from "./project-info.js";
+import * as projectData from "./project-info.js";
+import * as codepenData from "./codepen-info.js";
 let scrollPosition = 0;
 
 window.onload = function () {
@@ -14,6 +15,12 @@ window.onload = function () {
     window.scrollTo(0, scrollPosition);
   }
 
+  let exercisesBtns = document.querySelectorAll(`[class*="exercises-main-container-button"]`);
+  console.log(exercisesBtns.length);
+  for (let i = 0; i < exercisesBtns.length; i++) {
+    console.log(exercisesBtns[i]);
+  }
+
   let readMoreBtns = document.getElementsByClassName("project-btn-2");
   for (let i = 0; i < readMoreBtns.length; i++) {
     let currentBtn = readMoreBtns[i];
@@ -23,7 +30,7 @@ window.onload = function () {
       document.body.classList.add('show-overlay');
 
       let overlay = document.getElementsByClassName("projects-info")[0];
-      let projectInfo = data.default;
+      let projectInfo = projectData.default;
       overlay.style.display = "flex";
       // The projectInfor is the javascript object, the projects is the key, and them I am accessing
       // each inner component by grabbing the id of the current button being clicked and accessing the final

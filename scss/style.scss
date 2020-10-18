@@ -286,7 +286,7 @@ textarea {
 .exercises {
   &-info {
     position: fixed;
-    // display: none;
+    display: none;
     z-index: 4;
     top: 0;
     left: 0;
@@ -294,7 +294,7 @@ textarea {
     width: 100vw;
     background-color: $colour-alternative-background;
     opacity: 0.9;
-    display: flex;
+    // display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -343,9 +343,9 @@ textarea {
       width: 100%;
       height: 100%;
 
-      &-html,
-      &-css,
-      &-js {
+      &-button-html,
+      &-button-css,
+      &-button-js {
         flex: 1;
         padding: 2rem 0;
         margin: 0rem 1rem;

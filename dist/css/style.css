@@ -318,6 +318,7 @@ textarea {
 
 .exercises-info {
   position: fixed;
+  display: none;
   z-index: 4;
   top: 0;
   left: 0;
@@ -325,7 +326,6 @@ textarea {
   width: 100vw;
   background-color: #111414;
   opacity: 0.9;
-  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -363,7 +363,7 @@ textarea {
     align-items: center;
     width: 100%;
     height: 100%; }
-    .exercises-main-container-html, .exercises-main-container-css, .exercises-main-container-js {
+    .exercises-main-container-button-html, .exercises-main-container-button-css, .exercises-main-container-button-js {
       flex: 1;
       padding: 2rem 0;
       margin: 0rem 1rem;
@@ -372,7 +372,7 @@ textarea {
       color: #8e8e8e;
       border: 4px solid #292F30;
       box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05), inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.1), inset 0 15px 15px rgba(0, 0, 0, 0.1); }
-      .exercises-main-container-html h2, .exercises-main-container-css h2, .exercises-main-container-js h2 {
+      .exercises-main-container-button-html h2, .exercises-main-container-button-css h2, .exercises-main-container-button-js h2 {
         font: normal small-caps 100 3rem/2rem "Lato";
         letter-spacing: 1px;
         display: inline-block;
@@ -520,14 +520,14 @@ textarea {
     margin-left: 0; }
     .exercises-main-container {
       flex-direction: column; }
-      .exercises-main-container-html, .exercises-main-container-css, .exercises-main-container-js {
+      .exercises-main-container-button-html, .exercises-main-container-button-css, .exercises-main-container-button-js {
         display: flex;
         justify-content: center;
         align-items: center;
         flex: 1;
         margin: 2rem 0;
         width: 90%; }
-        .exercises-main-container-html h2, .exercises-main-container-css h2, .exercises-main-container-js h2 {
+        .exercises-main-container-button-html h2, .exercises-main-container-button-css h2, .exercises-main-container-button-js h2 {
           margin: 0;
           top: 30%; } }
 
@@ -572,11 +572,11 @@ textarea {
     .exercises-main-container {
       flex-direction: column;
       height: 80%; }
-      .exercises-main-container-html, .exercises-main-container-css, .exercises-main-container-js {
+      .exercises-main-container-button-html, .exercises-main-container-button-css, .exercises-main-container-button-js {
         flex: 0;
         width: 12rem;
         margin-left: 1rem; }
-        .exercises-main-container-html h2, .exercises-main-container-css h2, .exercises-main-container-js h2 {
+        .exercises-main-container-button-html h2, .exercises-main-container-button-css h2, .exercises-main-container-button-js h2 {
           font-size: 2rem;
           top: 25%; } }
 
@@ -614,6 +614,6 @@ textarea {
     width: 80%; }
   .exercises-main {
     margin-left: 0; }
-    .exercises-main-container-html, .exercises-main-container-css, .exercises-main-container-js {
+    .exercises-main-container-button-html, .exercises-main-container-button-css, .exercises-main-container-button-js {
       padding: 2rem 1rem;
       margin: 0rem 1rem; } }

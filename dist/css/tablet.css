@@ -39,11 +39,11 @@
     .exercises-main-container {
       flex-direction: column;
       height: 80%; }
-      .exercises-main-container-html, .exercises-main-container-css, .exercises-main-container-js {
+      .exercises-main-container-button-html, .exercises-main-container-button-css, .exercises-main-container-button-js {
         flex: 0;
         width: 12rem;
         margin-left: 1rem; }
-        .exercises-main-container-html h2, .exercises-main-container-css h2, .exercises-main-container-js h2 {
+        .exercises-main-container-button-html h2, .exercises-main-container-button-css h2, .exercises-main-container-button-js h2 {
           font-size: 2rem;
           top: 25%; } }
 
@@ -81,6 +81,6 @@
     width: 80%; }
   .exercises-main {
     margin-left: 0; }
-    .exercises-main-container-html, .exercises-main-container-css, .exercises-main-container-js {
+    .exercises-main-container-button-html, .exercises-main-container-button-css, .exercises-main-container-button-js {
       padding: 2rem 1rem;
       margin: 0rem 1rem; } }

@@ -76,9 +76,9 @@
         flex-direction: column;
         height: 80%;
 
-        &-html,
-        &-css,
-        &-js {
+        &-button-html,
+        &-button-css,
+        &-button-js {
           flex: 0;
           width: 12rem;
           // padding: 2rem;
@@ -167,9 +167,9 @@
       margin-left: 0;
       &-container {
 
-        &-html,
-        &-css,
-        &-js {
+        &-button-html,
+        &-button-css,
+        &-button-js {
           padding: 2rem 1rem;
           margin: 0rem 1rem;
         }
