@@ -55,6 +55,23 @@
   font: $font-secondary;
 }
 
+.modal-title {
+  // grid-area: title;
+  padding: 0.8rem 0;
+  font-size: 1.8rem;
+}
+
+.modal-cancel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+
+  i {
+  cursor: pointer;
+  }
+}
+
 .py-1 {
   padding: 1rem 0;
 }

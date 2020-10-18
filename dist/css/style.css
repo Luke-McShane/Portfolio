@@ -43,6 +43,18 @@
 .section-content {
   font: normal 200 1.2rem/2rem "Lato"; }
 
+.modal-title {
+  padding: 0.8rem 0;
+  font-size: 1.8rem; }
+
+.modal-cancel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem; }
+  .modal-cancel i {
+    cursor: pointer; }
+
 .py-1 {
   padding: 1rem 0; }
 
@@ -296,9 +308,6 @@ textarea {
       .projects-info-content-grid {
         display: block;
         position: relative; }
-        .projects-info-content-grid #modal-title {
-          padding: 0.8rem 0;
-          font-size: 1.8rem; }
         .projects-info-content-grid h3 {
           margin: 1rem 0rem 0.1rem 0rem; }
         .projects-info-content-grid-buttons {
@@ -306,13 +315,37 @@ textarea {
           justify-content: center;
           align-items: center;
           text-align: center; }
-        .projects-info-content-grid #modal-cancel {
-          position: absolute;
-          top: 0;
-          right: 0;
-          padding: 0.5rem; }
-          .projects-info-content-grid #modal-cancel i {
-            cursor: pointer; }
+
+.exercises-info {
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #111414;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow-y: scroll; }
+  .exercises-info-content {
+    height: 90%;
+    width: 90%;
+    padding: 0.5rem;
+    background-color: #292F30;
+    opacity: 1; }
+    .exercises-info-content-grid {
+      display: block;
+      position: relative; }
+      .exercises-info-content-grid h3 {
+        margin: 1rem 0rem 0.1rem 0rem; }
+      .exercises-info-content-grid-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center; }
 
 .exercises-main {
   display: flex;
@@ -329,8 +362,7 @@ textarea {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    height: 100%;
-    display: flex; }
+    height: 100%; }
     .exercises-main-container-html, .exercises-main-container-css, .exercises-main-container-js {
       flex: 1;
       padding: 2rem 0;
@@ -419,7 +451,7 @@ textarea {
       .footer-content-icons i {
         padding: 0 1rem; }
 
-@media only screen and (min-device-width: 481px) and (max-device-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
   #nav-main {
     display: none;
     font-size: 3em; }
@@ -451,7 +483,7 @@ textarea {
   .exercises-main {
     margin-left: 0; } }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media only screen and (min-width: 320px) and (max-width: 480px) {
   html, body {
     height: 10vh; }
   #nav-main {
@@ -499,7 +531,7 @@ textarea {
           margin: 0;
           top: 30%; } }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   html, body {
     height: 100vh; }
   #nav-main {
@@ -513,29 +545,42 @@ textarea {
       margin: 0; }
   .projects-main {
     margin-left: 0; }
+    .projects-main-title {
+      margin-bottom: 8rem; }
   .projects-info {
     height: 100%; }
     .projects-info-content {
-      height: 90%;
+      height: auto;
       width: 90%;
       overflow-y: scroll; }
   .grid-system {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 5rem;
     height: auto; }
     .grid-system-item-info {
       transform: translateY(60%) !important; }
       .grid-system-item-info .project-title {
-        font-size: 2rem; }
+        font-size: 1rem; }
       .grid-system-item-info .fa-1x {
-        font-size: 2rem; }
+        font-size: 1rem; }
       .grid-system-item-info p {
-        margin-top: 0.8rem;
+        margin-top: 0rem;
         line-height: 0.9rem;
-        font-size: 1.5rem; }
+        font-size: 0.9rem; }
   .exercises-main {
-    margin-left: 0; } }
+    margin-left: 0; }
+    .exercises-main-container {
+      flex-direction: column;
+      height: 80%; }
+      .exercises-main-container-html, .exercises-main-container-css, .exercises-main-container-js {
+        flex: 0;
+        width: 12rem;
+        margin-left: 1rem; }
+        .exercises-main-container-html h2, .exercises-main-container-css h2, .exercises-main-container-js h2 {
+          font-size: 2rem;
+          top: 25%; } }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   #nav-main {
     display: none;
     font-size: 3em; }
@@ -565,5 +610,10 @@ textarea {
       .grid-system-item-info p {
         line-height: 0.9rem;
         font-size: 0.8rem; }
+  .exercises .contaier {
+    width: 80%; }
   .exercises-main {
-    margin-left: 0; } }
+    margin-left: 0; }
+    .exercises-main-container-html, .exercises-main-container-css, .exercises-main-container-js {
+      padding: 2rem 1rem;
+      margin: 0rem 1rem; } }

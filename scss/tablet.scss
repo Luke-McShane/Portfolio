@@ -1,6 +1,6 @@
 @media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
+  and (min-width: 768px) 
+  and (max-width: 1024px) 
   and (orientation: portrait) {
   html, body {
     height: 100vh;
@@ -24,12 +24,16 @@
   .projects {
     &-main {
       margin-left: 0;
+      
+      &-title {
+        margin-bottom: 8rem;
+      }
     }
 
     &-info {
       height: 100%;
       &-content {
-        height: 90%;
+        height: auto;
         width: 90%;
         overflow-y: scroll;
       }
@@ -37,7 +41,8 @@
   }
   
   .grid-system {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 5rem;
     height: auto;
 
     &-item {
@@ -45,16 +50,16 @@
         transform: translateY(60%) !important;
 
         .project-title {
-          font-size: 2rem;
+          font-size: 1rem;
         }
         .fa-1x {
-          font-size: 2rem;
+          font-size: 1rem;
         }
 
         p {
-          margin-top: 0.8rem;
+          margin-top: 0rem;
           line-height: 0.9rem;
-          font-size: 1.5rem;
+          font-size: 0.9rem;
         }
         // &:active {
         // opacity: 1;
@@ -67,29 +72,31 @@
   .exercises {
     &-main {
       margin-left: 0;
-      // &-container {
+      &-container {
+        flex-direction: column;
+        height: 80%;
 
-      //   &-html,
-      //   &-css,
-      //   &-js {
-      //     width: 75%;
-      //     height: 50%;
-      //     padding-top:10%;
-      //     margin-left: 1rem;
+        &-html,
+        &-css,
+        &-js {
+          flex: 0;
+          width: 12rem;
+          // padding: 2rem;
+          margin-left: 1rem;
 
-      //     h2 {
-      //       font-size: 2rem;
-      //       top: 25%;
-      //     }
-      //   }
-      // }
+          h2 {
+            font-size: 2rem;
+            top: 25%;
+          }
+        }
+      }
     }
   }
 }
 
 @media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
+  and (min-width: 768px) 
+  and (max-width: 1024px) 
   and (orientation: landscape) {
   // html, body {
   //   height: 100vh;
@@ -153,24 +160,20 @@
   }
   
   .exercises {
+    .contaier {
+      width: 80%;
+    }
     &-main {
       margin-left: 0;
-      // &-container {
+      &-container {
 
-      //   &-html,
-      //   &-css,
-      //   &-js {
-      //     width: 75%;
-      //     height: 50%;
-      //     padding-top:10%;
-      //     margin-left: 1rem;
-
-      //     h2 {
-      //       font-size: 2rem;
-      //       top: 25%;
-      //     }
-      //   }
-      // }
+        &-html,
+        &-css,
+        &-js {
+          padding: 2rem 1rem;
+          margin: 0rem 1rem;
+        }
+      }
     }
   }
 }

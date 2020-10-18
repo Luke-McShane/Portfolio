@@ -252,11 +252,7 @@ textarea {
         //   'txt txt txt'
         //   'btns btns btns';
 
-        #modal-title {
-          // grid-area: title;
-          padding: 0.8rem 0;
-          font-size: 1.8rem;
-        }
+        
 
         // #modal-img {
         //   grid-area: img;
@@ -280,16 +276,7 @@ textarea {
           text-align: center;
         }
 
-        #modal-cancel {
-          position: absolute;
-          top: 0;
-          right: 0;
-          padding: 0.5rem;
-
-          i {
-          cursor: pointer;
-          }
-        }
+       
       }
     }
   }
@@ -297,6 +284,47 @@ textarea {
 
 
 .exercises {
+  &-info {
+    position: fixed;
+    // display: none;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: $colour-alternative-background;
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow-y: scroll;
+
+    &-content {
+      height: 90%;
+      width: 90%;
+      padding: 0.5rem;
+      background-color: $colour-background;
+      opacity: 1;
+
+      &-grid {
+        display: block;
+        position: relative;
+
+        h3 {
+          margin: 1rem 0rem 0.1rem 0rem;
+        }
+
+        &-buttons {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+      }
+    }
+  }
+
   &-main {
     display: flex;
     flex-direction: column;
@@ -314,16 +342,11 @@ textarea {
       align-items: center;
       width: 100%;
       height: 100%;
-      display: flex;
 
       &-html,
       &-css,
       &-js {
         flex: 1;
-        // width: 2rem;
-        // height: 100%;
-        // width: 25%;
-        // padding-top: 25%;
         padding: 2rem 0;
         margin: 0rem 1rem;
         position: relative;

@@ -36,7 +36,7 @@ window.onload = function () {
       let site = projectInfo.projects[this.id.toString()[this.id.toString().length - 1] - 1].site;
       let source = projectInfo.projects[this.id.toString()[this.id.toString().length - 1] - 1].source;
 
-      let overlayTitle = overlay.querySelector("#modal-title");
+      let overlayTitle = overlay.querySelector(".modal-title");
       let overlayOverview = overlay.querySelector("#modal-overview");
       let overlayDifficulties = overlay.querySelector("#modal-difficulties");
       let overlayLessonsLearned = overlay.querySelector("#modal-lessons-learned");

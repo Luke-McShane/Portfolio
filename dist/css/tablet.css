@@ -1,4 +1,4 @@
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   html, body {
     height: 100vh; }
   #nav-main {
@@ -12,29 +12,42 @@
       margin: 0; }
   .projects-main {
     margin-left: 0; }
+    .projects-main-title {
+      margin-bottom: 8rem; }
   .projects-info {
     height: 100%; }
     .projects-info-content {
-      height: 90%;
+      height: auto;
       width: 90%;
       overflow-y: scroll; }
   .grid-system {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 5rem;
     height: auto; }
     .grid-system-item-info {
       transform: translateY(60%) !important; }
       .grid-system-item-info .project-title {
-        font-size: 2rem; }
+        font-size: 1rem; }
       .grid-system-item-info .fa-1x {
-        font-size: 2rem; }
+        font-size: 1rem; }
       .grid-system-item-info p {
-        margin-top: 0.8rem;
+        margin-top: 0rem;
         line-height: 0.9rem;
-        font-size: 1.5rem; }
+        font-size: 0.9rem; }
   .exercises-main {
-    margin-left: 0; } }
+    margin-left: 0; }
+    .exercises-main-container {
+      flex-direction: column;
+      height: 80%; }
+      .exercises-main-container-html, .exercises-main-container-css, .exercises-main-container-js {
+        flex: 0;
+        width: 12rem;
+        margin-left: 1rem; }
+        .exercises-main-container-html h2, .exercises-main-container-css h2, .exercises-main-container-js h2 {
+          font-size: 2rem;
+          top: 25%; } }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   #nav-main {
     display: none;
     font-size: 3em; }
@@ -64,5 +77,10 @@
       .grid-system-item-info p {
         line-height: 0.9rem;
         font-size: 0.8rem; }
+  .exercises .contaier {
+    width: 80%; }
   .exercises-main {
-    margin-left: 0; } }
+    margin-left: 0; }
+    .exercises-main-container-html, .exercises-main-container-css, .exercises-main-container-js {
+      padding: 2rem 1rem;
+      margin: 0rem 1rem; } }
