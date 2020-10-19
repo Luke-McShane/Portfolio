@@ -1,5 +1,5 @@
 export default {
-  "CodePen Mini Projects": [
+  "projects": [
     {
       "title": "Please tell me you like this project, will you? Really does me esteem good.",
       "link": ""
@@ -26,7 +26,7 @@ export default {
     }
   ],
 
-  "CodePen Exercises": [
+  "exercises": [
     {
       "Section 1: asdf": [
         {

@@ -7,18 +7,38 @@ window.onload = function () {
   scroll();
   freezeForTransition();
 
-  let closeOverlay = document.querySelector("#close");
-  closeOverlay.onclick = function () {
-    let overlay = document.querySelector(".projects-info");
-    overlay.style.display = "none";
-    document.body.classList.remove('show-overlay');
-    window.scrollTo(0, scrollPosition);
-  }
+  let closeOverlay = document.querySelectorAll(".close");
+  closeOverlay.forEach(btn => {
+    btn.onclick = function () {
+      let overlay = (btn.parentElement.id == "projects-cancel") ?
+        document.querySelector(".projects-info") :
+        document.querySelector(".exercises-info");
+      overlay.style.display = "none";
+      document.body.classList.remove('show-overlay');
+      window.scrollTo(0, scrollPosition);
+    }
+  })
 
   let exercisesBtns = document.querySelectorAll(`[class*="exercises-main-container-button"]`);
-  console.log(exercisesBtns.length);
   for (let i = 0; i < exercisesBtns.length; i++) {
-    console.log(exercisesBtns[i]);
+    let currentBtn = exercisesBtns[i];
+    currentBtn.onclick = function () {
+      scrollPosition = window.pageYOffset;
+      document.body.style.top = -scrollPosition + 'px';
+      document.body.classList.add('show-overlay');
+
+      let overlay = document.getElementsByClassName("exercises-info")[0];
+      let exercisesInfo = codepenData.default;
+      overlay.style.display = "flex";
+      console.log(exercisesInfo);
+      // console.log(exercisesInfo.projects);
+      // console.log(exercisesInfo.exercises);
+      for (var key in Object.keys(exercisesInfo)) {
+        console.log(exercisesInfo[key]);
+      }
+
+
+    }
   }
 
   let readMoreBtns = document.getElementsByClassName("project-btn-2");

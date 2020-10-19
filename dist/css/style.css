@@ -516,6 +516,13 @@ textarea {
     height: auto; }
     .grid-system-item-info p {
       font-size: 0.7rem; }
+  .exercises-info {
+    width: 100%;
+    height: 100%; }
+    .exercises-info-content {
+      height: 90%;
+      width: 90%;
+      overflow-y: scroll; }
   .exercises-main {
     margin-left: 0; }
     .exercises-main-container {
