@@ -33,8 +33,35 @@ window.onload = function () {
       console.log(exercisesInfo);
       // console.log(exercisesInfo.projects);
       // console.log(exercisesInfo.exercises);
-      for (var key in Object.keys(exercisesInfo)) {
-        console.log(exercisesInfo[key]);
+      // for (var key in Object.keys(exercisesInfo)) {
+      //   console.log(exercisesInfo[key]);
+      // }
+      for (const [key, val] of Object.entries(exercisesInfo)) {
+        if (key === "js-projects") {
+          const h2 = document.createElement('h2');
+          const h3 = document.createElement('h3');
+          h2.innerText = 'JavaScript';
+          h2.classList.add('modal-title');
+          h3.innerText = 'JS CodePen Projects';
+          h3.style.textAlign = 'center';
+          document.querySelector('.exercises-info-content-grid').insertBefore(h2, document.querySelector('.exercises-info-content-grid-text'));
+          document.querySelector('.exercises-info-content-grid-text').appendChild(h3);
+          val.forEach(entry => {
+            const a = document.createElement('a');
+            const div = document.createElement('div');
+            const hr = document.createElement('hr');
+            a.innerText = entry.title;
+            a.setAttribute('href', entry.link);
+            a.setAttribute('target', '_blank');
+            div.style.textAlign = 'center';
+            hr.style.width = "80%";
+            hr.style.color = '#55756C';
+            hr.style.display = 'inline-block';
+            document.querySelector('.exercises-info-content-grid-text').appendChild(a);
+            document.querySelector('.exercises-info-content-grid-text').appendChild(div);
+            div.appendChild(hr);
+          })
+        }
       }
 
 

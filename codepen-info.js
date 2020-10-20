@@ -1,32 +1,32 @@
 export default {
-  "projects": [
+  "js-projects": [
     {
       "title": "Please tell me you like this project, will you? Really does me esteem good.",
-      "link": ""
+      "link": "a"
     },
     {
       "title": "Please tell me you like this project, will you? Really does me esteem good.",
-      "link": ""
+      "link": "b"
     },
     {
       "title": "Please tell me you like this project, will you? Really does me esteem good.",
-      "link": ""
+      "link": "c"
     },
     {
       "title": "Please tell me you like this project, will you? Really does me esteem good.",
-      "link": ""
+      "link": "d"
     },
     {
       "title": "Please tell me you like this project, will you? Really does me esteem good.",
-      "link": ""
+      "link": "e"
     },
     {
       "title": "Please tell me you like this project, will you? Really does me esteem good.",
-      "link": ""
+      "link": "f"
     }
   ],
 
-  "exercises": [
+  "js-exercises": [
     {
       "Section 1: asdf": [
         {

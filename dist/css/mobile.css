@@ -70,6 +70,12 @@
       height: 90%;
       width: 90%;
       overflow-y: scroll; }
+      .exercises-info-content-grid-text {
+        text-align: left; }
+        .exercises-info-content-grid-text a {
+          display: inline-block;
+          width: 100%;
+          font-size: 0.9rem; }
   .exercises-main {
     margin-left: 0; }
     .exercises-main-container {

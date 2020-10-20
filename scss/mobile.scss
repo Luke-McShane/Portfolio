@@ -168,6 +168,16 @@
         height: 90%;
         width: 90%;
         overflow-y: scroll;
+        &-grid {
+          &-text {
+            text-align: left;
+            a {
+              display: inline-block;
+              width: 100%;
+              font-size: 0.9rem;
+            }
+          }
+        }
       }
     }
 
