@@ -1,5 +1,5 @@
 export default {
-  "js-projects": [
+  "JS CodePen Projects": [
     {
       "title": "Please tell me you like this project, will you? Really does me esteem good.",
       "link": "a"
@@ -26,7 +26,7 @@ export default {
     }
   ],
 
-  "js-exercises": [
+  "JS CodePen Exercises": [
     {
       "Section 1: asdf": [
         {
@@ -136,5 +136,66 @@ export default {
         }
       ],
     },
+  ],
+
+  "css-projects": [
+    {
+      "title": "What a lovely lil CSS project this is!",
+      "link": "www.randomsite.com"
+    },
+    {
+      "title": "What a lovely lil CSS project this is!",
+      "link": "www.randomsite.com"
+    },
+    {
+      "title": "What a lovely lil CSS project this is!",
+      "link": "www.randomsite.com"
+    },
+    {
+      "title": "What a lovely lil CSS project this is!",
+      "link": "www.randomsite.com"
+    },
+    {
+      "title": "What a lovely lil CSS project this is!",
+      "link": "www.randomsite.com"
+    }
+  ],
+
+  "css-exercises": [
+    {
+      "title": "Oof, now this is a CSS exercise!",
+      "link": "www.youtube.com"
+    },
+    {
+      "title": "Oof, now this is a CSS exercise!",
+      "link": "www.youtube.com"
+    },
+    {
+      "title": "Oof, now this is a CSS exercise!",
+      "link": "www.youtube.com"
+    },
+    {
+      "title": "Oof, now this is a CSS exercise!",
+      "link": "www.youtube.com"
+    }
+  ],
+
+  "html-exercises": [
+    {
+      "title": "Lovely little HTML, you will find here",
+      "link": "www.mail.com"
+    },
+    {
+      "title": "Lovely little HTML, you will find here",
+      "link": "www.mail.com"
+    },
+    {
+      "title": "Lovely little HTML, you will find here",
+      "link": "www.mail.com"
+    },
+    {
+      "title": "Lovely little HTML, you will find here",
+      "link": "www.mail.com"
+    }
   ]
 }

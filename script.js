@@ -1,8 +1,40 @@
 import * as projectData from "./project-info.js";
 import * as codepenData from "./codepen-info.js";
+import { FALSE } from "node-sass";
 let scrollPosition = 0;
 
 window.onload = function () {
+
+  function populateModal(title, link) {
+    const a = document.createElement('a');
+    const div = document.createElement('div');
+    const hr = document.createElement('hr');
+    a.innerText = title;
+    a.setAttribute('href', link);
+    a.setAttribute('target', '_blank');
+    div.style.textAlign = 'center';
+    div.style.height = '5px';
+    div.style.marginBottom = '0.6rem';
+    div.style.paddingTop = '0.3rem';
+    hr.style.width = "40%";
+    hr.style.color = '#55756C';
+    hr.style.display = 'inline-block';
+    hr.style.verticalAlign = 'top';
+    document.querySelector('.exercises-info-content-grid-text').appendChild(a);
+    document.querySelector('.exercises-info-content-grid-text').appendChild(div);
+    div.appendChild(hr);
+  }
+
+  function modalSetup(h3, key, h2) {
+    if (h2) {
+      h2.innerText = 'JavaScript';
+      h2.classList.add('modal-title');
+      document.querySelector('.exercises-info-content-grid').insertBefore(h2, document.querySelector('.exercises-info-content-grid-text'));
+    }
+    h3.innerText = key;
+    h3.style.textAlign = 'center';
+    document.querySelector('.exercises-info-content-grid-text').appendChild(h3);
+  }
 
   scroll();
   freezeForTransition();
@@ -13,6 +45,12 @@ window.onload = function () {
       let overlay = (btn.parentElement.id == "projects-cancel") ?
         document.querySelector(".projects-info") :
         document.querySelector(".exercises-info");
+      if (btn.parentElement.id == 'exercises-cancel') {
+        const title = document.querySelector('.exercises-info-content-grid').querySelector('.modal-title');
+        const modalBody = document.querySelector('.exercises-info-content-grid-text');
+        document.querySelector('.exercises-info-content-grid').removeChild(title);
+        modalBody.querySelectorAll('*').forEach(n => n.remove());
+      }
       overlay.style.display = "none";
       document.body.classList.remove('show-overlay');
       window.scrollTo(0, scrollPosition);
@@ -30,37 +68,25 @@ window.onload = function () {
       let overlay = document.getElementsByClassName("exercises-info")[0];
       let exercisesInfo = codepenData.default;
       overlay.style.display = "flex";
-      console.log(exercisesInfo);
       // console.log(exercisesInfo.projects);
       // console.log(exercisesInfo.exercises);
       // for (var key in Object.keys(exercisesInfo)) {
       //   console.log(exercisesInfo[key]);
       // }
       for (const [key, val] of Object.entries(exercisesInfo)) {
-        if (key === "js-projects") {
-          const h2 = document.createElement('h2');
-          const h3 = document.createElement('h3');
-          h2.innerText = 'JavaScript';
-          h2.classList.add('modal-title');
-          h3.innerText = 'JS CodePen Projects';
-          h3.style.textAlign = 'center';
-          document.querySelector('.exercises-info-content-grid').insertBefore(h2, document.querySelector('.exercises-info-content-grid-text'));
-          document.querySelector('.exercises-info-content-grid-text').appendChild(h3);
+        const h2 = document.createElement('h2');
+        const h3 = document.createElement('h3');
+        if (key === `JS CodePen Projects`) {
+          console.log(val);
+          modalSetup(h2, h3, key);
+          val.forEach(entry => populateModal(entry.title, entry.link));
+        } else if (key === `JS CodePen Exercises`) {
+          modalSetup(h3, key);
           val.forEach(entry => {
-            const a = document.createElement('a');
-            const div = document.createElement('div');
-            const hr = document.createElement('hr');
-            a.innerText = entry.title;
-            a.setAttribute('href', entry.link);
-            a.setAttribute('target', '_blank');
-            div.style.textAlign = 'center';
-            hr.style.width = "80%";
-            hr.style.color = '#55756C';
-            hr.style.display = 'inline-block';
-            document.querySelector('.exercises-info-content-grid-text').appendChild(a);
-            document.querySelector('.exercises-info-content-grid-text').appendChild(div);
-            div.appendChild(hr);
-          })
+            console.log(entry);
+            populateModal(entry.title, entry.link)
+          });
+
         }
       }
 
