@@ -1,6 +1,5 @@
 import * as projectData from "./project-info.js";
 import * as codepenData from "./codepen-info.js";
-import { FALSE } from "node-sass";
 let scrollPosition = 0;
 
 window.onload = function () {
@@ -25,7 +24,7 @@ window.onload = function () {
     div.appendChild(hr);
   }
 
-  function modalSetup(h3, key, h2) {
+  function modalSetup(h3, key, h2 = false) {
     if (h2) {
       h2.innerText = 'JavaScript';
       h2.classList.add('modal-title');
