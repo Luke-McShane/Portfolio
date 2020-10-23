@@ -1,6 +1,7 @@
 import * as projectData from "./project-info.js";
 import * as codepenData from "./codepen-info.js";
 let scrollPosition = 0;
+let isSetup = false;
 
 window.onload = function () {
 
@@ -25,16 +26,24 @@ window.onload = function () {
     div.appendChild(hr);
   }
 
-  function modalSetup(h3, key, h2 = false, header = '') {
-    if (h2) {
-      h2.innerText = header;
-      h2.classList.add('modal-title');
-      document.querySelector('.exercises-info-content-grid').insertBefore(h2, document.querySelector('.exercises-info-content-grid-text'));
+  // function modalSetup(h3, key, h2 = false, header = '') {
+  //   if (h2) {
+  //     h2.innerText = header;
+  //     h2.classList.add('modal-title');
+  //     document.querySelector('.exercises-info-content-grid').insertBefore(h2, document.querySelector('.exercises-info-content-grid-text'));
+  //   }
+  //   h3.innerText = key;
+  //   h3.style.textAlign = 'center';
+  //   h3.style.marginTop = '2rem';
+  //   document.querySelector('.exercises-info-content-grid-text').appendChild(h3);
+  // }
+  function modalSetup(h3, key, isSetup = false) {
+    if (!isSetup) {
+      h3.innerText = key;
+      h3.style.textAlign = 'center';
+      h3.style.marginTop = '2rem';
+      document.querySelector('.exercises-info-content-grid-text').appendChild(h3);
     }
-    h3.innerText = key;
-    h3.style.textAlign = 'center';
-    h3.style.marginTop = '2rem';
-    document.querySelector('.exercises-info-content-grid-text').appendChild(h3);
   }
 
   scroll();
@@ -59,9 +68,26 @@ window.onload = function () {
   })
 
   let exercisesBtns = document.querySelectorAll(`[class*="exercises-main-container-button"]`);
+  let cssHeaders = ['CSS Projects', 'CSS Exercises'];
+  let jsHeaders = ['JS Projects', 'JS Exercises'];
   for (let i = 0; i < exercisesBtns.length; i++) {
     let currentBtn = exercisesBtns[i];
+
     currentBtn.onclick = function () {
+      isSetup = false;
+      let classes = currentBtn.classList.value;
+      let infoKey = (
+        classes.includes('html') ? 'html' :
+          classes.includes('css') ? 'css' :
+            classes.includes('js') ? 'js' :
+              null
+      );
+      const h2 = document.createElement('h2');
+      h2.innerText = `My ${infoKey.toUpperCase()} Work`;
+      h2.classList.add('modal-title');
+      document.querySelector('.exercises-info-content-grid').insertBefore(h2, document.querySelector('.exercises-info-content-grid-text'));
+
+      console.log(`Info Key: ${infoKey}`);
       scrollPosition = window.pageYOffset;
       document.body.style.top = -scrollPosition + 'px';
       document.body.classList.add('show-overlay');
@@ -70,24 +96,37 @@ window.onload = function () {
       let exercisesInfo = codepenData.default;
       overlay.style.display = "flex";
 
-      for (const [key, val] of Object.entries(exercisesInfo)) {
-        const h2 = document.createElement('h2');
+      for (const [tempKey, tempVal] of Object.entries(exercisesInfo[`${infoKey}`])) {
+
+        const key = (
+          infoKey === 'html' ? 'HTML Projects' :
+            infoKey === 'css' ? cssHeaders[tempKey] :
+              infoKey === 'js' ? jsHeaders[tempKey] :
+                null
+        );
+        const val = Object.values(tempVal)[0];
         const h3 = document.createElement('h3');
-        if (key === `JS CodePen Exercises`) {
-          modalSetup(h3, key, h2, 'JavaScript');
-          val.forEach(entry => {
-            for (const [innerKey, innerVal] of Object.entries(entry)) {
-              const innerH3 = document.createElement('h3');
-              modalSetup(innerH3, innerKey);
-              innerVal.forEach(innerEntry => populateModal(innerEntry.title, innerEntry.link));
+        if (typeof (Object.values(val[0])[0]) === 'object') {
+          modalSetup(h3, key);
+          Object.entries(val[0]).forEach(entry => {
+            const innerH3 = document.createElement('h3');
+            modalSetup(innerH3, Object.values(entry)[0]);
+            for (const innerVal of Object.values(entry[1])) {
+              console.log(innerVal);
+              populateModal(innerVal.title, innerVal.link);
             }
           });
 
-        } else {
+        } else if (typeof (val) === 'object') {
+          debugger;
           modalSetup(h3, key);
           console.log(`Inner Key: ${key}`);
           console.log(`Inner Value: ${val}`);
           val.forEach(entry => populateModal(entry.title, entry.link));
+        } else if (typeof (val) === 'string') {
+          modalSetup(h3, key, isSetup);
+          isSetup = true;
+          populateModal(tempVal.title, tempVal.link);
         }
       }
 
