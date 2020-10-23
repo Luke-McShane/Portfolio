@@ -19,7 +19,7 @@ window.onload = function () {
     if (!isSetup) {
       h3.innerText = key;
       h3.style.textAlign = 'center';
-      h3.style.marginTop = '2rem';
+      h3.style.marginBottom = '1rem';
       document.querySelector('.exercises-info-content-grid-text').appendChild(h3);
     }
   }
@@ -29,13 +29,14 @@ window.onload = function () {
     const div = document.createElement('div');
     const hr = document.createElement('hr');
     a.innerText = title;
+    a.style.textAlign = 'center';
     a.setAttribute('href', link);
     a.setAttribute('target', '_blank');
     div.style.textAlign = 'center';
     div.style.height = '5px';
-    div.style.marginBottom = '0.6rem';
-    div.style.marginTop = '0.5rem';
-    div.style.paddingTop = '0.3rem';
+    div.style.marginBottom = '1rem';
+    div.style.marginTop = '1rem';
+    // div.style.paddingTop = '0.5rem';
     hr.style.width = "40%";
     hr.style.color = '#55756C';
     hr.style.display = 'inline-block';
@@ -124,6 +125,7 @@ window.onload = function () {
         );
         const val = Object.values(tempVal)[0];
         const h3 = document.createElement('h3');
+        h3.style.fontSize = '1.4rem';
         // If we have nested objects within the current subheading..
         if (typeof (Object.values(val[0])[0]) === 'object') {
           modalSetup(h3, key);
