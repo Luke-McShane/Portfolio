@@ -14,6 +14,7 @@ window.onload = function () {
     div.style.textAlign = 'center';
     div.style.height = '5px';
     div.style.marginBottom = '0.6rem';
+    div.style.marginTop = '0.5rem';
     div.style.paddingTop = '0.3rem';
     hr.style.width = "40%";
     hr.style.color = '#55756C';
@@ -24,14 +25,15 @@ window.onload = function () {
     div.appendChild(hr);
   }
 
-  function modalSetup(h3, key, h2 = false) {
+  function modalSetup(h3, key, h2 = false, header = '') {
     if (h2) {
-      h2.innerText = 'JavaScript';
+      h2.innerText = header;
       h2.classList.add('modal-title');
       document.querySelector('.exercises-info-content-grid').insertBefore(h2, document.querySelector('.exercises-info-content-grid-text'));
     }
     h3.innerText = key;
     h3.style.textAlign = 'center';
+    h3.style.marginTop = '2rem';
     document.querySelector('.exercises-info-content-grid-text').appendChild(h3);
   }
 
@@ -67,25 +69,25 @@ window.onload = function () {
       let overlay = document.getElementsByClassName("exercises-info")[0];
       let exercisesInfo = codepenData.default;
       overlay.style.display = "flex";
-      // console.log(exercisesInfo.projects);
-      // console.log(exercisesInfo.exercises);
-      // for (var key in Object.keys(exercisesInfo)) {
-      //   console.log(exercisesInfo[key]);
-      // }
+
       for (const [key, val] of Object.entries(exercisesInfo)) {
         const h2 = document.createElement('h2');
         const h3 = document.createElement('h3');
-        if (key === `JS CodePen Projects`) {
-          console.log(val);
-          modalSetup(h2, h3, key);
-          val.forEach(entry => populateModal(entry.title, entry.link));
-        } else if (key === `JS CodePen Exercises`) {
-          modalSetup(h3, key);
+        if (key === `JS CodePen Exercises`) {
+          modalSetup(h3, key, h2, 'JavaScript');
           val.forEach(entry => {
-            console.log(entry);
-            populateModal(entry.title, entry.link)
+            for (const [innerKey, innerVal] of Object.entries(entry)) {
+              const innerH3 = document.createElement('h3');
+              modalSetup(innerH3, innerKey);
+              innerVal.forEach(innerEntry => populateModal(innerEntry.title, innerEntry.link));
+            }
           });
 
+        } else {
+          modalSetup(h3, key);
+          console.log(`Inner Key: ${key}`);
+          console.log(`Inner Value: ${val}`);
+          val.forEach(entry => populateModal(entry.title, entry.link));
         }
       }
 
