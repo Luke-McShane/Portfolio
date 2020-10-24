@@ -55,43 +55,14 @@
         p {
           line-height: 0.9rem;
         }
-        // &:active {
-        // opacity: 1;
-        // transform: translateY(50%);
-        // }
       }
     }  
   }
   
   .exercises {
-    // &-info {
-    //   @include exercises-modal;
-    //   &-content {
-    //     @include exercises-modal-content;
-    //     &-grid-text{
-    //       @include exercises-modal-text;
-    //     }
-    //   }
-    // }
     
     &-main {
       margin-left: 0;
-      // &-container {
-
-      //   &-html,
-      //   &-css,
-      //   &-js {
-      //     width: 75%;
-      //     height: 50%;
-      //     padding-top:10%;
-      //     margin-left: 1rem;
-
-      //     h2 {
-      //       font-size: 2rem;
-      //       top: 25%;
-      //     }
-      //   }
-      // }
     }
   }
 }
@@ -100,7 +71,6 @@
 @media only screen
   and (min-width: 320px) 
   and (max-width: 480px) {
-  // and (orientation: portrait) {
 
   html, body {
     height: 10vh;
@@ -172,15 +142,6 @@
   }
 
   .exercises {
-    // &-info {
-    //   @include exercises-modal;
-    //   &-content {
-    //     @include exercises-modal-content;
-    //     &-grid-text{
-    //       @include exercises-modal-text;
-    //     }
-    //   }
-    // }
 
     &-main {
       margin-left: 0;
