@@ -62,11 +62,11 @@
 }
 
 .modal-cancel {
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: fixed;
+  top: 5%;
+  right: 5%;
   padding: 0.5rem;
-
+  
   i {
   cursor: pointer;
   }

@@ -48,9 +48,9 @@
   font-size: 1.8rem; }
 
 .modal-cancel {
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: fixed;
+  top: 5%;
+  right: 5%;
   padding: 0.5rem; }
   .modal-cancel i {
     cursor: pointer; }

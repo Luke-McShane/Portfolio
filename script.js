@@ -136,7 +136,6 @@ window.onload = function () {
             modalSetup(innerH3, Object.values(entry)[0]);
             // And looping through the inner object to populate the modal with the innermost data
             for (const innerVal of Object.values(entry[1])) {
-              console.log(innerVal);
               populateModal(innerVal.title, innerVal.link);
             }
           });
