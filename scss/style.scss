@@ -285,41 +285,16 @@ textarea {
 
 .exercises {
   &-info {
-    position: fixed;
-    display: none;
-    z-index: 4;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: $colour-alternative-background;
-    opacity: 0.9;
-    // display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow-y: scroll;
-
+    @include exercises-modal;
     &-content {
-      height: 90%;
-      width: 90%;
-      padding: 0.5rem;
-      background-color: $colour-background;
-      opacity: 1;
-
+      @include exercises-modal-content;
       &-grid {
-        display: block;
-        position: relative;
-
-        h3 {
-          margin: 1rem 0rem 0.1rem 0rem;
+        @include exercises-modal-grid;
+        &-text{
+          @include exercises-modal-text;
         }
-
         &-buttons {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
+          @include exercises-modal-buttons;
         }
       }
     }

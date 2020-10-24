@@ -1,3 +1,5 @@
+@import './config';
+
 @mixin bottom-line {
   content: '';
   display: block;
@@ -78,7 +80,7 @@
 
 .py-2 {
   padding: 2rem 0;
-}
+} 
 
 .py-3 {
   padding: 3rem 0;
@@ -178,4 +180,56 @@
       }
     }
   }
+}
+
+@mixin exercises-modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: none;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: $colour-alternative-background;
+  opacity: 0.9;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow-y: scroll;
+
+  h3 {
+    margin: 1rem 0rem 0.1rem 0rem;
+  }
+}
+
+@mixin exercises-modal-grid {
+  display: block;
+  position: relative;
+}
+
+@mixin exercises-modal-content {
+  height: 90%;
+  width: 90%;
+  overflow-y: scroll;
+  padding: 0.5rem;
+  background-color: $colour-background;
+  opacity: 1;
+}
+
+@mixin exercises-modal-text {
+  text-align: left;
+    a {
+      display: inline-block;
+      width: 100%;
+      font-size: 0.9rem;
+    }
+}
+
+@mixin exercises-modal-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
