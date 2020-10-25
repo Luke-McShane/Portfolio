@@ -234,36 +234,18 @@ textarea {
     justify-content: center;
     align-items: center;
     text-align: center;
-    overflow-y: scroll;
+    // overflow-y: scroll;
 
     &-content {
-      height: 450px;
-      width: 1200px;
+      height: 95%;
+      width: 95%;
       padding: 0.5rem;
       background-color: $colour-background;
       opacity: 1;
 
       &-grid {
-        // display: grid;
         display: block;
         position: relative;
-        // grid-template-areas:
-        //   'title title title'
-        //   'txt txt txt'
-        //   'btns btns btns';
-
-        
-
-        // #modal-img {
-        //   grid-area: img;
-        //   height: 250px;
-        //   width: 350px;
-        // }
-
-        // &-text {
-        //   grid-area: txt;
-        // }
-
         h3 {
           margin: 1rem 0rem 0.1rem 0rem;
         }
@@ -387,6 +369,38 @@ textarea {
       h2,
       a {
         color: #fff !important;
+      }
+    }
+  }
+
+  &-info {
+    position: fixed;
+    display: none;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: $colour-alternative-background;
+    opacity: 0.9;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &-content {
+      height: 95%;
+      width: 95%;
+      padding: 0.5rem;
+      background-color: $colour-background;
+      opacity: 1;
+      overflow-y: scroll;
+
+      &-grid {
+        display: block;
+        position: relative;
+        h2 {
+          margin: 0rem 0rem 0.1rem 0rem;
+        }       
       }
     }
   }

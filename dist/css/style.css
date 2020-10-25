@@ -297,11 +297,10 @@ textarea {
     opacity: 0.9;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    overflow-y: scroll; }
+    text-align: center; }
     .projects-info-content {
-      height: 450px;
-      width: 1200px;
+      height: 95%;
+      width: 95%;
       padding: 0.5rem;
       background-color: #292F30;
       opacity: 1; }
@@ -411,6 +410,32 @@ textarea {
     .blog-main-grid-item-info h2,
     .blog-main-grid-item-info a {
       color: #fff !important; }
+
+.blog-info {
+  position: fixed;
+  display: none;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #111414;
+  opacity: 0.9;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+  .blog-info-content {
+    height: 95%;
+    width: 95%;
+    padding: 0.5rem;
+    background-color: #292F30;
+    opacity: 1;
+    overflow-y: scroll; }
+    .blog-info-content-grid {
+      display: block;
+      position: relative; }
+      .blog-info-content-grid h2 {
+        margin: 0rem 0rem 0.1rem 0rem; }
 
 .contact {
   height: 100vh; }

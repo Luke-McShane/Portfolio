@@ -1,6 +1,6 @@
 import * as projectData from "./project-info.js";
 import * as codepenData from "./codepen-info.js";
-import * as blogsObject from "./blogs.js";
+import blogs, * as blogsObject from "./blogs.js";
 let scrollPosition = 0;
 let isSetup = false;
 
@@ -61,15 +61,21 @@ window.onload = function () {
     // not remove the elements, they would stack
     btn.onclick = function () {
 
-      let overlay = (btn.parentElement.id == "projects-cancel") ?
-        document.querySelector(".projects-info") :
-        document.querySelector(".exercises-info");
+      let overlay = (btn.parentElement.id == "projects-cancel") ? document.querySelector(".projects-info")
+        : (btn.parentElement.id == "exercises-cancel") ? document.querySelector(".exercises-info")
+          : document.querySelector(".blog-info");
       if (btn.parentElement.id == 'exercises-cancel') {
         const title = document.querySelector('.exercises-info-content-grid').querySelector('.modal-title');
         const modalBody = document.querySelector('.exercises-info-content-grid-text');
         document.querySelector('.exercises-info-content-grid').removeChild(title);
         modalBody.querySelectorAll('*').forEach(n => n.remove());
       }
+      // } else if (btn.parentElement.id == 'blog-cancel') {
+      //   const title = document.querySelector('.blog-info-content-grid').querySelector('.modal-title');
+      //   const modalBody = document.querySelector('.blog-info-content-grid-text');
+      //   document.querySelector('.blog-info-content-grid').removeChild(title);
+      //   modalBody.querySelectorAll('*').forEach(n => n.remove());
+      // }
       overlay.style.display = "none";
       document.body.classList.remove('show-overlay');
       window.scrollTo(0, scrollPosition);
@@ -198,12 +204,15 @@ window.onload = function () {
     }
   }
 
+
+
   function blogSetup() {
     let blogData = blogsObject.default;
     let blogs = Object.values(blogData)[0];
+    let iterate = 1;
     blogs.forEach(entry => {
       const title = entry.title;
-      const blog = entry.blog;
+      // const blog = entry.blog;
       const divItem = document.createElement('div');
       const divImg = document.createElement('div');
       const img = document.createElement('img');
@@ -219,6 +228,8 @@ window.onload = function () {
       divInfo.classList.add('grid-system-item-info');
       h2.classList.add('blog-title');
       h2.innerText = title;
+      a.classList.add('blog-btn');
+      a.id = `blog-btn-${iterate}`;
       icon.classList.add('fas', 'fa-book-open', 'fa-1x');
       p.innerText = 'Read Post';
 
@@ -231,10 +242,33 @@ window.onload = function () {
       a.appendChild(p);
 
       document.querySelector('.blog-main-grid').appendChild(divItem);
+      iterate += 1;
     })
   }
 
   blogSetup();
+
+  let blogBtns = document.getElementsByClassName("blog-btn");
+  for (let i = 0; i < blogBtns.length; i++) {
+    let currentBtn = blogBtns[i];
+    currentBtn.onclick = function () {
+
+      scrollPosition = window.pageYOffset;
+      document.body.style.top = -scrollPosition + 'px';
+      document.body.classList.add('show-overlay');
+
+      let overlay = document.getElementsByClassName("blog-info")[0];
+      overlay.style.display = "flex";
+      let title = blogs.blogs[this.id.toString()[this.id.toString().length - 1] - 1].title;
+      let blog = blogs.blogs[this.id.toString()[this.id.toString().length - 1] - 1].blog;;
+
+      let overlayTitle = overlay.querySelector(".modal-title");
+      let overlayBlog = overlay.querySelector("#blog-text");
+
+      overlayTitle.innerHTML = title;
+      overlayBlog.innerHTML = blog;
+    }
+  }
 }
 
 function scroll() {
