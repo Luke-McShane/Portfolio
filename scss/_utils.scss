@@ -65,12 +65,21 @@
 
 .modal-cancel {
   position: fixed;
-  top: 5%;
-  right: 5%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  top: 0;
+  right: 0;
   padding: 0.5rem;
+  width: 60px;
+  height: 60px;
+  background: #111414;
+  border-radius: 50%;
   
   i {
-  cursor: pointer;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
   }
 }
 
@@ -211,8 +220,12 @@
 
 @mixin exercises-modal-content {
   height: 90%;
-  width: 90%;
+  width: 95%;
   overflow-y: scroll;
+  // &::-webkit-scrollbar {
+  //   display: none;
+  // }
+  // scrollbar-width: none;
   padding: 0.5rem;
   background-color: $colour-background;
   opacity: 1;

@@ -49,11 +49,20 @@
 
 .modal-cancel {
   position: fixed;
-  top: 5%;
-  right: 5%;
-  padding: 0.5rem; }
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  width: 60px;
+  height: 60px;
+  background: #111414;
+  border-radius: 50%; }
   .modal-cancel i {
-    cursor: pointer; }
+    cursor: pointer;
+    height: 30px;
+    width: 30px; }
 
 .py-1 {
   padding: 1rem 0; }

@@ -7,6 +7,24 @@
   box-sizing: border-box;
 }
 
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $colour-dark-accent $colour-background;
+}
+
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+*::-webkit-scrollbar-track {
+  background: $colour-background;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: $colour-alternative-background;
+  border-radius: 20px;
+  border: 3px solid $colour-background;
+}
+
 html,
 body {
   background-color: $colour-background;
@@ -388,12 +406,16 @@ textarea {
     text-align: center;
 
     &-content {
-      height: 95%;
-      width: 95%;
+      height: 90%;
+      width: 90%;
       padding: 0.5rem;
       background-color: $colour-background;
       opacity: 1;
       overflow-y: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      scrollbar-width: none;
     }
   }
 }
