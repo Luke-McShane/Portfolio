@@ -431,11 +431,6 @@ textarea {
     background-color: #292F30;
     opacity: 1;
     overflow-y: scroll; }
-    .blog-info-content-grid {
-      display: block;
-      position: relative; }
-      .blog-info-content-grid h2 {
-        margin: 0rem 0rem 0.1rem 0rem; }
 
 .contact {
   height: 100vh; }
