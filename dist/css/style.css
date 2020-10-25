@@ -48,21 +48,21 @@
   font-size: 1.8rem; }
 
 .modal-cancel {
-  position: fixed;
+  position: absolute;
+  top: -3rem;
+  right: -3rem;
   display: flex;
   align-items: flex-end;
-  justify-content: flex-start;
-  top: 0;
-  right: 0;
-  padding: 0.5rem;
-  width: 60px;
-  height: 60px;
+  justify-content: flex-end;
+  padding: 1rem;
+  width: 110px;
+  height: 110px;
   background: #111414;
   border-radius: 50%; }
   .modal-cancel i {
     cursor: pointer;
-    height: 30px;
-    width: 30px; }
+    height: 48px;
+    width: 48px; }
 
 .py-1 {
   padding: 1rem 0; }
@@ -364,6 +364,7 @@ textarea {
     overflow-y: scroll;
     padding: 0.5rem;
     background-color: #292F30;
+    direction: rtl;
     opacity: 1; }
     .exercises-info-content-grid {
       display: block;
@@ -456,7 +457,8 @@ textarea {
     background-color: #292F30;
     opacity: 1;
     overflow-y: scroll;
-    scrollbar-width: none; }
+    scrollbar-width: none;
+    direction: rtl; }
     .blog-info-content::-webkit-scrollbar {
       display: none; }
 
@@ -558,21 +560,21 @@ textarea {
   font-size: 1.8rem; }
 
 .modal-cancel {
-  position: fixed;
+  position: absolute;
+  top: -3rem;
+  right: -3rem;
   display: flex;
   align-items: flex-end;
-  justify-content: flex-start;
-  top: 0;
-  right: 0;
-  padding: 0.5rem;
-  width: 60px;
-  height: 60px;
+  justify-content: flex-end;
+  padding: 1rem;
+  width: 110px;
+  height: 110px;
   background: #111414;
   border-radius: 50%; }
   .modal-cancel i {
     cursor: pointer;
-    height: 30px;
-    width: 30px; }
+    height: 48px;
+    width: 48px; }
 
 .py-1 {
   padding: 1rem 0; }
@@ -781,21 +783,21 @@ textarea {
   font-size: 1.8rem; }
 
 .modal-cancel {
-  position: fixed;
+  position: absolute;
+  top: -3rem;
+  right: -3rem;
   display: flex;
   align-items: flex-end;
-  justify-content: flex-start;
-  top: 0;
-  right: 0;
-  padding: 0.5rem;
-  width: 60px;
-  height: 60px;
+  justify-content: flex-end;
+  padding: 1rem;
+  width: 110px;
+  height: 110px;
   background: #111414;
   border-radius: 50%; }
   .modal-cancel i {
     cursor: pointer;
-    height: 30px;
-    width: 30px; }
+    height: 48px;
+    width: 48px; }
 
 .py-1 {
   padding: 1rem 0; }
