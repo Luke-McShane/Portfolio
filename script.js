@@ -1,5 +1,6 @@
 import * as projectData from "./project-info.js";
 import * as codepenData from "./codepen-info.js";
+import * as blogsObject from "./blogs.js";
 let scrollPosition = 0;
 let isSetup = false;
 
@@ -196,6 +197,44 @@ window.onload = function () {
       overlaySource.href = source;
     }
   }
+
+  function blogSetup() {
+    let blogData = blogsObject.default;
+    let blogs = Object.values(blogData)[0];
+    blogs.forEach(entry => {
+      const title = entry.title;
+      const blog = entry.blog;
+      const divItem = document.createElement('div');
+      const divImg = document.createElement('div');
+      const img = document.createElement('img');
+      const divInfo = document.createElement('div');
+      const h2 = document.createElement('h2');
+      const a = document.createElement('a');
+      const icon = document.createElement('i');
+      const p = document.createElement('p');
+
+      divItem.classList.add('grid-system-item');
+      divImg.classList.add('grid-system-item-img');
+      img.src = './dist/img/blogs/greystripe.png';
+      divInfo.classList.add('grid-system-item-info');
+      h2.classList.add('blog-title');
+      h2.innerText = title;
+      icon.classList.add('fas', 'fa-book-open', 'fa-1x');
+      p.innerText = 'Read Post';
+
+      divItem.appendChild(divImg);
+      divImg.appendChild(img);
+      divItem.appendChild(divInfo);
+      divInfo.appendChild(h2);
+      divInfo.appendChild(a);
+      a.appendChild(icon);
+      a.appendChild(p);
+
+      document.querySelector('.blog-main-grid').appendChild(divItem);
+    })
+  }
+
+  blogSetup();
 }
 
 function scroll() {
