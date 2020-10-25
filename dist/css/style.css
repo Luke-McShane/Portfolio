@@ -451,6 +451,7 @@ textarea {
   align-items: center;
   text-align: center; }
   .blog-info-content {
+    position: relative;
     height: 90%;
     width: 90%;
     padding: 0.5rem;
