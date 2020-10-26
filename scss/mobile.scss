@@ -1,4 +1,4 @@
-@import './utils';
+// @import './utils';
 @media only screen 
   and (min-width: 481px) 
   and (max-width: 767px) {
@@ -37,7 +37,7 @@
     }
   }
   
-  .grid-system {
+  .projects-main > .grid-system {
     grid-template-columns: repeat(3, 1fr);
     height: auto;
 
@@ -63,6 +63,12 @@
     
     &-main {
       margin-left: 0;
+    }
+  }
+
+  .blog {
+    &-main {
+    margin-left: 0;
     }
   }
 }
@@ -123,7 +129,7 @@
     }
   }
 
-  .grid-system {
+  .projects-main > .grid-system {
     grid-template-columns: repeat(1, 1fr);
     height: auto;
 
@@ -164,6 +170,12 @@
           }
         }
       }
+    }
+  }
+
+  .blog {
+    &-main {
+    margin-left: 0;
     }
   }
 }

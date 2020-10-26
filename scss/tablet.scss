@@ -1,4 +1,4 @@
-@import './utils';
+// @import './utils';
 
 @media only screen 
   and (min-width: 768px) 
@@ -95,6 +95,12 @@
       }
     }
   }
+
+  .blog {
+    &-main {
+    margin-left: 0;
+    }
+  }
 }
 
 @media only screen 
@@ -178,6 +184,12 @@
           margin: 0rem 1rem;
         }
       }
+    }
+  }
+
+  .blog {
+    &-main {
+    margin-left: 0;
     }
   }
 }
