@@ -49,14 +49,14 @@
 
 .modal-cancel {
   position: absolute;
-  top: -3rem;
-  right: -3rem;
+  top: -3.4rem;
+  right: -3.9rem;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  padding: 1rem;
-  width: 110px;
-  height: 110px;
+  padding: 0rem;
+  width: 100px;
+  height: 100px;
   background: #111414;
   border-radius: 50%; }
   .modal-cancel i {
@@ -239,15 +239,17 @@ textarea {
       border-bottom-color: #55756C; }
 
 .header-main {
-  height: 100vh;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
+  height: 100vh;
   width: 100%;
-  margin-left: 10%; }
+  margin-left: 10%;
+  overflow: hidden;
+  z-index: 1;
+  justify-content: center; }
   .header-main h1 {
     padding-bottom: 0.8rem; }
     .header-main h1::after {
@@ -278,17 +280,16 @@ textarea {
 .projects {
   position: relative; }
   .projects-main {
-    position: relative;
-    z-index: 1;
-    margin-left: 10%;
-    height: 100vh;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    overflow-y: auto; }
+    height: 100vh;
+    width: 100%;
+    margin-left: 10%;
+    overflow: hidden;
+    z-index: 1; }
     .projects-main h2 {
       margin-bottom: 1rem; }
     .projects-main-grid-item-info {
@@ -311,6 +312,8 @@ textarea {
       .projects-main-grid-item-info p {
         font-size: 0.9rem; }
   .projects-info {
+    width: 100%;
+    height: 100%;
     position: fixed;
     display: none;
     z-index: 4;
@@ -322,13 +325,21 @@ textarea {
     opacity: 0.9;
     justify-content: center;
     align-items: center;
-    text-align: center; }
+    text-align: center;
+    overflow-y: scroll; }
+    .projects-info h3 {
+      margin: 1rem 0rem 0.1rem 0rem; }
     .projects-info-content {
-      height: 95%;
+      height: 90%;
       width: 95%;
       padding: 0.5rem;
       background-color: #292F30;
-      opacity: 1; }
+      opacity: 1;
+      overflow-y: scroll;
+      scrollbar-width: none;
+      direction: rtl; }
+      .projects-info-content::-webkit-scrollbar {
+        display: none; }
       .projects-info-content-grid {
         display: block;
         position: relative; }
@@ -361,11 +372,14 @@ textarea {
   .exercises-info-content {
     height: 90%;
     width: 95%;
-    overflow-y: scroll;
     padding: 0.5rem;
     background-color: #292F30;
-    direction: rtl;
-    opacity: 1; }
+    opacity: 1;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    direction: rtl; }
+    .exercises-info-content::-webkit-scrollbar {
+      display: none; }
     .exercises-info-content-grid {
       display: block;
       position: relative; }
@@ -389,8 +403,9 @@ textarea {
   text-align: center;
   height: 100vh;
   width: 100%;
+  margin-left: 10%;
   overflow: hidden;
-  margin-left: 10%; }
+  z-index: 1; }
   .exercises-main-container {
     display: flex;
     justify-content: space-evenly;
@@ -417,14 +432,16 @@ textarea {
         font-size: 3rem; }
 
 .blog-main {
-  margin-left: 10%;
-  height: 100vh;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  text-align: center; }
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  margin-left: 10%;
+  overflow: hidden;
+  z-index: 1; }
   .blog-main h1 {
     margin-bottom: 3rem; }
   .blog-main-grid-item-info {
@@ -438,6 +455,8 @@ textarea {
       color: #fff !important; }
 
 .blog-info {
+  width: 100%;
+  height: 100%;
   position: fixed;
   display: none;
   z-index: 4;
@@ -449,11 +468,13 @@ textarea {
   opacity: 0.9;
   justify-content: center;
   align-items: center;
-  text-align: center; }
+  text-align: center;
+  overflow-y: scroll; }
+  .blog-info h3 {
+    margin: 1rem 0rem 0.1rem 0rem; }
   .blog-info-content {
-    position: relative;
     height: 90%;
-    width: 90%;
+    width: 95%;
     padding: 0.5rem;
     background-color: #292F30;
     opacity: 1;
@@ -462,17 +483,23 @@ textarea {
     direction: rtl; }
     .blog-info-content::-webkit-scrollbar {
       display: none; }
+    .blog-info-content-grid {
+      display: block;
+      position: relative; }
 
 .contact {
   height: 100vh; }
   .contact-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    text-align: center;
+    height: 100vh;
     width: 100%;
-    height: 100%;
-    margin-left: 10%; }
+    margin-left: 10%;
+    overflow: hidden;
+    z-index: 1; }
     .contact-content-form {
       width: 100%;
       height: 100%;
@@ -562,14 +589,14 @@ textarea {
 
 .modal-cancel {
   position: absolute;
-  top: -3rem;
-  right: -3rem;
+  top: -3.4rem;
+  right: -3.9rem;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  padding: 1rem;
-  width: 110px;
-  height: 110px;
+  padding: 0rem;
+  width: 100px;
+  height: 100px;
   background: #111414;
   border-radius: 50%; }
   .modal-cancel i {
@@ -785,14 +812,14 @@ textarea {
 
 .modal-cancel {
   position: absolute;
-  top: -3rem;
-  right: -3rem;
+  top: -3.4rem;
+  right: -3.9rem;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  padding: 1rem;
-  width: 110px;
-  height: 110px;
+  padding: 0rem;
+  width: 100px;
+  height: 100px;
   background: #111414;
   border-radius: 50%; }
   .modal-cancel i {

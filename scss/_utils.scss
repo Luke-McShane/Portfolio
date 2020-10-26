@@ -65,15 +65,17 @@
 
 .modal-cancel {
   // position: fixed;
+  // position: sticky;
   position: absolute;
-  top: -3rem;
-  right: -3rem;
+  top: -3.4rem;
+  right: -3.9rem;
+  // transform: translateX(50%);
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  padding: 1rem;
-  width: 110px;
-  height: 110px;
+  padding: 0rem;
+  width: 100px;
+  height: 100px;
   background: #111414;
   border-radius: 50%;
   
@@ -192,7 +194,20 @@
   }
 }
 
-@mixin exercises-modal {
+@mixin section-styling {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  margin-left: 10%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+@mixin modal {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -214,12 +229,12 @@
   }
 }
 
-@mixin exercises-modal-grid {
+@mixin modal-grid {
   display: block;
   position: relative;
 }
 
-@mixin exercises-modal-content {
+@mixin modal-content {
   height: 90%;
   width: 95%;
   overflow-y: scroll;
@@ -229,7 +244,7 @@
   opacity: 1;
 }
 
-@mixin exercises-modal-text {
+@mixin modal-text {
   text-align: left;
     a {
       display: inline-block;
@@ -238,9 +253,23 @@
     }
 }
 
-@mixin exercises-modal-buttons {
+@mixin modal-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+@mixin modal-container {
+  height: 90%;
+  width: 95%;
+  padding: 0.5rem;
+  background-color: $colour-background;
+  opacity: 1;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none;
+  direction: rtl;
 }

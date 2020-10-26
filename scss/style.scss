@@ -128,15 +128,8 @@ textarea {
 .header {
 
   &-main {
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    @include section-styling;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    margin-left: 10%;
 
     h1 {
       padding-bottom: 0.8rem;
@@ -178,21 +171,8 @@ textarea {
   position: relative;
 
   &-main {
-    position: relative;
-    z-index: 1;
-    margin-left: 10%;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-    overflow-y: auto;
+    @include section-styling;
 
-    // &-title{
-    //   height: 25%;
-    // }
     h2 {
       margin-bottom: 1rem;
     }
@@ -223,10 +203,6 @@ textarea {
         cursor: pointer;
       }
 
-      // a {
-      //   height: auto;
-      // }
-
       h2,
       a {
         color: #fff !important;
@@ -239,44 +215,17 @@ textarea {
   }
 
   &-info {
-    position: fixed;
-    display: none;
-    z-index: 4;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: $colour-alternative-background;
-    opacity: 0.9;
-    // display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    // overflow-y: scroll;
-
+    @include modal;
     &-content {
-      height: 95%;
-      width: 95%;
-      padding: 0.5rem;
-      background-color: $colour-background;
-      opacity: 1;
-
+      @include modal-container;
       &-grid {
-        display: block;
-        position: relative;
+        @include modal-grid;
         h3 {
           margin: 1rem 0rem 0.1rem 0rem;
         }
-
         &-buttons {
-          // grid-area: btns;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
+          @include modal-buttons;
         }
-
-       
       }
     }
   }
@@ -285,31 +234,23 @@ textarea {
 
 .exercises {
   &-info {
-    @include exercises-modal;
+    @include modal;
     &-content {
-      @include exercises-modal-content;
+      @include modal-container;
       &-grid {
-        @include exercises-modal-grid;
+        @include modal-grid;
         &-text{
-          @include exercises-modal-text;
+          @include modal-text;
         }
         &-buttons {
-          @include exercises-modal-buttons;
+          @include modal-buttons;
         }
       }
     }
   }
 
   &-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    margin-left: 10%;
+    @include section-styling;
 
     &-container {
       display: flex;
@@ -358,14 +299,7 @@ textarea {
 .blog {
 
   &-main {
-    margin-left: 10%;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
+    @include section-styling;
 
     h1 {
       margin-bottom: 3rem;
@@ -392,32 +326,12 @@ textarea {
   }
 
   &-info {
-    position: fixed;
-    display: none;
-    z-index: 4;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: $colour-alternative-background;
-    opacity: 0.9;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
+    @include modal;
     &-content {
-      position: relative;
-      height: 90%;
-      width: 90%;
-      padding: 0.5rem;
-      background-color: $colour-background;
-      opacity: 1;
-      overflow-y: scroll;
-      &::-webkit-scrollbar {
-        display: none;
+      @include modal-container;
+      &-grid {
+        @include modal-grid;
       }
-      scrollbar-width: none;
-      direction: rtl;
     }
   }
 }
@@ -426,13 +340,7 @@ textarea {
   height: 100vh;
 
   &-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    margin-left: 10%;
+    @include section-styling;
 
     &-form {
       width: 100%;

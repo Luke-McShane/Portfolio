@@ -49,14 +49,14 @@
 
 .modal-cancel {
   position: absolute;
-  top: -3rem;
-  right: -3rem;
+  top: -3.4rem;
+  right: -3.9rem;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  padding: 1rem;
-  width: 110px;
-  height: 110px;
+  padding: 0rem;
+  width: 100px;
+  height: 100px;
   background: #111414;
   border-radius: 50%; }
   .modal-cancel i {
