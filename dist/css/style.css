@@ -49,12 +49,13 @@
 
 .modal-cancel {
   position: absolute;
-  top: -3.4rem;
-  right: -3.9rem;
+  top: -3.2rem;
+  right: -3.6rem;
   display: flex;
   align-items: flex-end;
-  justify-content: flex-end;
-  padding: 0rem;
+  justify-content: flex-start;
+  padding: 0.3rem;
+  padding-bottom: 0.1rem;
   width: 100px;
   height: 100px;
   background: #111414;
@@ -289,7 +290,8 @@ textarea {
     width: 100%;
     margin-left: 10%;
     overflow: hidden;
-    z-index: 1; }
+    z-index: 1;
+    overflow-y: scroll; }
     .projects-main h2 {
       margin-bottom: 1rem; }
     .projects-main-grid-item-info {
@@ -321,8 +323,7 @@ textarea {
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-color: #111414;
-    opacity: 0.9;
+    background: rgba(17, 20, 20, 0.9);
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -330,14 +331,13 @@ textarea {
     .projects-info h3 {
       margin: 1rem 0rem 0.1rem 0rem; }
     .projects-info-content {
-      height: 90%;
+      height: auto;
+      max-height: 95%;
       width: 95%;
       padding: 0.5rem;
-      background-color: #292F30;
-      opacity: 1;
+      background: #111414;
       overflow-y: scroll;
-      scrollbar-width: none;
-      direction: rtl; }
+      scrollbar-width: none; }
       .projects-info-content::-webkit-scrollbar {
         display: none; }
       .projects-info-content-grid {
@@ -361,8 +361,7 @@ textarea {
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: #111414;
-  opacity: 0.9;
+  background: rgba(17, 20, 20, 0.9);
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -370,14 +369,13 @@ textarea {
   .exercises-info h3 {
     margin: 1rem 0rem 0.1rem 0rem; }
   .exercises-info-content {
-    height: 90%;
+    height: auto;
+    max-height: 95%;
     width: 95%;
     padding: 0.5rem;
-    background-color: #292F30;
-    opacity: 1;
+    background: #111414;
     overflow-y: scroll;
-    scrollbar-width: none;
-    direction: rtl; }
+    scrollbar-width: none; }
     .exercises-info-content::-webkit-scrollbar {
       display: none; }
     .exercises-info-content-grid {
@@ -413,7 +411,6 @@ textarea {
     width: 100%;
     height: 100%; }
     .exercises-main-container-button-html, .exercises-main-container-button-css, .exercises-main-container-button-js {
-      flex: 1;
       padding: 2rem 0;
       margin: 0rem 1rem;
       position: relative;
@@ -464,8 +461,7 @@ textarea {
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: #111414;
-  opacity: 0.9;
+  background: rgba(17, 20, 20, 0.9);
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -473,14 +469,13 @@ textarea {
   .blog-info h3 {
     margin: 1rem 0rem 0.1rem 0rem; }
   .blog-info-content {
-    height: 90%;
+    height: auto;
+    max-height: 95%;
     width: 95%;
     padding: 0.5rem;
-    background-color: #292F30;
-    opacity: 1;
+    background: #111414;
     overflow-y: scroll;
-    scrollbar-width: none;
-    direction: rtl; }
+    scrollbar-width: none; }
     .blog-info-content::-webkit-scrollbar {
       display: none; }
     .blog-info-content-grid {
@@ -539,6 +534,9 @@ textarea {
         padding: 0 1rem; }
 
 @media only screen and (min-width: 481px) and (max-width: 767px) {
+  .section-title {
+    font: normal small-caps 100 2rem/2rem "Lato";
+    line-height: 1.5rem; }
   #nav-main {
     display: none;
     font-size: 3em; }
@@ -553,7 +551,6 @@ textarea {
   .projects-info {
     height: 100%; }
     .projects-info-content {
-      height: 90%;
       width: 90%;
       overflow-y: scroll; }
   .projects-main > .grid-system {
@@ -569,12 +566,26 @@ textarea {
         line-height: 0.9rem; }
   .exercises-main {
     margin-left: 0; }
+    .exercises-main-container-button-html, .exercises-main-container-button-css, .exercises-main-container-button-js {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem 1rem;
+      padding: 1rem 0;
+      width: 90%; }
+      .exercises-main-container-button-html h2, .exercises-main-container-button-css h2, .exercises-main-container-button-js h2 {
+        margin: 0;
+        top: 30%;
+        font-size: 1.5rem; }
   .blog-main {
     margin-left: 0; } }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   html, body {
     height: 10vh; }
+  .section-title {
+    font: normal small-caps 100 2rem/1rem "Lato";
+    line-height: 1.5rem; }
   #nav-main {
     display: none;
     font-size: 3em; }
@@ -592,7 +603,6 @@ textarea {
       width: 100%;
       height: 100%; }
       .projects-info-content {
-        height: 90%;
         width: 90%;
         overflow-y: scroll; }
         .projects-info-content-grid {
@@ -600,6 +610,9 @@ textarea {
           .projects-info-content-grid-buttons a {
             margin: 2rem 2rem 0rem 2rem;
             width: 5rem; }
+  .blog-main > .grid-system {
+    grid-template-columns: repeat(1, 1fr);
+    height: auto; }
   .projects-main > .grid-system {
     grid-template-columns: repeat(1, 1fr);
     height: auto; }
@@ -613,14 +626,12 @@ textarea {
         display: flex;
         justify-content: center;
         align-items: center;
-        flex: 1;
-        margin: 2rem 0;
-        width: 90%; }
+        width: 50%;
+        height: 20%; }
         .exercises-main-container-button-html h2, .exercises-main-container-button-css h2, .exercises-main-container-button-js h2 {
           margin: 0;
-          top: 30%; }
-  .blog-main {
-    margin-left: 0; } }
+          top: 30%;
+          font-size: 2rem; } }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   html, body {
@@ -669,9 +680,7 @@ textarea {
         margin-left: 1rem; }
         .exercises-main-container-button-html h2, .exercises-main-container-button-css h2, .exercises-main-container-button-js h2 {
           font-size: 2rem;
-          top: 25%; }
-  .blog-main {
-    margin-left: 0; } }
+          top: 25%; } }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   #nav-main {
@@ -683,12 +692,14 @@ textarea {
     .header-main .section-title {
       line-height: 1.2em;
       margin: 0; }
-  .projects-main {
+  .projects-main,
+  .blog-main {
     margin-left: 0; }
-  .projects-info {
+  .projects-info,
+  .blog-info {
     height: 100%; }
-    .projects-info-content {
-      height: 90%;
+    .projects-info-content,
+    .blog-info-content {
       width: 90%;
       overflow-y: scroll; }
   .grid-system {
@@ -707,8 +718,13 @@ textarea {
     width: 80%; }
   .exercises-main {
     margin-left: 0; }
-    .exercises-main-container-button-html, .exercises-main-container-button-css, .exercises-main-container-button-js {
-      padding: 2rem 1rem;
-      margin: 0rem 1rem; }
-  .blog-main {
-    margin-left: 0; } }
+    .exercises-main-container {
+      justify-content: space-between; }
+      .exercises-main-container-button-html, .exercises-main-container-button-css, .exercises-main-container-button-js {
+        padding: 2rem 1rem;
+        margin: 0rem 1rem;
+        width: 100%; }
+        .exercises-main-container-button-html h2, .exercises-main-container-button-css h2, .exercises-main-container-button-js h2 {
+          margin: 0;
+          top: 30%;
+          font-size: 2rem; } }

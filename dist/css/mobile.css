@@ -1,4 +1,7 @@
 @media only screen and (min-width: 481px) and (max-width: 767px) {
+  .section-title {
+    font: normal small-caps 100 2rem/2rem "Lato";
+    line-height: 1.5rem; }
   #nav-main {
     display: none;
     font-size: 3em; }
@@ -13,7 +16,6 @@
   .projects-info {
     height: 100%; }
     .projects-info-content {
-      height: 90%;
       width: 90%;
       overflow-y: scroll; }
   .projects-main > .grid-system {
@@ -29,12 +31,26 @@
         line-height: 0.9rem; }
   .exercises-main {
     margin-left: 0; }
+    .exercises-main-container-button-html, .exercises-main-container-button-css, .exercises-main-container-button-js {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem 1rem;
+      padding: 1rem 0;
+      width: 90%; }
+      .exercises-main-container-button-html h2, .exercises-main-container-button-css h2, .exercises-main-container-button-js h2 {
+        margin: 0;
+        top: 30%;
+        font-size: 1.5rem; }
   .blog-main {
     margin-left: 0; } }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   html, body {
     height: 10vh; }
+  .section-title {
+    font: normal small-caps 100 2rem/1rem "Lato";
+    line-height: 1.5rem; }
   #nav-main {
     display: none;
     font-size: 3em; }
@@ -52,7 +68,6 @@
       width: 100%;
       height: 100%; }
       .projects-info-content {
-        height: 90%;
         width: 90%;
         overflow-y: scroll; }
         .projects-info-content-grid {
@@ -60,6 +75,9 @@
           .projects-info-content-grid-buttons a {
             margin: 2rem 2rem 0rem 2rem;
             width: 5rem; }
+  .blog-main > .grid-system {
+    grid-template-columns: repeat(1, 1fr);
+    height: auto; }
   .projects-main > .grid-system {
     grid-template-columns: repeat(1, 1fr);
     height: auto; }
@@ -73,11 +91,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        flex: 1;
-        margin: 2rem 0;
-        width: 90%; }
+        width: 50%;
+        height: 20%; }
         .exercises-main-container-button-html h2, .exercises-main-container-button-css h2, .exercises-main-container-button-js h2 {
           margin: 0;
-          top: 30%; }
-  .blog-main {
-    margin-left: 0; } }
+          top: 30%;
+          font-size: 2rem; } }

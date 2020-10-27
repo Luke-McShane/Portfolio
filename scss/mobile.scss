@@ -6,6 +6,12 @@
   // html, body {
   //   height: 100vh;
   // }
+
+  .section-title {
+    font: normal small-caps 100 2rem/2rem "Lato";
+    line-height: 1.5rem;
+  }
+
   #nav-main {
     display: none;
     font-size: 3em;
@@ -30,7 +36,7 @@
     &-info {
       height: 100%;
       &-content {
-        height: 90%;
+        // height: 90%;
         width: 90%;
         overflow-y: scroll;
       }
@@ -63,6 +69,27 @@
     
     &-main {
       margin-left: 0;
+
+      &-container {
+
+        &-button-html,
+        &-button-css,
+        &-button-js {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          // flex: 1;
+          margin: 1rem 1rem;
+          padding: 1rem 0;
+          width: 90%;
+
+          h2 {
+            margin: 0;
+            top: 30%;
+            font-size: 1.5rem;
+          }
+        }
+      }
     }
   }
 
@@ -81,6 +108,12 @@
   html, body {
     height: 10vh;
   }
+
+  .section-title {
+    font: normal small-caps 100 2rem/1rem "Lato";
+    line-height: 1.5rem;
+  }
+
   #nav-main {
     display: none;
     font-size: 3em;
@@ -107,16 +140,12 @@
       width: 100%;
       height: 100%;
       &-content {
-        height: 90%;
+        // height: 90%;
         width: 90%;
         overflow-y: scroll;
 
-        &-grid{
+        &-grid {
           width: 100%;
-          // &-text {
-          //   width: 100%;
-          //   height: 100%;
-          // }
 
           &-buttons {
             a {
@@ -129,16 +158,17 @@
     }
   }
 
+  .blog-main > .grid-system {
+    grid-template-columns: repeat(1, 1fr);
+    height: auto; 
+  }
+
   .projects-main > .grid-system {
     grid-template-columns: repeat(1, 1fr);
     height: auto;
 
     &-item {
       &-info {
-      //   :active {
-      //   opacity: 1;
-      //   transform: translateY(50%);
-      //  }
 
        p {
          font-size: 0.7rem;
@@ -160,22 +190,22 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          flex: 1;
-          margin: 2rem 0;
-          width: 90%;
+          width: 50%;
+          height: 20%;
 
           h2 {
             margin: 0;
-            top:30%;
+            top: 30%;
+            font-size: 2rem;
           }
         }
       }
     }
   }
 
-  .blog {
-    &-main {
-    margin-left: 0;
-    }
-  }
+  // .blog {
+  //   &-main {
+    // margin-left: 0;
+  //   }
+  // }
 }

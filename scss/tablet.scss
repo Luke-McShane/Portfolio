@@ -96,11 +96,11 @@
     }
   }
 
-  .blog {
-    &-main {
-    margin-left: 0;
-    }
-  }
+  // .blog {
+  //   &-main {
+  //   margin-left: 0;
+  //   }
+  // }
 }
 
 @media only screen 
@@ -126,7 +126,8 @@
   }
   
   
-  .projects {
+  .projects,
+  .blog {
     &-main {
       margin-left: 0;
     }
@@ -134,7 +135,7 @@
     &-info {
       height: 100%;
       &-content {
-        height: 90%;
+        // height: 90%;
         width: 90%;
         overflow-y: scroll;
       }
@@ -176,20 +177,28 @@
     &-main {
       margin-left: 0;
       &-container {
+        justify-content: space-between;
 
         &-button-html,
         &-button-css,
         &-button-js {
           padding: 2rem 1rem;
           margin: 0rem 1rem;
+          width: 100%;
+
+          h2 {
+            margin: 0;
+            top: 30%;
+            font-size: 2rem;
+          }
         }
       }
     }
   }
 
-  .blog {
-    &-main {
-    margin-left: 0;
-    }
-  }
+  // .blog {
+  //   &-main {
+  //   margin-left: 0;
+  //   }
+  // }
 }

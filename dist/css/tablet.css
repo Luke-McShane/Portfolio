@@ -45,9 +45,7 @@
         margin-left: 1rem; }
         .exercises-main-container-button-html h2, .exercises-main-container-button-css h2, .exercises-main-container-button-js h2 {
           font-size: 2rem;
-          top: 25%; }
-  .blog-main {
-    margin-left: 0; } }
+          top: 25%; } }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   #nav-main {
@@ -59,12 +57,14 @@
     .header-main .section-title {
       line-height: 1.2em;
       margin: 0; }
-  .projects-main {
+  .projects-main,
+  .blog-main {
     margin-left: 0; }
-  .projects-info {
+  .projects-info,
+  .blog-info {
     height: 100%; }
-    .projects-info-content {
-      height: 90%;
+    .projects-info-content,
+    .blog-info-content {
       width: 90%;
       overflow-y: scroll; }
   .grid-system {
@@ -83,8 +83,13 @@
     width: 80%; }
   .exercises-main {
     margin-left: 0; }
-    .exercises-main-container-button-html, .exercises-main-container-button-css, .exercises-main-container-button-js {
-      padding: 2rem 1rem;
-      margin: 0rem 1rem; }
-  .blog-main {
-    margin-left: 0; } }
+    .exercises-main-container {
+      justify-content: space-between; }
+      .exercises-main-container-button-html, .exercises-main-container-button-css, .exercises-main-container-button-js {
+        padding: 2rem 1rem;
+        margin: 0rem 1rem;
+        width: 100%; }
+        .exercises-main-container-button-html h2, .exercises-main-container-button-css h2, .exercises-main-container-button-js h2 {
+          margin: 0;
+          top: 30%;
+          font-size: 2rem; } }

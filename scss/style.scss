@@ -172,6 +172,7 @@ textarea {
 
   &-main {
     @include section-styling;
+    overflow-y: scroll;
 
     h2 {
       margin-bottom: 1rem;
@@ -262,7 +263,7 @@ textarea {
       &-button-html,
       &-button-css,
       &-button-js {
-        flex: 1;
+        // flex: 1;
         padding: 2rem 0;
         margin: 0rem 1rem;
         position: relative;
