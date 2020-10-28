@@ -1,6 +1,8 @@
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   html, body {
     height: 100vh; }
+  .container {
+    max-width: 85%; }
   #nav-main {
     display: none;
     font-size: 3em; }
@@ -22,18 +24,16 @@
       overflow-y: scroll; }
   .grid-system {
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 5rem;
+    row-gap: 3rem;
     height: auto; }
-    .grid-system-item-info {
-      transform: translateY(60%) !important; }
-      .grid-system-item-info .project-title {
-        font-size: 1rem; }
-      .grid-system-item-info .fa-1x {
-        font-size: 1rem; }
-      .grid-system-item-info p {
-        margin-top: 0rem;
-        line-height: 0.9rem;
-        font-size: 0.9rem; }
+    .grid-system-item-info .project-title {
+      font-size: 1rem; }
+    .grid-system-item-info .fa-1x {
+      font-size: 1rem; }
+    .grid-system-item-info p {
+      margin-top: 0rem;
+      line-height: 0.9rem;
+      font-size: 0.9rem; }
   .exercises-main {
     margin-left: 0; }
     .exercises-main-container {

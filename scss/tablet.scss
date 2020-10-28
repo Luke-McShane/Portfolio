@@ -7,6 +7,10 @@
   html, body {
     height: 100vh;
   }
+
+  .container {
+    max-width: 85%;
+  }
   #nav-main {
     display: none;
     font-size: 3em;
@@ -44,12 +48,12 @@
   
   .grid-system {
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 5rem;
+    row-gap: 3rem;
     height: auto;
 
     &-item {
       &-info {
-        transform: translateY(60%) !important;
+        // transform: translateY(60%) !important;
 
         .project-title {
           font-size: 1rem;
