@@ -246,6 +246,70 @@ window.onload = function () {
     })
   }
 
+  function projectsSetup() {
+    let data = projectData.default;
+    let blogs = Object.values(data)[0];
+    let iterate = 1;
+    blogs.forEach(entry => {
+      const title = entry.title;
+      // projects-main-grid-item-${iterate} grid-system-item
+      const divItem = document.createElement('div');
+
+      // projects-main-grid-item-img grid-system-item-img
+      const divImg = document.createElement('div');
+      // src="how to select corresponding img?" alt="Project ${iterate}"
+      const img = document.createElement('img');
+
+      // projects-main-grid-item-info grid-system-item-info
+      const divInfo = document.createElement('div');
+      // project-title
+      const h2 = document.createElement('h2');
+
+      // btn-div
+      const divBtn = document.createElement('div');
+      // href="how to find corresponding link? Add to js object, but how to select?" target="_blank"
+
+      const a1 = document.createElement('a');
+      // class="fas fa-external-link-alt fa-1x"
+      const icon1 = document.createElement('i');
+      const p1 = document.createElement('p');
+      // class="project-btn-2"
+
+      const a2 = document.createElement('a');
+      // class="fas fa-book-open fa-1x"
+      const icon2 = document.createElement('i');
+      const p2 = document.createElement('p');
+
+      // href="how to find corresponding link? Add to js object, but how to select?" target="_blank" class="project-btn-3"
+      const a3 = document.createElement('a');
+      // class="fas fa-code fa-1x"
+      const icon3 = document.createElement('i');
+      const p3 = document.createElement('p');
+
+      divItem.classList.add(`projects-main-grid-item-${iterate}`, 'grid-system-item');
+      divImg.classList.add('projects-main-grid-item-img', 'grid-system-item-img');
+      img.src = `./dist/img/projects/project-${1}`;
+      divInfo.classList.add('grid-system-item-info');
+      h2.classList.add('blog-title');
+      h2.innerText = title;
+      a.classList.add('blog-btn');
+      a.id = `blog-btn-${iterate}`;
+      icon.classList.add('fas', 'fa-book-open', 'fa-1x');
+      p.innerText = 'Read Post';
+
+      divItem.appendChild(divImg);
+      divImg.appendChild(img);
+      divItem.appendChild(divInfo);
+      divInfo.appendChild(h2);
+      divInfo.appendChild(a);
+      a.appendChild(icon);
+      a.appendChild(p);
+
+      document.querySelector('.blog-main-grid').appendChild(divItem);
+      iterate += 1;
+    })
+  }
+
   blogSetup();
 
   let blogBtns = document.getElementsByClassName("blog-btn");

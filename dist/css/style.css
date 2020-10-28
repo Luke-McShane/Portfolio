@@ -303,9 +303,7 @@ textarea {
         grid-area: btn-div;
         display: flex;
         justify-content: space-evenly; }
-      .projects-main-grid-item-info .project-btn-1 {
-        cursor: pointer; }
-      .projects-main-grid-item-info .project-btn-2 {
+      .projects-main-grid-item-info a {
         cursor: pointer; }
       .projects-main-grid-item-info .project-btn-3 {
         grid-area: btn-3;
