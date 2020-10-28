@@ -537,6 +537,9 @@ textarea {
         padding: 0 1rem; }
 
 @media only screen and (min-width: 481px) and (max-width: 767px) {
+  .container {
+    max-width: 90%;
+    overflow-x: hidden; }
   .section-title {
     font: normal small-caps 100 2rem/2rem "Lato";
     line-height: 1.5rem; }
@@ -551,6 +554,16 @@ textarea {
       margin: 0; }
   .projects-main {
     margin-left: 0; }
+    .projects-main-grid-item-info {
+      transform: translateY(50%) !important; }
+      .projects-main-grid-item-info .project-title {
+        font-size: 0.8rem;
+        margin: 0.25rem; }
+      .projects-main-grid-item-info .fa-1x {
+        font-size: 0.75rem; }
+      .projects-main-grid-item-info p {
+        line-height: 0.9rem;
+        font-size: 0.6rem; }
   .projects-info {
     height: 100%; }
     .projects-info-content {
@@ -559,14 +572,6 @@ textarea {
   .projects-main > .grid-system {
     grid-template-columns: repeat(3, 1fr);
     height: auto; }
-    .projects-main > .grid-system-item-info {
-      transform: translateY(50%) !important; }
-      .projects-main > .grid-system-item-info .project-title {
-        font-size: 1rem; }
-      .projects-main > .grid-system-item-info .fa-1x {
-        font-size: 1rem; }
-      .projects-main > .grid-system-item-info p {
-        line-height: 0.9rem; }
   .exercises-main {
     margin-left: 0; }
     .exercises-main-container-button-html, .exercises-main-container-button-css, .exercises-main-container-button-js {
@@ -708,15 +713,14 @@ textarea {
   .grid-system {
     grid-template-columns: repeat(3, 1fr);
     height: auto; }
-    .grid-system-item-info {
-      transform: translateY(55%) !important; }
-      .grid-system-item-info .project-title {
-        font-size: 1.2rem; }
-      .grid-system-item-info .fa-1x {
-        font-size: 0.9rem; }
-      .grid-system-item-info p {
-        line-height: 0.9rem;
-        font-size: 0.8rem; }
+    .grid-system-item-info .project-title {
+      font-size: 1rem;
+      margin-bottom: 0.5rem; }
+    .grid-system-item-info .fa-1x {
+      font-size: 0.9rem; }
+    .grid-system-item-info p {
+      line-height: 0.9rem;
+      font-size: 0.6rem; }
   .exercises .contaier {
     width: 80%; }
   .exercises-main {

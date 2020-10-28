@@ -152,10 +152,11 @@
 
     &-item {
       &-info {
-        transform: translateY(55%) !important;
+        // transform: translateY(55%) !important;
 
         .project-title {
-          font-size: 1.2rem;
+          font-size: 1rem;
+          margin-bottom: 0.5rem;
         }
         .fa-1x {
           font-size: 0.9rem;
@@ -163,7 +164,7 @@
 
         p {
           line-height: 0.9rem;
-          font-size: 0.8rem;
+          font-size: 0.6rem;
         }
         // &:active {
         // opacity: 1;

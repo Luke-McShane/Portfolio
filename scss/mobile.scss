@@ -7,6 +7,11 @@
   //   height: 100vh;
   // }
 
+  .container {
+    max-width: 90%;
+    overflow-x: hidden;
+  }
+
   .section-title {
     font: normal small-caps 100 2rem/2rem "Lato";
     line-height: 1.5rem;
@@ -31,6 +36,22 @@
   .projects {
     &-main {
       margin-left: 0;
+      &-grid-item-info {
+        transform: translateY(50%) !important;
+
+        .project-title {
+          font-size: 0.8rem;
+          margin: 0.25rem;
+        }
+        .fa-1x {
+          font-size: 0.75rem;
+        }
+
+        p {
+          line-height: 0.9rem;
+          font-size: 0.6rem;
+        }
+      }
     }
 
     &-info {
@@ -41,28 +62,13 @@
         overflow-y: scroll;
       }
     }
+
+      
   }
   
   .projects-main > .grid-system {
     grid-template-columns: repeat(3, 1fr);
     height: auto;
-
-    &-item {
-      &-info {
-        transform: translateY(50%) !important;
-
-        .project-title {
-          font-size: 1rem;
-        }
-        .fa-1x {
-          font-size: 1rem;
-        }
-
-        p {
-          line-height: 0.9rem;
-        }
-      }
-    }  
   }
   
   .exercises {

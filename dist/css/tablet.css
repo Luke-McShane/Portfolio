@@ -70,15 +70,14 @@
   .grid-system {
     grid-template-columns: repeat(3, 1fr);
     height: auto; }
-    .grid-system-item-info {
-      transform: translateY(55%) !important; }
-      .grid-system-item-info .project-title {
-        font-size: 1.2rem; }
-      .grid-system-item-info .fa-1x {
-        font-size: 0.9rem; }
-      .grid-system-item-info p {
-        line-height: 0.9rem;
-        font-size: 0.8rem; }
+    .grid-system-item-info .project-title {
+      font-size: 1rem;
+      margin-bottom: 0.5rem; }
+    .grid-system-item-info .fa-1x {
+      font-size: 0.9rem; }
+    .grid-system-item-info p {
+      line-height: 0.9rem;
+      font-size: 0.6rem; }
   .exercises .contaier {
     width: 80%; }
   .exercises-main {
