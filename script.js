@@ -12,6 +12,151 @@ window.onload = function () {
   let jsHeaders = ['JS Projects', 'JS Exercises'];
   let exercisesBtns = document.querySelectorAll(`[class*="exercises-main-container-button"]`);
 
+  function blogSetup() {
+    let blogData = blogsObject.default;
+    let blogs = Object.values(blogData)[0];
+    let iterate = 1;
+    blogs.forEach(entry => {
+      const title = entry.title;
+      // const blog = entry.blog;
+      const divItem = document.createElement('div');
+      const divImg = document.createElement('div');
+      const img = document.createElement('img');
+      const divInfo = document.createElement('div');
+      const h2 = document.createElement('h2');
+      const a = document.createElement('a');
+      const icon = document.createElement('i');
+      const p = document.createElement('p');
+
+      divItem.classList.add('grid-system-item');
+      divImg.classList.add('grid-system-item-img');
+      img.src = './dist/img/blogs/greystripe.png';
+      divInfo.classList.add('grid-system-item-info');
+      h2.classList.add('blog-title');
+      h2.innerText = title;
+      a.classList.add('blog-btn');
+      a.id = `blog-btn-${iterate}`;
+      icon.classList.add('fas', 'fa-book-open', 'fa-1x');
+      p.innerText = 'Read Post';
+
+      divItem.appendChild(divImg);
+      divImg.appendChild(img);
+      divItem.appendChild(divInfo);
+      divInfo.appendChild(h2);
+      divInfo.appendChild(a);
+      a.appendChild(icon);
+      a.appendChild(p);
+
+      document.querySelector('.blog-main-grid').appendChild(divItem);
+      iterate += 1;
+    })
+  }
+
+  function projectsSetup() {
+    let data = projectData.default;
+    let projects = Object.values(data)[0];
+    let iterate = 1;
+    let sites = ['https://luke-mcshane.github.io/Kindle-Quotes/',
+      'https://luke-mcshane.github.io/NaturesSojourn-Project-5/',
+      'https://luke-mcshane.github.io/Nietzsches-Hamburger-Project-6/',
+      'https://luke-mcshane.github.io/ShaneWrites-Project-2/',
+      'https://luke-mcshane.github.io/Hotel-Website-Project-1/index.html',
+      'https://luke-mcshane.github.io/Etch-a-Sketch/',
+      'https://luke-mcshane.github.io/JigSure-Project-3/index.html',
+      'https://luke-mcshane.github.io/EdgeLedger-Project-4/',
+      'https://luke-mcshane.github.io/Kindle-Quotes/'];
+
+    let sources = ['https://github.com/Luke-McShane/Kindle-Quotes',
+      'https://github.com/Luke-McShane/NaturesSojourn-Project-5',
+      'https://github.com/Luke-McShane/Nietzsches-Hamburger-Project-6',
+      'https://github.com/Luke-McShane/ShaneWrites-Project-2',
+      'https://github.com/Luke-McShane/Hotel-Website-Project-1',
+      'https://github.com/Luke-McShane/Etch-a-Sketch',
+      'https://github.com/Luke-McShane/JigSure-Project-3',
+      'https://github.com/Luke-McShane/EdgeLedger-Project-4',
+      'https://github.com/Luke-McShane/Kindle-Quotes'];
+    projects.forEach(entry => {
+      const title = entry.title;
+      // projects-main-grid-item-${iterate} grid-system-item
+      const divItem = document.createElement('div');
+
+      // projects-main-grid-item-img grid-system-item-img
+      const divImg = document.createElement('div');
+      // src="how to select corresponding img?" alt="Project ${iterate}"
+      const img = document.createElement('img');
+
+      // projects-main-grid-item-info grid-system-item-info
+      const divInfo = document.createElement('div');
+      // project-title
+      const h2 = document.createElement('h2');
+
+      // btn-div
+      const divBtn = document.createElement('div');
+      // href="how to find corresponding link? Add to js object, but how to select?" target="_blank"
+
+      const a1 = document.createElement('a');
+      // class="fas fa-external-link-alt fa-1x"
+      const i1 = document.createElement('i');
+      const p1 = document.createElement('p');
+      // class="project-btn-2"
+
+      const a2 = document.createElement('a');
+      // class="fas fa-book-open fa-1x"
+      const i2 = document.createElement('i');
+      const p2 = document.createElement('p');
+
+      // href="how to find corresponding link? Add to js object, but how to select?" target="_blank" class="project-btn-3"
+      const a3 = document.createElement('a');
+      // class="fas fa-code fa-1x"
+      const i3 = document.createElement('i');
+      const p3 = document.createElement('p');
+
+      divItem.classList.add(`projects-main-grid-item-${iterate}`, 'grid-system-item');
+      divImg.classList.add('projects-main-grid-item-img', 'grid-system-item-img');
+      divInfo.classList.add('projects-main-grid-item-info', 'grid-system-item-info');
+      h2.classList.add('project-title');
+      divBtn.classList.add('btn-div');
+      i1.classList.add('fas', 'fa-external-link-alt', 'fa-1x');
+      i2.classList.add('fas', 'fa-book-open', 'fa-1x');
+      i3.classList.add('fas', 'fa-code', 'fa-1x');
+      a2.classList.add('project-btn-2');
+      a3.classList.add('project-btn-3');
+      img.src = `./dist/img/projects-new/projects-${iterate}.png`;
+      img.alt = `Project ${iterate}`;
+      h2.innerText = title;
+
+      a1.href = sites[iterate - 1];
+      a1.target = '_blank';
+      p1.innerText = 'View Site';
+      p2.innerText = 'Read More';
+      a3.href = sources[iterate - 1];
+      a3.target = '_blank';
+      p3.innerText = 'View Source';
+
+      a1.appendChild(i1);
+      a1.appendChild(p1);
+      a2.appendChild(i2);
+      a2.appendChild(p2);
+      a3.appendChild(i3);
+      a3.appendChild(p3);
+      divBtn.appendChild(a1);
+      divBtn.appendChild(a2);
+      divInfo.appendChild(h2);
+      divInfo.appendChild(divBtn);
+      divInfo.appendChild(a3);
+      divImg.appendChild(img);
+      divItem.appendChild(divImg);
+      divItem.appendChild(divInfo);
+
+
+      document.querySelector('.projects-main-grid').appendChild(divItem);
+      iterate += 1;
+    })
+  }
+
+  blogSetup();
+  projectsSetup();
+
   // This sets up the subheadings for the respective section
   // If the subheading(s) is already setup, the function is not run
   // This check is necessary, because the user can close and reopen the modal, and the
@@ -203,153 +348,6 @@ window.onload = function () {
       overlaySource.href = source;
     }
   }
-
-
-
-  function blogSetup() {
-    let blogData = blogsObject.default;
-    let blogs = Object.values(blogData)[0];
-    let iterate = 1;
-    blogs.forEach(entry => {
-      const title = entry.title;
-      // const blog = entry.blog;
-      const divItem = document.createElement('div');
-      const divImg = document.createElement('div');
-      const img = document.createElement('img');
-      const divInfo = document.createElement('div');
-      const h2 = document.createElement('h2');
-      const a = document.createElement('a');
-      const icon = document.createElement('i');
-      const p = document.createElement('p');
-
-      divItem.classList.add('grid-system-item');
-      divImg.classList.add('grid-system-item-img');
-      img.src = './dist/img/blogs/greystripe.png';
-      divInfo.classList.add('grid-system-item-info');
-      h2.classList.add('blog-title');
-      h2.innerText = title;
-      a.classList.add('blog-btn');
-      a.id = `blog-btn-${iterate}`;
-      icon.classList.add('fas', 'fa-book-open', 'fa-1x');
-      p.innerText = 'Read Post';
-
-      divItem.appendChild(divImg);
-      divImg.appendChild(img);
-      divItem.appendChild(divInfo);
-      divInfo.appendChild(h2);
-      divInfo.appendChild(a);
-      a.appendChild(icon);
-      a.appendChild(p);
-
-      document.querySelector('.blog-main-grid').appendChild(divItem);
-      iterate += 1;
-    })
-  }
-
-  function projectsSetup() {
-    let data = projectData.default;
-    let projects = Object.values(data)[0];
-    let iterate = 1;
-    let sites = ['https://luke-mcshane.github.io/Kindle-Quotes/',
-      'https://luke-mcshane.github.io/NaturesSojourn-Project-5/',
-      'https://luke-mcshane.github.io/Nietzsches-Hamburger-Project-6/',
-      'https://luke-mcshane.github.io/ShaneWrites-Project-2/',
-      'https://luke-mcshane.github.io/Hotel-Website-Project-1/index.html',
-      'https://luke-mcshane.github.io/Etch-a-Sketch/',
-      'https://luke-mcshane.github.io/JigSure-Project-3/index.html',
-      'https://luke-mcshane.github.io/EdgeLedger-Project-4/',
-      'https://luke-mcshane.github.io/Kindle-Quotes/'];
-
-    let sources = ['https://github.com/Luke-McShane/Kindle-Quotes',
-      'https://github.com/Luke-McShane/NaturesSojourn-Project-5',
-      'https://github.com/Luke-McShane/Nietzsches-Hamburger-Project-6',
-      'https://github.com/Luke-McShane/ShaneWrites-Project-2',
-      'https://github.com/Luke-McShane/Hotel-Website-Project-1',
-      'https://github.com/Luke-McShane/Etch-a-Sketch',
-      'https://github.com/Luke-McShane/JigSure-Project-3',
-      'https://github.com/Luke-McShane/EdgeLedger-Project-4',
-      'https://github.com/Luke-McShane/Kindle-Quotes'];
-    projects.forEach(entry => {
-      const title = entry.title;
-      // projects-main-grid-item-${iterate} grid-system-item
-      const divItem = document.createElement('div');
-
-      // projects-main-grid-item-img grid-system-item-img
-      const divImg = document.createElement('div');
-      // src="how to select corresponding img?" alt="Project ${iterate}"
-      const img = document.createElement('img');
-
-      // projects-main-grid-item-info grid-system-item-info
-      const divInfo = document.createElement('div');
-      // project-title
-      const h2 = document.createElement('h2');
-
-      // btn-div
-      const divBtn = document.createElement('div');
-      // href="how to find corresponding link? Add to js object, but how to select?" target="_blank"
-
-      const a1 = document.createElement('a');
-      // class="fas fa-external-link-alt fa-1x"
-      const i1 = document.createElement('i');
-      const p1 = document.createElement('p');
-      // class="project-btn-2"
-
-      const a2 = document.createElement('a');
-      // class="fas fa-book-open fa-1x"
-      const i2 = document.createElement('i');
-      const p2 = document.createElement('p');
-
-      // href="how to find corresponding link? Add to js object, but how to select?" target="_blank" class="project-btn-3"
-      const a3 = document.createElement('a');
-      // class="fas fa-code fa-1x"
-      const i3 = document.createElement('i');
-      const p3 = document.createElement('p');
-
-      divItem.classList.add(`projects-main-grid-item-${iterate}`, 'grid-system-item');
-      divImg.classList.add('projects-main-grid-item-img', 'grid-system-item-img');
-      divInfo.classList.add('projects-main-grid-item-info', 'grid-system-item-info');
-      h2.classList.add('project-title');
-      divBtn.classList.add('btn-div');
-      i1.classList.add('fas', 'fa-external-link-alt', 'fa-1x');
-      i2.classList.add('fas', 'fa-book-open', 'fa-1x');
-      i3.classList.add('fas', 'fa-code', 'fa-1x');
-      a2.classList.add('project-btn-2');
-      a3.classList.add('project-btn-3');
-      img.src = `./dist/img/projects-new/projects-${iterate}.png`;
-      img.alt = `Project ${iterate}`;
-      h2.innerText = title;
-
-      a1.href = sites[iterate - 1];
-      a1.target = '_blank';
-      p1.innerText = 'View Site';
-      p2.innerText = 'Read More';
-      a3.href = sources[iterate - 1];
-      a3.target = '_blank';
-      p3.innerText = 'View Source';
-
-      a1.appendChild(i1);
-      a1.appendChild(p1);
-      a2.appendChild(i2);
-      a2.appendChild(p2);
-      a3.appendChild(i3);
-      a3.appendChild(p3);
-      divBtn.appendChild(a1);
-      divBtn.appendChild(a2);
-      divInfo.appendChild(h2);
-      divInfo.appendChild(divBtn);
-      divInfo.appendChild(a3);
-      divImg.appendChild(img);
-      divItem.appendChild(divImg);
-      divItem.appendChild(divInfo);
-
-
-      document.querySelector('.projects-main-grid').appendChild(divItem);
-      iterate += 1;
-    })
-  }
-
-  blogSetup();
-  projectsSetup();
 
   let blogBtns = document.getElementsByClassName("blog-btn");
   for (let i = 0; i < blogBtns.length; i++) {
