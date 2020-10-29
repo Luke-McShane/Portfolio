@@ -248,9 +248,28 @@ window.onload = function () {
 
   function projectsSetup() {
     let data = projectData.default;
-    let blogs = Object.values(data)[0];
+    let projects = Object.values(data)[0];
     let iterate = 1;
-    blogs.forEach(entry => {
+    let sites = ['https://luke-mcshane.github.io/Kindle-Quotes/',
+      'https://luke-mcshane.github.io/NaturesSojourn-Project-5/',
+      'https://luke-mcshane.github.io/Nietzsches-Hamburger-Project-6/',
+      'https://luke-mcshane.github.io/ShaneWrites-Project-2/',
+      'https://luke-mcshane.github.io/Hotel-Website-Project-1/index.html',
+      'https://luke-mcshane.github.io/Etch-a-Sketch/',
+      'https://luke-mcshane.github.io/JigSure-Project-3/index.html',
+      'https://luke-mcshane.github.io/EdgeLedger-Project-4/',
+      'https://luke-mcshane.github.io/Kindle-Quotes/'];
+
+    let sources = ['https://github.com/Luke-McShane/Kindle-Quotes',
+      'https://github.com/Luke-McShane/NaturesSojourn-Project-5',
+      'https://github.com/Luke-McShane/Nietzsches-Hamburger-Project-6',
+      'https://github.com/Luke-McShane/ShaneWrites-Project-2',
+      'https://github.com/Luke-McShane/Hotel-Website-Project-1',
+      'https://github.com/Luke-McShane/Etch-a-Sketch',
+      'https://github.com/Luke-McShane/JigSure-Project-3',
+      'https://github.com/Luke-McShane/EdgeLedger-Project-4',
+      'https://github.com/Luke-McShane/Kindle-Quotes'];
+    projects.forEach(entry => {
       const title = entry.title;
       // projects-main-grid-item-${iterate} grid-system-item
       const divItem = document.createElement('div');
@@ -271,46 +290,66 @@ window.onload = function () {
 
       const a1 = document.createElement('a');
       // class="fas fa-external-link-alt fa-1x"
-      const icon1 = document.createElement('i');
+      const i1 = document.createElement('i');
       const p1 = document.createElement('p');
       // class="project-btn-2"
 
       const a2 = document.createElement('a');
       // class="fas fa-book-open fa-1x"
-      const icon2 = document.createElement('i');
+      const i2 = document.createElement('i');
       const p2 = document.createElement('p');
 
       // href="how to find corresponding link? Add to js object, but how to select?" target="_blank" class="project-btn-3"
       const a3 = document.createElement('a');
       // class="fas fa-code fa-1x"
-      const icon3 = document.createElement('i');
+      const i3 = document.createElement('i');
       const p3 = document.createElement('p');
 
       divItem.classList.add(`projects-main-grid-item-${iterate}`, 'grid-system-item');
       divImg.classList.add('projects-main-grid-item-img', 'grid-system-item-img');
-      img.src = `./dist/img/projects/project-${1}`;
-      divInfo.classList.add('grid-system-item-info');
-      h2.classList.add('blog-title');
+      divInfo.classList.add('projects-main-grid-item-info', 'grid-system-item-info');
+      h2.classList.add('project-title');
+      divBtn.classList.add('btn-div');
+      i1.classList.add('fas', 'fa-external-link-alt', 'fa-1x');
+      i2.classList.add('fas', 'fa-book-open', 'fa-1x');
+      i3.classList.add('fas', 'fa-code', 'fa-1x');
+      a2.classList.add('project-btn-2');
+      a3.classList.add('project-btn-3');
+      img.src = `./dist/img/projects-new/projects-${iterate}.png`;
+      img.alt = `Project ${iterate}`;
       h2.innerText = title;
-      a.classList.add('blog-btn');
-      a.id = `blog-btn-${iterate}`;
-      icon.classList.add('fas', 'fa-book-open', 'fa-1x');
-      p.innerText = 'Read Post';
 
-      divItem.appendChild(divImg);
-      divImg.appendChild(img);
-      divItem.appendChild(divInfo);
+      a1.href = sites[iterate - 1];
+      a1.target = '_blank';
+      p1.innerText = 'View Site';
+      p2.innerText = 'Read More';
+      a3.href = sources[iterate - 1];
+      a3.target = '_blank';
+      p3.innerText = 'View Source';
+
+      a1.appendChild(i1);
+      a1.appendChild(p1);
+      a2.appendChild(i2);
+      a2.appendChild(p2);
+      a3.appendChild(i3);
+      a3.appendChild(p3);
+      divBtn.appendChild(a1);
+      divBtn.appendChild(a2);
       divInfo.appendChild(h2);
-      divInfo.appendChild(a);
-      a.appendChild(icon);
-      a.appendChild(p);
+      divInfo.appendChild(divBtn);
+      divInfo.appendChild(a3);
+      divImg.appendChild(img);
+      divItem.appendChild(divImg);
+      divItem.appendChild(divInfo);
 
-      document.querySelector('.blog-main-grid').appendChild(divItem);
+
+      document.querySelector('.projects-main-grid').appendChild(divItem);
       iterate += 1;
     })
   }
 
   blogSetup();
+  projectsSetup();
 
   let blogBtns = document.getElementsByClassName("blog-btn");
   for (let i = 0; i < blogBtns.length; i++) {
