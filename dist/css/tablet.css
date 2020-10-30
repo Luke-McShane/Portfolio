@@ -45,7 +45,9 @@
         margin-left: 1rem; }
         .exercises-main-container-button-html h2, .exercises-main-container-button-css h2, .exercises-main-container-button-js h2 {
           font-size: 2rem;
-          top: 25%; } }
+          top: 25%; }
+  .blog-main {
+    margin-left: 0; } }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   #nav-main {
@@ -91,4 +93,6 @@
         .exercises-main-container-button-html h2, .exercises-main-container-button-css h2, .exercises-main-container-button-js h2 {
           margin: 0;
           top: 30%;
-          font-size: 2rem; } }
+          font-size: 2rem; }
+  .blog-main {
+    margin-left: 0; } }

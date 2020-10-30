@@ -1,28 +1,28 @@
 @media screen and (min-width: 1024px) and (max-height: 1310px) {
   /* Laptop */
-  .grid-system {
-    // display: grid;
-    // gap: 1rem;
-    // grid-template-columns: repeat(3, 1fr);
-    // height: 70%;  
-    &-item {
-      &-info {
-        // position: absolute;
-        // opacity: 0;
-        // z-index: -1;
-        top: -35%;
-        // left: 0;
-        // bottom: 0;
-        // right: 0;
-        // display: grid;
-        // height: 75%;
-        // transition: all 500ms ease-out 500ms;
+  // .grid-system {
+  //   // display: grid;
+  //   // gap: 1rem;
+  //   // grid-template-columns: repeat(3, 1fr);
+  //   // height: 70%;  
+  //   &-item {
+  //     &-info {
+  //       // position: absolute;
+  //       // opacity: 0;
+  //       // z-index: -1;
+  //       top: -35%;
+  //       // left: 0;
+  //       // bottom: 0;
+  //       // right: 0;
+  //       // display: grid;
+  //       // height: 75%;
+  //       // transition: all 500ms ease-out 500ms;
         
-      }
+  //     }
   
      
-    }
-  }
+  //   }
+  // }
 
   .projects-main-grid-item-info  {
     .project-title {

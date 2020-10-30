@@ -142,13 +142,16 @@ textarea {
 
     .resume {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: center;
       align-items: flex-end;
-      width: 30%;
+      width: 100%;
       margin-top: 1rem;
 
       &-section {
         padding: 0.5rem;
+        margin: 0 2rem;
+        display: flex;
+        flex-direction: column;
 
         span[class^="resume-"] {
           display: inline-block;
@@ -244,10 +247,12 @@ textarea {
         @include modal-grid;
         &-text{
           @include modal-text;
+          
         }
-        &-buttons {
-          @include modal-buttons;
-        }
+        
+        // &-buttons {
+        //   @include modal-buttons;
+        // }
       }
     }
   }
@@ -273,6 +278,7 @@ textarea {
         display: inline-block;
         color: $colour-text;
         border: 4px solid $colour-background;
+        cursor: pointer;
         // border-radius: 50%;
         box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
           inset 0 -15px 15px rgba(255, 255, 255, 0.05),
@@ -308,18 +314,22 @@ textarea {
       margin-bottom: 1rem;
     }
 
-    &-grid-item-info {
-      grid-template-areas:
-        'title'
-        'btn-1';
+    .grid-system-item-info {
+      // grid-template-areas:
+      //   'title'
+      //   'btn-1';
 
-      .blog-title {
-        grid-area: title;
-      }
+      // .blog-title {
+      //   grid-area: title;
+      // }
 
-      .blog-btn-1 {
-        grid-area: btn-1;
-      }
+      // .blog-btn-1 {
+      //   grid-area: btn-1;
+      // }
+
+      // h2 {
+      //   // font-size: 1rem;
+      // }
 
       h2,
       a {

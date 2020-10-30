@@ -37,7 +37,7 @@
     &-main {
       margin-left: 0;
       &-grid-item-info {
-        transform: translateY(50%) !important;
+        // transform: translateY(50%) !important;
 
         .project-title {
           font-size: 0.8rem;
@@ -66,7 +66,8 @@
       
   }
   
-  .projects-main > .grid-system {
+  .projects-main > .grid-system,
+  .blog-main > .grid-system {
     grid-template-columns: repeat(3, 1fr);
     height: auto;
   }
@@ -102,6 +103,10 @@
   .blog {
     &-main {
     margin-left: 0;
+    
+    .blog-title {
+      font-size: 1rem;
+    }
     }
   }
 }
@@ -113,6 +118,10 @@
 
   html, body {
     height: 10vh;
+  }
+
+  .container {
+    max-width: 80%;
   }
 
   .section-title {
@@ -132,6 +141,12 @@
     .section-title {
       line-height: 1.2em;
       margin: 0;
+    }
+
+    .section-content {
+      .resume-section {
+        margin: 0;
+      }
     }
   }
 
@@ -166,6 +181,7 @@
 
   .blog-main {
   
+    margin-left: 0;
     
   & > .grid-system {
     grid-template-columns: repeat(1, 1fr);
@@ -213,9 +229,9 @@
     }
   }
 
-  // .blog {
-  //   &-main {
-    // margin-left: 0;
-  //   }
-  // }
+  .blog {
+    &-main {
+    margin-left: 0;
+    }
+  }
 }

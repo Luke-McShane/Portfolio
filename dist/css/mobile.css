@@ -16,22 +16,21 @@
       margin: 0; }
   .projects-main {
     margin-left: 0; }
-    .projects-main-grid-item-info {
-      transform: translateY(50%) !important; }
-      .projects-main-grid-item-info .project-title {
-        font-size: 0.8rem;
-        margin: 0.25rem; }
-      .projects-main-grid-item-info .fa-1x {
-        font-size: 0.75rem; }
-      .projects-main-grid-item-info p {
-        line-height: 0.9rem;
-        font-size: 0.6rem; }
+    .projects-main-grid-item-info .project-title {
+      font-size: 0.8rem;
+      margin: 0.25rem; }
+    .projects-main-grid-item-info .fa-1x {
+      font-size: 0.75rem; }
+    .projects-main-grid-item-info p {
+      line-height: 0.9rem;
+      font-size: 0.6rem; }
   .projects-info {
     height: 100%; }
     .projects-info-content {
       width: 90%;
       overflow-y: scroll; }
-  .projects-main > .grid-system {
+  .projects-main > .grid-system,
+  .blog-main > .grid-system {
     grid-template-columns: repeat(3, 1fr);
     height: auto; }
   .exercises-main {
@@ -48,11 +47,15 @@
         top: 30%;
         font-size: 1.5rem; }
   .blog-main {
-    margin-left: 0; } }
+    margin-left: 0; }
+    .blog-main .blog-title {
+      font-size: 1rem; } }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   html, body {
     height: 10vh; }
+  .container {
+    max-width: 80%; }
   .section-title {
     font: normal small-caps 100 2rem/1rem "Lato";
     line-height: 1.5rem; }
@@ -64,6 +67,8 @@
     justify-content: space-evenly; }
     .header-main .section-title {
       line-height: 1.2em;
+      margin: 0; }
+    .header-main .section-content .resume-section {
       margin: 0; }
   .projects {
     margin-bottom: 4rem; }
@@ -80,9 +85,11 @@
           .projects-info-content-grid-buttons a {
             margin: 2rem 2rem 0rem 2rem;
             width: 5rem; }
-  .blog-main > .grid-system {
-    grid-template-columns: repeat(1, 1fr);
-    height: auto; }
+  .blog-main {
+    margin-left: 0; }
+    .blog-main > .grid-system {
+      grid-template-columns: repeat(1, 1fr);
+      height: auto; }
   .projects-main > .grid-system {
     grid-template-columns: repeat(1, 1fr);
     height: auto; }
@@ -101,4 +108,6 @@
         .exercises-main-container-button-html h2, .exercises-main-container-button-css h2, .exercises-main-container-button-js h2 {
           margin: 0;
           top: 30%;
-          font-size: 2rem; } }
+          font-size: 2rem; }
+  .blog-main {
+    margin-left: 0; } }

@@ -150,7 +150,7 @@
       .grid-system-item-info {
         opacity: 1;
         z-index: 2;
-        transform: translateY(50%);
+        transform: translateY(10%);
       }
 
       &::before {
@@ -166,12 +166,13 @@
       position: absolute;
       opacity: 0;
       z-index: -1;
-      top: -30%;
+      top: 0;
       left: 0;
       bottom: 0;
       right: 0;
       display: grid;
       height: 75%;
+      transform: translateY(-100%);
       transition: all 500ms ease-out 500ms;
     }
 
@@ -236,6 +237,7 @@
   padding: 0.5rem;
   background: rgba(17,20,20, 1);
   overflow-y: scroll;
+  overflow-x: hidden;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -243,10 +245,12 @@
 }
 
 @mixin modal-text {
-  text-align: left;
+  // text-align: left;
+  text-align: center;
     a {
       display: inline-block;
-      width: 100%;
+      // width: 100%;
+      width: auto;
       font-size: 0.9rem;
     }
 }
