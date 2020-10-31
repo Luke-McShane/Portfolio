@@ -13,6 +13,7 @@
   <title>Luke Mcshane | Home</title>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script type="module" src="script.js"></script>
+  <!-- <php? include('contact-form.php'); ?> -->
 </head>
 
 <body>
@@ -177,11 +178,11 @@
     <div class="container">
       <div class="contact-content">
         <h2 class="section-title">Contact Me</h2>
-        <form action="#" class="contact-content-form">
+        <form action="./contact-form.php" class="contact-content-form" method="post">
           <input type="text" name="name" id="name" placeholder="Name">
-          <input type="text" name="name" id="email" placeholder="Email Address">
+          <input type="text" name="email" id="email" placeholder="Email Address">
           <textarea name="message" id="message" placeholder="Message"></textarea>
-          <input type="submit" value="Submit">
+          <input type="submit" name="submit" value="Submit">
         </form>
 
         <footer class="footer">
