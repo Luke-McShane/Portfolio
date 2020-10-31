@@ -729,7 +729,8 @@ textarea {
   .grid-system {
     grid-template-columns: repeat(3, 1fr);
     height: auto; }
-    .grid-system-item-info .project-title {
+    .grid-system-item-info .project-title,
+    .grid-system-item-info .blog-title {
       font-size: 1rem;
       margin-bottom: 0.5rem; }
     .grid-system-item-info .fa-1x {
