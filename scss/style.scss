@@ -97,9 +97,6 @@ textarea {
 
       }
 
-      // &>li:first-child::after {
-      //   border-bottom-color: $colour-light-accent;
-      // }
       &>li.current::after {
         border-bottom-color: $colour-light-accent;
       }
@@ -181,7 +178,6 @@ textarea {
       }
 
       a {
-        // grid-area: btn-1;
         cursor: pointer;
 
       }
@@ -190,11 +186,6 @@ textarea {
         grid-area: btn-3;
         cursor: pointer;
       }
-
-      // h2,
-      // a {
-      //   color: #fff !important;
-      // }
 
       p {
         font-size: 0.9rem;
@@ -231,10 +222,6 @@ textarea {
           @include modal-text;
           
         }
-        
-        // &-buttons {
-        //   @include modal-buttons;
-        // }
       }
     }
   }
@@ -278,8 +265,6 @@ textarea {
           font-size: 3rem;
         }
       }
-
-      // Rather than have everything in two separate lists on the main screen, have a button for each language, and clicking a button brings an overlay/modal that will neatly display all the lessons. Each lesson can either be a number with a title (i.e. '30 - Flexbox Basics') and thus we can have like 3 or 4 columns, or we can have a number with a title with a description, and can have one exercise per row, or perhaps 2 exercises per row (2 columns)
     }
   }
 }
@@ -295,29 +280,6 @@ textarea {
     h2 {
       margin-bottom: 1rem;
     }
-
-    // .grid-system-item-info {
-    //   // grid-template-areas:
-    //   //   'title'
-    //   //   'btn-1';
-
-    //   // .blog-title {
-    //   //   grid-area: title;
-    //   // }
-
-    //   // .blog-btn-1 {
-    //   //   grid-area: btn-1;
-    //   // }
-
-    //   // h2 {
-    //   //   // font-size: 1rem;
-    //   // }
-
-    //   // h2,
-    //   // a {
-    //   //   color: #fff !important;
-    //   // }
-    // }
   }
 
   &-info {
@@ -398,44 +360,3 @@ textarea {
 @import 'tablet.scss';
 @import 'laptop.scss';
 @import 'desktop.scss';
-
-// For if you decide to use grid-template-areas for the portfolio items:
-// grid-template-areas:
-//   'projects-item-1 projects-item-2 projects-item-3'
-//   'projects-item-4 projects-item-5 projects-item-6'
-//   'projects-item-7 projects-item-8 projects-item-9';
-//&-1 {
-//   grid-area: projects-item-1;
-// }
-
-// &-2 {
-//   grid-area: projects-item-2;
-// }
-
-// &-3 {
-//   grid-area: projects-item-3;
-// }
-
-// &-4 {
-//   grid-area: projects-item-4;
-// }
-
-// &-5 {
-//   grid-area: projects-item-5;
-// }
-
-// &-6 {
-//   grid-area: projects-item-6;
-// }
-
-// &-7 {
-//   grid-area: projects-item-7;
-// }
-
-// &-8 {
-//   grid-area: projects-item-8;
-// }
-
-// &-9 {
-//   grid-area: projects-item-9;
-// }

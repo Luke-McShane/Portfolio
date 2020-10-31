@@ -53,7 +53,6 @@
 
     &-item {
       &-info {
-        // transform: translateY(60%) !important;
 
         .project-title {
           font-size: 1rem;
@@ -67,10 +66,6 @@
           line-height: 0.9rem;
           font-size: 0.9rem;
         }
-        // &:active {
-        // opacity: 1;
-        // transform: translateY(50%);
-        // }
       }
     }  
   }
@@ -111,9 +106,7 @@
   and (min-width: 768px) 
   and (max-width: 1024px) 
   and (orientation: landscape) {
-  // html, body {
-  //   height: 100vh;
-  // }
+
   #nav-main {
     display: none;
     font-size: 3em;
@@ -152,7 +145,6 @@
 
     &-item {
       &-info {
-        // transform: translateY(55%) !important;
 
         .project-title,
         .blog-title {
@@ -167,10 +159,6 @@
           line-height: 0.9rem;
           font-size: 0.6rem;
         }
-        // &:active {
-        // opacity: 1;
-        // transform: translateY(50%);
-        // }
       }
     }  
   }
