@@ -263,6 +263,10 @@
     display: none;
   }
   scrollbar-width: none;
+
+  @media screen and (min-width: 1921px) {
+    max-width: 50%;
+  }
 }
 
 @mixin modal-text {

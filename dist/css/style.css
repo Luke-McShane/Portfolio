@@ -344,6 +344,9 @@ textarea {
       scrollbar-width: none; }
       .projects-info-content::-webkit-scrollbar {
         display: none; }
+      @media screen and (min-width: 1921px) {
+        .projects-info-content {
+          max-width: 50%; } }
       .projects-info-content-grid {
         display: block;
         position: relative; }
@@ -385,6 +388,9 @@ textarea {
     scrollbar-width: none; }
     .exercises-info-content::-webkit-scrollbar {
       display: none; }
+    @media screen and (min-width: 1921px) {
+      .exercises-info-content {
+        max-width: 50%; } }
     .exercises-info-content-grid {
       display: block;
       position: relative; }
@@ -477,6 +483,9 @@ textarea {
     scrollbar-width: none; }
     .blog-info-content::-webkit-scrollbar {
       display: none; }
+    @media screen and (min-width: 1921px) {
+      .blog-info-content {
+        max-width: 50%; } }
     .blog-info-content-grid {
       display: block;
       position: relative; }
