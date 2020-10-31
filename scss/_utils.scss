@@ -50,12 +50,12 @@
   margin: auto;
   text-align: center;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .section-title {
   font: $font-primary;
-  margin: 4rem 0 1rem 0;
+  margin: 2rem 0 1rem 0;
   letter-spacing: 1px;
 
   &::after {
@@ -214,7 +214,8 @@
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  height: 100vh;
+  // height: 100%;
+  height: 100%;
   width: 100%;
   margin-left: 10%;
   // overflow-y: scroll;
