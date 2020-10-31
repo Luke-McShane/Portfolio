@@ -7,24 +7,6 @@
   box-sizing: border-box;
 }
 
-* {
-  scrollbar-width: thin;
-  scrollbar-color: $colour-dark-accent $colour-background;
-}
-
-/* Works on Chrome/Edge/Safari */
-*::-webkit-scrollbar {
-  width: 12px;
-}
-*::-webkit-scrollbar-track {
-  background: $colour-background;
-}
-*::-webkit-scrollbar-thumb {
-  background-color: $colour-alternative-background;
-  border-radius: 20px;
-  border: 3px solid $colour-background;
-}
-
 html,
 body {
   background-color: $colour-background;
@@ -209,10 +191,10 @@ textarea {
         cursor: pointer;
       }
 
-      h2,
-      a {
-        color: #fff !important;
-      }
+      // h2,
+      // a {
+      //   color: #fff !important;
+      // }
 
       p {
         font-size: 0.9rem;
@@ -314,28 +296,28 @@ textarea {
       margin-bottom: 1rem;
     }
 
-    .grid-system-item-info {
-      // grid-template-areas:
-      //   'title'
-      //   'btn-1';
+    // .grid-system-item-info {
+    //   // grid-template-areas:
+    //   //   'title'
+    //   //   'btn-1';
 
-      // .blog-title {
-      //   grid-area: title;
-      // }
+    //   // .blog-title {
+    //   //   grid-area: title;
+    //   // }
 
-      // .blog-btn-1 {
-      //   grid-area: btn-1;
-      // }
+    //   // .blog-btn-1 {
+    //   //   grid-area: btn-1;
+    //   // }
 
-      // h2 {
-      //   // font-size: 1rem;
-      // }
+    //   // h2 {
+    //   //   // font-size: 1rem;
+    //   // }
 
-      h2,
-      a {
-        color: #fff !important;
-      }
-    }
+    //   // h2,
+    //   // a {
+    //   //   color: #fff !important;
+    //   // }
+    // }
   }
 
   &-info {
