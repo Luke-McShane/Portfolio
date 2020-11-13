@@ -12,18 +12,34 @@ window.onload = function () {
   let jsHeaders = ['JS Projects', 'JS Exercises'];
   let exercisesBtns = document.querySelectorAll(`[class*="exercises-main-container-button"]`);
 
+  // const tx = document.getElementsByTagName('textarea');
+  // for (let i = 0; i < tx.length; i++) {
+  //   tx[i].setAttribute('style', 'height:' + (tx[i].scrollHeight) + 'px;overflow-y:hidden;');
+  //   tx[i].addEventListener("input", OnInput, false);
+  // }
+
+  // function OnInput() {
+  //   this.style.height = 'auto';
+  //   this.style.height = (this.scrollHeight) + 'px';
+  //   this.style.overflowY = 'auto';
+  // }
+
+
+
   function blogSetup() {
     let blogData = blogsObject.default;
     let blogs = Object.values(blogData)[0];
     let iterate = 1;
     blogs.forEach(entry => {
       const title = entry.title;
+      // const date = entry.date;
       // const blog = entry.blog;
       const divItem = document.createElement('div');
       const divImg = document.createElement('div');
       const img = document.createElement('img');
       const divInfo = document.createElement('div');
       const h2 = document.createElement('h2');
+      // const h3 = document.createElement('h3');
       const a = document.createElement('a');
       const icon = document.createElement('i');
       const p = document.createElement('p');
@@ -34,6 +50,7 @@ window.onload = function () {
       divInfo.classList.add('grid-system-item-info');
       h2.classList.add('blog-title');
       h2.innerText = title;
+      // h3.innerText = date;
       a.classList.add('blog-btn');
       a.id = `blog-btn-${iterate}`;
       icon.classList.add('fas', 'fa-book-open', 'fa-1x');
@@ -43,6 +60,7 @@ window.onload = function () {
       divImg.appendChild(img);
       divItem.appendChild(divInfo);
       divInfo.appendChild(h2);
+      // divInfo.appendChild(h3);
       divInfo.appendChild(a);
       a.appendChild(icon);
       a.appendChild(p);
@@ -361,16 +379,21 @@ window.onload = function () {
       let overlay = document.getElementsByClassName("blog-info")[0];
       overlay.style.display = "flex";
       let title = blogs.blogs[this.id.toString()[this.id.toString().length - 1] - 1].title;
+      let date = blogs.blogs[this.id.toString()[this.id.toString().length - 1] - 1].date;
       let blog = blogs.blogs[this.id.toString()[this.id.toString().length - 1] - 1].blog;;
 
       let overlayTitle = overlay.querySelector(".modal-title");
+      let overlayDate = overlay.querySelector(".modal-date");
       let overlayBlog = overlay.querySelector("#blog-text");
 
       overlayTitle.innerHTML = title;
+      overlayDate.innerHTML = date;
       overlayBlog.innerHTML = blog;
     }
   }
 }
+
+
 
 function scroll() {
   var lastId,
@@ -428,3 +451,4 @@ function freezeForTransition() {
     });
   }
 }
+

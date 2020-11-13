@@ -49,7 +49,9 @@
   .blog-main {
     margin-left: 0; }
     .blog-main .blog-title {
-      font-size: 1rem; } }
+      font-size: 1rem; }
+  .blog-info {
+    height: 90vh; } }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   html, body {
@@ -110,4 +112,6 @@
           top: 30%;
           font-size: 2rem; }
   .blog-main {
+    margin-left: 0; }
+  .contact-content {
     margin-left: 0; } }

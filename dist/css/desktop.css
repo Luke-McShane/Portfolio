@@ -1,6 +1,7 @@
 @media screen and (min-width: 1921px) {
   #nav-main {
-    font: normal 200 2.2rem/6rem "Lato"; }
+    font: normal 200 1.6rem/5rem "Lato";
+    top: 19%; }
   .projects-main,
   .blog-main,
   .exercises-main {
