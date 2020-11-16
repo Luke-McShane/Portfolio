@@ -138,6 +138,7 @@ window.onload = function () {
       i2.classList.add('fas', 'fa-book-open', 'fa-1x');
       i3.classList.add('fas', 'fa-code', 'fa-1x');
       a2.classList.add('project-btn-2');
+      a2.id = iterate;
       a3.classList.add('project-btn-3');
       img.src = `./dist/img/projects-new/projects-${iterate}.png`;
       img.alt = `Project ${iterate}`;
@@ -169,6 +170,8 @@ window.onload = function () {
 
       document.querySelector('.projects-main-grid').appendChild(divItem);
       iterate += 1;
+
+
     })
   }
 
@@ -340,16 +343,22 @@ window.onload = function () {
       let overlay = document.getElementsByClassName("projects-info")[0];
       let projectInfo = projectData.default;
       overlay.style.display = "flex";
-      // The projectInfor is the javascript object, the projects is the key, and them I am accessing
+      // The projectInfo is the javascript object, the projects is the key, and them I am accessing
       // each inner component by grabbing the id of the current button being clicked and accessing the final
       // element, which is the number. This number is used to index the projectInfo object to locate the
       // text that corresponds to the element being clicked. This data is then used to populate the overlay.
-      let title = projectInfo.projects[this.id.toString()[this.id.toString().length - 1] - 1].title;
-      let overview = projectInfo.projects[this.id.toString()[this.id.toString().length - 1] - 1].overview;
-      let difficulties = projectInfo.projects[this.id.toString()[this.id.toString().length - 1] - 1].difficulties;
-      let lessonsLearned = projectInfo.projects[this.id.toString()[this.id.toString().length - 1] - 1].lessons_learned;
-      let site = projectInfo.projects[this.id.toString()[this.id.toString().length - 1] - 1].site;
-      let source = projectInfo.projects[this.id.toString()[this.id.toString().length - 1] - 1].source;
+      let title = projectInfo.projects[this.id - 1].title;
+      let overview = projectInfo.projects[this.id - 1].overview;
+      let difficulties = projectInfo.projects[this.id - 1].difficulties;
+      let lessonsLearned = projectInfo.projects[this.id - 1].lessons_learned;
+      let site = projectInfo.projects[this.id - 1].site;
+      let source = projectInfo.projects[this.id - 1].source;
+      // let title = projectInfo.projects[this.id.toString()[this.id.toString().length - 1] - 1].title;
+      // let overview = projectInfo.projects[this.id.toString()[this.id.toString().length - 1] - 1].overview;
+      // let difficulties = projectInfo.projects[this.id.toString()[this.id.toString().length - 1] - 1].difficulties;
+      // let lessonsLearned = projectInfo.projects[this.id.toString()[this.id.toString().length - 1] - 1].lessons_learned;
+      // let site = projectInfo.projects[this.id.toString()[this.id.toString().length - 1] - 1].site;
+      // let source = projectInfo.projects[this.id.toString()[this.id.toString().length - 1] - 1].source;
 
       let overlayTitle = overlay.querySelector(".modal-title");
       let overlayOverview = overlay.querySelector("#modal-overview");

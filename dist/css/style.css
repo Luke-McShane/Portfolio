@@ -37,7 +37,7 @@
   height: 100vh; }
 
 .section-title {
-  font: normal small-caps 100 3rem/2rem "Lato";
+  font: "Montserrat", sans-serif;
   margin: 2rem 0 1rem 0;
   letter-spacing: 1px; }
   .section-title::after {
@@ -57,7 +57,7 @@
   font-style: italic; }
 
 .section-content {
-  font: normal 200 1.2rem/2rem "Lato"; }
+  font: "Open Sans", sans-serif; }
 
 .modal-title {
   padding: 0.8rem 0;
@@ -168,7 +168,7 @@ html,
 body {
   background-color: #111414;
   color: #e8d9af;
-  font-family: 'Kanit', Arial, Helvetica, sans-serif; }
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif; }
 
 ul {
   list-style: none; }
@@ -217,7 +217,7 @@ textarea {
   color: #e8d9af; }
 
 #nav-main {
-  font: normal 200 1.2rem/2rem "Lato";
+  font: "Open Sans", sans-serif;
   z-index: 3;
   font-size: 1rem;
   position: fixed;
@@ -425,7 +425,7 @@ textarea {
       cursor: pointer;
       box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05), inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.1), inset 0 15px 15px rgba(0, 0, 0, 0.1); }
       .exercises-main-container-button-html h2, .exercises-main-container-button-css h2, .exercises-main-container-button-js h2 {
-        font: normal small-caps 100 3rem/2rem "Lato";
+        font: "Montserrat", sans-serif;
         letter-spacing: 1px;
         display: inline-block;
         left: 0;
@@ -547,7 +547,7 @@ textarea {
     max-width: 90%;
     overflow-x: hidden; }
   .section-title {
-    font: normal small-caps 100 2rem/2rem "Lato";
+    font: normal small-caps 100 2rem/2rem 'Montserrat';
     line-height: 1.5rem; }
   #nav-main {
     display: none;
@@ -603,7 +603,7 @@ textarea {
   .container {
     max-width: 80%; }
   .section-title {
-    font: normal small-caps 100 2rem/1rem "Lato";
+    font: normal small-caps 100 2rem/2rem 'Montserrat';
     line-height: 1.5rem; }
   #nav-main {
     display: none;
@@ -771,7 +771,7 @@ textarea {
 
 @media screen and (min-width: 1921px) {
   #nav-main {
-    font: normal 200 1.6rem/5rem "Lato";
+    font: normal 200 1.6rem/5rem 'Montserrat';
     top: 19%; }
   .projects-main,
   .blog-main,

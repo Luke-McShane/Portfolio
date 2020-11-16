@@ -3,7 +3,7 @@
     max-width: 90%;
     overflow-x: hidden; }
   .section-title {
-    font: normal small-caps 100 2rem/2rem "Lato";
+    font: normal small-caps 100 2rem/2rem 'Montserrat';
     line-height: 1.5rem; }
   #nav-main {
     display: none;
@@ -59,7 +59,7 @@
   .container {
     max-width: 80%; }
   .section-title {
-    font: normal small-caps 100 2rem/1rem "Lato";
+    font: normal small-caps 100 2rem/2rem 'Montserrat';
     line-height: 1.5rem; }
   #nav-main {
     display: none;
